@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'BoonJot';
+    src: url('../fonts/BoonJot-400.eot') format('embedded-opentype');
+    src: url('../fonts/BoonJot-400.woff2') format('woff2');
+    src: url('../fonts/BoonJot-400.woff') format('woff');
+    src: url('../fonts/BoonJot-400.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'DJB';
+    src: url('../fonts/DJB_This_is_Me_2.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Thaisanlite';
+    src: url('../fonts/thaisanslite_r1.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
