@@ -13,5 +13,6 @@ module.exports = function() {
 
 	require('../app/routes/test.routes')(app);
 	require('../app/routes/time.routes')(app);
+	require('../app/routes/index.routes')(app);
 	return app;
 }
