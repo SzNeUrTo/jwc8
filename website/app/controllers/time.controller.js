@@ -17,7 +17,7 @@ exports.sendMail = function(req, res) {
             clientSecret: config.clientSecret,
             refreshToken: config.refreshToken,
             accessToken: config.accessToken
-        });
+        })
     }
   }
 

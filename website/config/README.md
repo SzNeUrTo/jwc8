@@ -21,3 +21,21 @@ module.exports = {
 }
 
 ```
+
+
+# Config Database
+
+<h3>Copy File</h3>
+Copy `database.config.sample.js` to `database.config.js`
+
+```bash
+cp database.config.sample.js database.config.js
+```
+
+<h3>Config</h3>
+```javascript
+module.exports = {
+	'url': 'mongodb://<USER>:<PASS>@<URL>:<PORT>'
+}
+
+```
