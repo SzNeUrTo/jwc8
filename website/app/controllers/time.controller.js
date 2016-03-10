@@ -6,6 +6,7 @@ exports.sendMail = function(req, res) {
   var nodemailer = require("nodemailer");
   var xoauth2 = require("xoauth2");
   var config = require('../../config/password.config.js').getEmailConfig();
+  console.log(config);
   var sendEmail = config.email;
   var password = config.password;
   var xoauth={
@@ -17,7 +18,7 @@ exports.sendMail = function(req, res) {
             clientSecret: config.clientSecret,
             refreshToken: config.refreshToken,
             accessToken: config.accessToken
-        });
+        })
     }
   }
 
