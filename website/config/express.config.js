@@ -5,13 +5,12 @@ var bodyParser = require('body-parser');
 
 module.exports = function() {
 	app.use(bodyParser.urlencoded({
-    extended: true
-  }));
+    	extended: true
+  	}));
 	app.set('views', './app/views');
 	app.use(express.static('./public'));
 	app.engine('html', ejs.renderFile);
 
-	require('../app/routes/test.routes')(app);
-	require('../app/routes/time.routes')(app);
+	require('../app/routes.app.js')(app);
 	return app;
 }
