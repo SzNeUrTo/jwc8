@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/WebMasterCamp/jwc8-website#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
-    "body-parser": "^1.15.0",
+    "mongoose": "^4.4.6",
+    "morgan": "^1.7.0",
     "nodemailer": "^2.3.0",
     "xoauth2": "~1.1.0"
   }
