@@ -17,9 +17,10 @@ exports.sendMail = function(req, res) {
             clientSecret: config.clientSecret,
             refreshToken: config.refreshToken,
             accessToken: config.accessToken
-        })
+        });
     }
   }
+
   var transporter = nodemailer.createTransport(xoauth);
   var mailOptions = {
       from: sendEmail,
@@ -27,6 +28,7 @@ exports.sendMail = function(req, res) {
       subject: config.subject,
       html: config.html
   }
+
   transporter.sendMail(mailOptions, function(err){
       if(err){
         console.log(err);
