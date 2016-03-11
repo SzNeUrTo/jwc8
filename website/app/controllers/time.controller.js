@@ -1,29 +1,42 @@
-exports.render = function(req, res){
+exports.render = function(req, res) {
   res.render('time.html');
 }
-exports.sendMail = function(req, res){
+
+exports.sendMail = function(req, res) {
   var nodemailer = require("nodemailer");
-  var sendEmail = '';
-  var password = '';
-  var smtpTransport = nodemailer.createTransport("SMTP",{
-        service: "Gmail",
-          auth: {
-              user: sendEmail,
-              pass: password
-        }
-  });
-  var mailOptions = {
-      from: "", // sender address
-      to: req.body.email, // list of receivers
-      subject: "", // Subject line
-      html: "" // html body
+  var xoauth2 = require("xoauth2");
+  var config = require('../../config/password.config.js');
+  var sendEmail = config.email;
+  var password = config.password;
+  var xoauth={
+    service: 'gmail',
+    auth: {
+        xoauth2: xoauth2.createXOAuth2Generator({
+            user: sendEmail,
+            clientId: config.clientId,
+            clientSecret: config.clientSecret,
+            refreshToken: config.refreshToken,
+            accessToken: config.accessToken
+        })
+    }
   }
-  smtpTransport.sendMail(mailOptions, function(error, response){
-      if(error){
-          console.log(error);
-      }else{
-          console.log("Message sent: " + response.message);
+
+  var transporter = nodemailer.createTransport(xoauth);
+  var mailOptions = {
+      from: sendEmail,
+      to: req.body.email,
+      subject: config.subject,
+      html: config.html
+  }
+
+  transporter.sendMail(mailOptions, function(err){
+      if(err){
+        console.log(err);
+        res.render(err);
       }
-      smtpTransport.close();
-    });
+      else{
+        console.log("SUCCESS");
+        res.render('success');
+      }
+  });
 }

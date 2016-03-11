@@ -10,21 +10,31 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-default">
   <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <img class="img-responsive" src="/pictures/JWClogo.png" style="height:100%;"/>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/index">
+        <img class="img-responsive" src="/pictures/JWClogo.png" style="height:100%;">
       </a>
     </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#">JWC คืออะไร</a></li>
-      <li><a href="#">สาขาที่สมัคร</a></li>
-      <li><a href="#">กำหนดการ</a></li>
-      <li><a href="#">ภาพกิจกรรม</a></li>
-      <li><a href="#">ติดตามค่าย</a></li>
-    </ul>
-  </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="./whatis">JWC คืออะไร</a></li>
+        <li><a href="./register">สาขาที่สมัคร</a></li>
+        <li><a href="./calendar">กำหนดการ</a></li>
+        <li><a href="./eventpic">ภาพกิจกรรม</a></li>
+        <li><a href="./about">ติดตามค่าย</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 
   {{{body}}}

@@ -1,2 +1,4 @@
+config/password.config.js
+config/database.config.js
 node_modules
 npm-debug.log
