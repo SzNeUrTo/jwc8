@@ -24,6 +24,14 @@
     "mongoose": "^4.4.6",
     "morgan": "^1.7.0",
     "nodemailer": "^2.3.0",
-    "xoauth2": "~1.1.0"
+    "xoauth2": "~1.1.0",
+    "cookie-parser": "latest",
+    "express-session": "latest",
+    "passport": "~0.2.1",
+    "passport-local": "~1.0.0",
+    "connect-flash": "~0.1.1",
+    "bcrypt": "~0.8.1",
+    "passport-facebook": "~2.0.0",
+    "connect-mongo": "~0.8.0"
   }
 }
