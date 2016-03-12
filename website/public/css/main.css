@@ -1,0 +1,38 @@
+.navigation{
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/pictures/allpage/menuBG6.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sub-nav{
+  padding: 0 20px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+.sub-nav:hover{
+  padding: 0 20px;
+  font-size: 16px;
+  color: white;
+  text-decoration:underline;
+}
+body, html{
+  background-image: url('/pictures/allpage/background.png');
+  color: white;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+.menu-logo{
+  height: 100px
+}
+.menu-logo:hover{
+  cursor: pointer;
+}
+div{
+  display: inline-block;
+}

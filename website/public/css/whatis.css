@@ -1,3 +1,12 @@
+.box{
+  display: flex;
+  align-items: center;
+}
+.text{
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
 .head{
   background-image: url('/pictures/whatis/what_is_jwcBG.png');
   display: block;
@@ -5,14 +14,4 @@
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
-}
-.logo-block{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.logo{
-  padding:0 15px;
-  height: 100px;
-  margin-bottom: 10px;
 }
