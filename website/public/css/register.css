@@ -1,4 +1,4 @@
-.box{
+.box2{
   display: flex;
   align-items: baseline;
   margin: 15px 10% 10px 10%;
@@ -7,13 +7,7 @@
   background-color: rgba(240, 246, 212, 0);
   border: none;
 }
-.head{
-  background-image: url('/pictures/whatis/what_is_jwcBG.png');
-  padding: 15px 0;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
+
 .regisnow{
   background-image: url('/pictures/register/register_now_bg.png');
   background-position: center;

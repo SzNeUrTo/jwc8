@@ -7,11 +7,3 @@
 #myCarousel{
   width: 70%;
 }
-.head{
-  background-image: url('/pictures/whatis/what_is_jwcBG.png');
-  display: block;
-  padding: 15px 15px;
-  background-position: center;
-  background-size: auto;
-  background-repeat: no-repeat;
-}

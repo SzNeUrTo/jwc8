@@ -1,11 +1,4 @@
-.head{
-  background-image: url('/pictures/whatis/what_is_jwcBG.png');
-  display: block;
-  padding: 15px 0;
-  background-position: center;
-  background-size: auto;
-  background-repeat: no-repeat;
-}
+
 .logo-block{
   display: flex;
   justify-content: center;

@@ -6,12 +6,16 @@
   background-image: url('/pictures/allpage/menuBG6.png');
   background-position: center;
   background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
 }
 .sub-nav{
   padding: 0 20px;
   font-size: 20px;
   color: white;
   text-decoration: none;
+  cursor: pointer;
+  
 }
 .sub-nav:hover{
   color: white;
@@ -41,4 +45,30 @@ div{
 }
 *{
   font-family: 'THSarabunNew';
+}
+section{
+  margin-bottom: 100px;
+}
+.index{
+  padding-top: 90px;
+}
+footer{
+  background-image: url('/pictures/allpage/footer.png');
+}
+footer > div{
+  color: rgba(247, 207, 217, 0);
+}
+.about{
+  margin-bottom: 10px;
+}
+.eventpic{
+  margin-bottom: 160px;
+}
+.head{
+  background-image: url('/pictures/whatis/what_is_jwcBG.png');
+  display: block;
+  padding: 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

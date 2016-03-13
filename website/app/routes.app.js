@@ -8,5 +8,6 @@ module.exports = function(app) {
 	require('../app/routes/eventpic.routes')(app);
 	require('../app/routes/about.routes')(app);
 	require('../app/routes/index.routes')(app);
+	require('../app/routes/onepage.routes')(app);
 
 }
