@@ -1,17 +1,16 @@
-.box{
-  display: flex;
-  align-items: center;
+.faq{
+  text-align: left;
 }
-.text{
-  width: 50%;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  font-size: 20px;
+.faq > h3{
+  padding-left: 15px;
+}
+#myCarousel{
+  width: 70%;
 }
 .head{
   background-image: url('/pictures/whatis/what_is_jwcBG.png');
   display: block;
-  padding: 15px 0;
+  padding: 15px 15px;
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;

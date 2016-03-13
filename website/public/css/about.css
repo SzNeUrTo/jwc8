@@ -1,0 +1,10 @@
+.embed{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tidtor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

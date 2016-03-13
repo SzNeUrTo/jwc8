@@ -9,19 +9,19 @@
 }
 .sub-nav{
   padding: 0 20px;
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   text-decoration: none;
 }
 .sub-nav:hover{
-  padding: 0 20px;
-  font-size: 16px;
   color: white;
   text-decoration:underline;
 }
+*{
+  color: white;
+}
 body, html{
   background-image: url('/pictures/allpage/background.png');
-  color: white;
   background-position: center;
   background-size: cover;
   height: 100%;
@@ -35,4 +35,10 @@ body, html{
 }
 div{
   display: inline-block;
+}
+.head{
+  font-family: 'Quark-Bold';
+}
+*{
+  font-family: 'THSarabunNew';
 }

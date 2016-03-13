@@ -14,3 +14,16 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+.regisnow{
+  background-image: url('/pictures/register/register_now_bg.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 20px;
+}
+.atom > img{
+  height:20px;
+}
+.atom > p{
+  font-size: 13px
+}
