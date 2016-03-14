@@ -95,16 +95,20 @@
                         <h3 class="pull-left">ข้อมูลทั่วไป</h3>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12">
-                            <input type="text" placeholder="ชื่อ-นามสกุล"></input>
+                        <div class="col-xs-6">
+                            <input type="text" placeholder="ชื่อ" name="firstname"></input>
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="text" placeholder="นามสกุล" name="lastname"></input>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="ชื่อเล่น"></input>
+                            <input type="text" placeholder="ชื่อเล่น" name="nickname"></input>
                         </div>
                         <div class="col-xs-6">
                             <div class="btn-group dropdown">
+                                <input type="hidden" id="sex" name="sex"></input>
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     เพศ <span class="caret"></span>
                                 </button>
@@ -117,10 +121,10 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" id="datepicker" placeholder="วัน/เดือน/ปีเกิด">
+                            <input type="text" id="datepicker" placeholder="วัน/เดือน/ปีเกิด" name="birthdate">
                         </div>
                         <div class="col-xs-6">
-                            <!--<input type="text" placeholder="ศาสนา"></input>-->
+                            <input type="hidden" id="religion" name="religion"></input>
                             <div class="btn-group dropdown">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     ศาสนา <span class="caret"></span>
@@ -129,15 +133,79 @@
                                     <li><a>พุทธ</a></li>
                                     <li><a>คริสต์</a></li>
                                     <li><a>อิสลาม</a></li>
-                                    <li><a>ฮินดู</a></li>
-                                    <li><a>ซิกข์</a></li>
-                                    <li><a>เต๋า</a></li>
+                                    <li><a>อื่น ๆ</a></li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input type="email" placeholder="E-mail" name="email"></input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input type="text" placeholder="เบอร์โทรศัพท์" name="tel"></input>
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="hidden" id="size" name="size"></input>
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    ไซต์เสื้อ <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a>S (กว้าง 34" x ยาว 26")</a></li>
+                                    <li><a>M (กว้าง 36" x ยาว 27")</a></li>
+                                    <li><a>L (กว้าง 38" x ยาว 28")</a></li>
+                                    <li><a>XL (กว้าง 40" x ยาว 29")</a></li>
+                                    <li><a>XXL (กว้าง 42" x ยาว 30")</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="textarea">
+                                <textarea rows="3" placeholder="ที่อยู่" name="position"></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+              <br>
+              <div class="school row no-margin">
+                  <div class="col-md-8 col-md-offset-2 general">
+                      <div class="row">
+                          <h3 class="pull-left">ข้อมูลการศึกษา</h3>
+                      </div>
+                      <div class="row">
+                          <div class="col-xs-12">
+                              <input type="text" class="col-md-12" placeholder="โรงเรียน" name="school"></input>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-xs-6">
+                              <input type="hidden" id="level" name="level"></input>
+                              <div class="btn-group dropdown">
+                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      ระดับชั้น <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                      <li><a>ม.4</a></li>
+                                      <li><a>ม.5</a></li>
+                                      <li><a>ม.6</a></li>
+                                      <li><a>ปวช 1</a></li>
+                                      <li><a>ปวช 2</a></li>
+                                      <li><a>ปวช 3</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="col-xs-6">
+                              <input class="number" type="tel" placeholder="สายที่เรียน" name="major"></input>
+                          </div>
+                      </div>
+                  </div><!--.parent-->
+              </div>
             <br>
             <div class="parent row no-margin">
                 <div class="col-md-8 col-md-offset-2 general">
@@ -145,16 +213,19 @@
                         <h3 class="pull-left">ข้อมูลผู้ปกครอง</h3>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12">
-                            <input type="text" class="col-md-12" placeholder="ชื่อ-นามสกุล"></input>
+                        <div class="col-xs-6">
+                            <input type="text" class="col-md-12" placeholder="นามสกุล" name="parent_firstname"></input>
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="text" class="col-md-12" placeholder="ชื่อ" name="parent_lastname"></input>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="สถานะที่เกี่ยวข้อง"></input>
+                            <input type="text" placeholder="สถานะที่เกี่ยวข้อง" name="parent"></input>
                         </div>
                         <div class="col-xs-6">
-                            <input class="number" type="tel" placeholder="เบอร์โทรศัพท์"></input>
+                            <input class="number" type="tel" placeholder="เบอร์โทรศัพท์" name="emergency_tel"></input>
                         </div>
                     </div>
                 </div><!--.parent-->
@@ -213,12 +284,12 @@
               <div class="row no-margin">
                   <div class="col-md-8 col-md-offset-2 general">
                       <div class="row no-margin">
-                          <h3 class="pull-left question">1.  กิจกรรมและประสบการณ์ที่คุณเคยทำ</h3>
+                          <h3 class="pull-left question">1.  เล่ากิจกรรมและประสบการณ์ที่คุณเคยทำ</h3>
                       </div>
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea rows="8"></textarea>
+                                  <textarea name="your_experience" rows="8"></textarea>
                               </div>
                           </div>
                       </div>
@@ -228,18 +299,64 @@
               <div class="row no-margin">
                   <div class="col-md-8 col-md-offset-2 general">
                       <div class="row no-margin">
-                          <h3 class="pull-left question">2.  คุณจะมีกระบวนการจัดการกับปัญหาอย่างไรถ้ามีคน ตั้งกระทู้ที่มีการละเมิดลิขสิทธิ์ในเว็บบอร์ดของคุณ</h3>
+                          <h3 class="pull-left question">2.  ความสามารถพิเศษหรืออดิเรกที่ชื่นชอบ</h3>
                       </div>
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea rows="8"></textarea>
+                                  <textarea name="your_hobbies" rows="8"></textarea>
                               </div>
                           </div>
                       </div>
                   </div>
               </div>
+              <br>
 
+              <div class="row no-margin">
+                  <div class="col-md-8 col-md-offset-2 general">
+                      <div class="row no-margin">
+                          <h3 class="pull-left question">3.  จุดเด่นที่คุณคิดว่าแตกต่างจากผู้อื่นคือ</h3>
+                      </div>
+                      <div class="row">
+                          <div class="col-xs-12">
+                              <div class="textarea">
+                                  <textarea name="strong_point" rows="8"></textarea>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <br>
+              <div class="row no-margin">
+                  <div class="col-md-8 col-md-offset-2 general">
+                      <div class="row no-margin">
+                          <h3 class="pull-left question">4.  นิสัยใดของตัวเองที่คุณไม่ชอบ เพราะอะไร คุณมีวิธีจัดการอย่างไร</h3>
+                      </div>
+                      <div class="row">
+                          <div class="col-xs-12">
+                              <div class="textarea">
+                                  <textarea name="your_like_unlike" rows="8"></textarea>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <br>
+
+              <div class="row no-margin">
+                  <div class="col-md-8 col-md-offset-2 general">
+                      <div class="row no-margin">
+                          <h3 class="pull-left question">5.  เว็บไซต์แบบไหน ที่คุณอยากสร้างเพื่อแก้ไขปัญหาในวัยเรียนของคุณให้ดีขึ้น</h3>
+                      </div>
+                      <div class="row">
+                          <div class="col-xs-12">
+                              <div class="textarea">
+                                  <textarea name="your_created_websites" rows="8"></textarea>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
                 <br>
                 <br>
                 <div class="row">
@@ -328,7 +445,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="textarea">
-                                    <textarea rows="8"></textarea>
+                                    <textarea rows="8" name="marketing-1"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -359,7 +476,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="textarea">
-                                    <textarea rows="8"></textarea>
+                                    <textarea rows="8" name="marketing-2"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -391,7 +508,7 @@
                           <div class="row">
                               <div class="col-xs-12">
                                   <div class="textarea">
-                                      <textarea rows="8" maxlength=140></textarea>
+                                      <textarea rows="8" maxlength=140 name="content-1"></textarea>
                                   </div>
                               </div>
                           </div>
@@ -437,7 +554,7 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="textarea">
-                                        <textarea rows="8"></textarea>
+                                        <textarea rows="8" name="design-1"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -447,7 +564,7 @@
                                 <div style="text-align: left; position: relative; background-color: transparent; border: medium solid white; padding-right: 10px; border-radius: 10px; cursor: pointer;">
                                     <a class="btn btn-primary" style="margin: 5px; background-color: white; border-radius: 10px; color: black; border-color: white; cursor: pointer;" href="javascript:;">
                                         Choose File...
-                                        <input style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" name="file_source" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file">
+                                        <input name="design-1-pic" style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file">
                                     </a>
                                     &nbsp;
                                     <span class="label" id="upload-file-info" style="font-size: 18px;">อัพโหลดรูปภาพ</span>
@@ -540,6 +657,21 @@
 
             <p>เอาทุก Field มาโชว์ แบบ View Only ถ้า User จะแก้ไข</p>
             <p>ให้กด “กลับไปแก้ไข”</p>
+
+
+            <br><br>
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
+                    <h3 class="back-button back-button-text">กลับไปแก้ไข</h3>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <h3 class="next-button">ถัดไป</h3>
+                </div>
+            </div>
+            <br>
+
 
           </section><!--.step-4-->
 
