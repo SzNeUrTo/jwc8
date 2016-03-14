@@ -12,21 +12,25 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var userSchema = mongoose.Schema({
-	local: {
-		username: String,
-		password: String
-	},
-	facebook: {
-		id: String,
-		token: String,
-		email: String,
-		name: String
-	},
-	google: {
-		id: String,
-		token: String,
-		email: String,
-		name: String
+	// auth_type: String,
+	auth: {
+		auth_type: String,
+		local: {
+			username: String,
+			password: String
+		},
+		facebook: {
+			id: String,
+			token: String,
+			email: String,
+			name: String
+		},
+		google: {
+ 			id: String,
+ 			token: String,
+ 			email: String,
+ 			name: String
+		}
 	}
 });
 
