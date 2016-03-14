@@ -1,5 +1,4 @@
 module.exports = function(app){
-  var index = require('../controllers/index.controller');
-  console.log("test");
-  app.get('/index',index.render);
+  var onepage = require('../controllers/onepage.controller');
+  app.get('/',onepage.render);
 }
