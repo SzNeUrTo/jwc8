@@ -8,12 +8,35 @@
 <script>
 
   $(function() {
+    $(".head-2, .head-3, .head-4").addClass("hide");
+    $(".step-2, .step-3, .step-4").addClass("hide");
     $( "#datepicker" ).datepicker({
       dateFormat: "dd/mm/yy"
     });
-
   });
-  </script>
+
+  function changePage(thisPage, destPage) {
+    // Out
+    if(thisPage < destPage) {
+      $('.head-'+thisPage).addClass('hide');
+      $('.step-'+thisPage).addClass('animated slideOutLeft hide');
+    } else if(thisPage > destPage) {
+      $('.head-'+thisPage).addClass('hide');
+      $('.step-'+thisPage).addClass('animated slideOutRight hide');
+    }
+
+    // In
+    if(thisPage < destPage) {
+      $('.head-'+destPage).removeClass('hide');
+      $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight');
+      $('.step-'+destPage).addClass('animated slideInLeft');
+    } else if(thisPage > destPage) {
+      $('.head-'+destPage).removeClass('hide');
+      $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight');
+      $('.step-'+destPage).addClass('animated slideInRight');
+    }
+  }
+</script>
 
   <div class="register-form">
 
@@ -45,11 +68,6 @@
 <br>
 
       <div class="row question-form">
-
-
-
-          <br>
-          <br>
 
           <div class="row step-bar-row text-center head-1">
               <div class="col-xs-3 step-bar-main">
@@ -164,14 +182,11 @@
             <br>
               <div class="row text-center">
                   <div class="col-xs-4 col-xs-offset-4">
-                      <h3 class="next-button">ถัดไป</h3>
+                      <h3 class="next-button next-button-1" onclick="changePage('1','2')">ถัดไป</h3>
                   </div>
               </div>
 
           </section><!--.step-1-->
-
-
-            <br><br><br><br>
 
           <div class="row step-bar-row text-center head-2">
               <div class="col-xs-3 step-bar-main">
@@ -245,17 +260,14 @@
                 <div class="row">
                     <div class="col-xs-4">
                         <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                        <h3 class="back-button back-button-text">กลับไปแก้ไข</h3>
+                        <h3 class="back-button back-button-text back-button-2" onclick="changePage('2','1')">กลับไปแก้ไข</h3>
                     </div>
                     <div class="col-xs-4 text-center">
-                        <h3 class="next-button">ถัดไป</h3>
+                        <h3 class="next-button next-button-2" onclick="changePage('2','3')">ถัดไป</h3>
                     </div>
                 </div>
 
           </section><!--.step-2-->
-
-
-          <br><br><br><br>
 
 
           <div class="row step-bar-row text-center head-3">
@@ -375,10 +387,10 @@
               <div class="row">
                   <div class="col-xs-4">
                       <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                      <h3 class="back-button back-button-text">กลับไปแก้ไข</h3>
+                      <h3 class="back-button back-button-text back-button-3" onclick="changePage('3','2')">กลับไปแก้ไข</h3>
                   </div>
                   <div class="col-xs-4 text-center">
-                      <h3 class="next-button">ถัดไป</h3>
+                      <h3 class="next-button next-button-3" onclick="changePage('3','4')">ถัดไป</h3>
                   </div>
               </div>
 
@@ -424,8 +436,6 @@
                   </div>
               </div>
           </div>
-          
-          <br><br>
 
           <section class="step-4">
 
@@ -441,14 +451,14 @@
             <div class="row">
                 <div class="col-xs-4">
                     <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                    <h3 class="back-button back-button-text">กลับไปแก้ไข</h3>
+                    <h3 class="back-button back-button-text back-button-4" onclick="changePage('4','3')">กลับไปแก้ไข</h3>
                 </div>
                 <div class="col-xs-4 text-center">
-                    <h3 class="next-button">ถัดไป</h3>
+                    <h3 class="next-button next-button-4" onclick="changePage('4','5')">ถัดไป</h3>
                 </div>
             </div>
             <br>
-          
+
           </section><!--.step-4-->
 
 
