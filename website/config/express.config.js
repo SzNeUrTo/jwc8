@@ -16,7 +16,8 @@ module.exports = function() {
 	app.engine('.hbs', exphbs({
 		defaultLayout: 'main',
 	 	extname: '.hbs',
-		layoutsDir:'./app/views/layouts'
+		layoutsDir:'./app/views/layouts',
+		partialsDir: './app/views/partials'
 	}));
 	app.set('view engine', '.hbs');
 	//mongoose.connect(configDB.url);
