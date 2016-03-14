@@ -1,29 +1,42 @@
 <link rel="stylesheet" href="/css/registerform.css" >
 <link rel="stylesheet" href="/css/fonts.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script>
+
+  $(function() {
+    $( "#datepicker" ).datepicker({
+      dateFormat: "dd/mm/yy"
+    });
+
+  });
+  </script>
 
   <div class="register-form">
 
     <div class="container body-container">
-        <div class="sponsor-row-big sponsor-row">
-            <div class="row">
-                <div class="col-xs-2 sponsor">
-                    <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
-                </div>
-                <div class="col-xs-2 sponsor">
-                    <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
-                </div>
-                <div class="col-xs-4 logo-regis">
-                    <img src="/pictures/form/logo_regis.png" alt="">
-                </div>
-                <div class="col-xs-2 sponsor">
-                    <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
-                </div>
-                <div class="col-xs-2 sponsor">
-                    <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
-                </div>
-            </div>
-            <h2 class="head-background">ฟอร์มสมัครค่าย</h2>
-        </div>
+        <!--<div class="sponsor-row-big sponsor-row">-->
+            <!--<div class="row">-->
+                <!--<div class="col-xs-2 sponsor">-->
+                    <!--<img src="/pictures/sponser/Logo_Jankasem.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="col-xs-2 sponsor">-->
+                    <!--<img src="/pictures/sponser/Logo_Jankasem.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="col-xs-4 logo-regis">-->
+                    <!--<img src="/pictures/form/logo_regis.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="col-xs-2 sponsor">-->
+                    <!--<img src="/pictures/sponser/Logo_Jankasem.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="col-xs-2 sponsor">-->
+                    <!--<img src="/pictures/sponser/Logo_Jankasem.png" alt="">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<h2 class="head-background">ฟอร์มสมัครค่าย</h2>-->
+        <!--</div>-->
 
 
 
@@ -103,7 +116,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="วันเดือนปีเกิด"></input>
+                            <input type="text" id="datepicker" placeholder="วัน/เดือน/ปีเกิด">
                         </div>
                         <div class="col-xs-6">
                             <!--<input type="text" placeholder="ศาสนา"></input>-->
@@ -168,7 +181,7 @@
           <div class="row step-bar-row">
               <div class="col-xs-3 step-bar-main">
                   <div class="row step-background-pass">
-                      <img src="/pictures/form/icon_finish.png" alt="" height="90px">
+                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
                   </div>
                   <div class="row">
                       <h2>ประวัติส่วนตัว</h2>
@@ -257,7 +270,7 @@
           <div class="row step-bar-row">
               <div class="col-xs-3 step-bar-main">
                   <div class="row step-background-pass">
-                      <img src="/pictures/form/icon_finish.png" alt="" height="90px">
+                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
                   </div>
                   <div class="row">
                       <h2>ประวัติส่วนตัว</h2>
@@ -265,7 +278,7 @@
               </div>
               <div class="col-xs-3 step-bar">
                   <div class="row step-background-pass">
-                      <img src="/pictures/form/icon_finish.png" alt="" height="90px">
+                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
                   </div>
                   <div class="row">
                       <h2>คำถามค่าย</h2>
@@ -328,27 +341,27 @@
                               </div>
                           </div>
                       </div>
+                      <br>
+                      <div class="row no-margin">
+                          <!---->
+                          <div style="text-align: left; position: relative; background-color: transparent; border: medium solid white; padding-right: 10px; border-radius: 10px; cursor: pointer;">
+                              <a class="btn btn-primary" style="margin: 5px; background-color: white; border-radius: 10px; color: black; border-color: white; cursor: pointer;" href="javascript:;">
+                                  Choose File...
+                                  <input style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" name="file_source" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file">
+                              </a>
+                              &nbsp;
+                              <span class="label" id="upload-file-info" style="font-size: 18px;">อัพโหลดรูปภาพ</span>
+                          </div>
+
+                          <!--////-->
+                      </div>
                   </div>
               </div>
             <br>
 
-              <input type="file" title="Browse"  data-filename-placement="inside">
 
-              <div class="fancy-file-upload fancy-file-primary">
-                  <i class="fa fa-upload"></i>
-                  <input type="file" class="form-control" name="contact[attachment]" onchange="jQuery(this).next('input').val(this.value);" />
-                  <input type="text" class="form-control" placeholder="no file selected" readonly="" />
-                  <span class="button">Choose File</span>
-              </div>
 
-            <div style="position: relative; background-color: transparent; border-radius: 5px; border-color: white;">
-          		<a class="btn " style="margin: 5px;" href="javascript:;">
-          			Choose File...
-          			<input style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" name="file_source" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file">
-          		</a>
-          		&nbsp;
-          		<span class="label label-info" id="upload-file-info">VisualElementsManifest.xml</span>
-	          </div>
+
 
 
               <div class="row no-margin">
@@ -389,7 +402,7 @@
           <div class="row step-bar-row">
               <div class="col-xs-3 step-bar-main">
                   <div class="row step-background-pass">
-                      <img src="/pictures/form/icon_finish.png" alt="" height="90px">
+                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
                   </div>
                   <div class="row">
                       <h2>ประวัติส่วนตัว</h2>
@@ -397,7 +410,7 @@
               </div>
               <div class="col-xs-3 step-bar">
                   <div class="row step-background-pass">
-                      <img src="/pictures/form/icon_finish.png" alt="" height="90px">
+                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
                   </div>
                   <div class="row">
                       <h2>คำถามค่าย</h2>
@@ -405,7 +418,7 @@
               </div>
               <div class="col-xs-3 step-bar">
                   <div class="row step-background-pass">
-                      <img src="/pictures/form/icon_finish.png" alt="" height="90px">
+                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
                   </div>
                   <div class="row">
                       <h2>คำถามสาขา</h2>
@@ -458,66 +471,66 @@
         $(this).parent().parent().prev().html($(this).html() + '<span class="caret"></span>');
     });
 
-    var sponsorBig = '<div class="sponsor-row-big sponsor-row">'
-            +'<div class="row">'
-            +'<div class="col-xs-2 sponsor">'
-            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
-            +'</div>'
-            +'<div class="col-xs-2 sponsor">'
-            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
-            +'</div>'
-            +'<div class="col-xs-4 logo-regis">'
-            +'<img src="/pictures/form/logo_regis.png" alt="">'
-            +'</div>'
-            +'<div class="col-xs-2 sponsor">'
-            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
-            +'</div>'
-            +'<div class="col-xs-2 sponsor">'
-            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
-            +'</div>'
-            +'</div>'
-            +'<h2 class="head-background">ฟอร์มสมัครค่าย</h2>'
-            +'</div>';
-    var sponsorSmall = '<div class="row sponsor-row-small sponsor-row">'
-            +'<div class="row">'
-            +'    <div class="col-xs-12 logo-regis">'
-            +'        <img src="/pictures/form/logo_regis.png" alt="" width="60%">'
-            +'    </div>'
-            +'</div>'
-            +'<div class="row">'
-            +'<h2 class="head-background">ฟอร์มสมัครค่าย</h2>'
-            +'</div>'
-            +'<div class="row">'
-            +'    <div class="col-xs-5 col-xs-offset-1 sponsor">'
-            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
-            +'    </div>'
-            +'    <div class="col-xs-5 sponsor">'
-            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
-            +'    </div>'
-            +'</div>'
-            +'<div class="row">'
-            +'    <div class="col-xs-5 col-xs-offset-1 sponsor">'
-            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
-            +'    </div>'
-            +'    <div class="col-xs-5 sponsor">'
-            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
-            +'    </div>'
-            +'</div>'
-            +'<div class="row sponsor-row-footer">' +
-            '<img src="/pictures/allpage/footer.png" class="sponsor-row-footer-bar">' +
-            '<img src="/pictures/allpage/JWClogo.png" class="sponsor-row-footer-logo">' +
-            '</div>'
-            +'</div>';
+//    var sponsorBig = '<div class="sponsor-row-big sponsor-row">'
+//            +'<div class="row">'
+//            +'<div class="col-xs-2 sponsor">'
+//            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
+//            +'</div>'
+//            +'<div class="col-xs-2 sponsor">'
+//            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
+//            +'</div>'
+//            +'<div class="col-xs-4 logo-regis">'
+//            +'<img src="/pictures/form/logo_regis.png" alt="">'
+//            +'</div>'
+//            +'<div class="col-xs-2 sponsor">'
+//            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
+//            +'</div>'
+//            +'<div class="col-xs-2 sponsor">'
+//            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
+//            +'</div>'
+//            +'</div>'
+//            +'<h2 class="head-background">ฟอร์มสมัครค่าย</h2>'
+//            +'</div>';
+//    var sponsorSmall = '<div class="row sponsor-row-small sponsor-row">'
+//            +'<div class="row">'
+//            +'    <div class="col-xs-12 logo-regis">'
+//            +'        <img src="/pictures/form/logo_regis.png" alt="" width="60%">'
+//            +'    </div>'
+//            +'</div>'
+//            +'<div class="row">'
+//            +'<h2 class="head-background">ฟอร์มสมัครค่าย</h2>'
+//            +'</div>'
+//            +'<div class="row">'
+//            +'    <div class="col-xs-5 col-xs-offset-1 sponsor">'
+//            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
+//            +'    </div>'
+//            +'    <div class="col-xs-5 sponsor">'
+//            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
+//            +'    </div>'
+//            +'</div>'
+//            +'<div class="row">'
+//            +'    <div class="col-xs-5 col-xs-offset-1 sponsor">'
+//            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
+//            +'    </div>'
+//            +'    <div class="col-xs-5 sponsor">'
+//            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
+//            +'    </div>'
+//            +'</div>'
+//            +'<div class="row sponsor-row-footer">' +
+//            '<img src="/pictures/allpage/footer.png" class="sponsor-row-footer-bar">' +
+//            '<img src="/pictures/allpage/JWClogo.png" class="sponsor-row-footer-logo">' +
+//            '</div>'
+//            +'</div>';
     function resize(windowSize){
         if (windowSize <768){
-            $(".sponsor-row").remove();
-            $(".body-container").prepend(sponsorSmall);
+//            $(".sponsor-row").remove();
+//            $(".body-container").prepend(sponsorSmall);
 
             $(".back-button-text").addClass("hide");
         }
         else{
-            $(".sponsor-row").remove();
-            $(".body-container").prepend(sponsorBig);
+//            $(".sponsor-row").remove();
+//            $(".body-container").prepend(sponsorBig);
 
             $(".back-button-text").removeClass("hide");
         }

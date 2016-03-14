@@ -58,8 +58,21 @@ div{
 }
 
 .step-background-pass{
-    height: 90px;
-    padding-top: 13px;
+    /*height: 90px;*/
+    /*padding-top: 13px;*/
+    background-image: url('/pictures/form/icon_in.png');
+    background-size: 75px;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    color: black;
+    background-position-x: 50%;
+    background-position-y: 13px;
+    background-position: 50% 13px;
+}
+
+.step-background-pass-text{
+    margin-top: 29px;
+    margin-bottom: 40px;
 }
 
 .no-margin{
