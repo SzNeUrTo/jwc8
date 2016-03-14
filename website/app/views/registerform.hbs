@@ -95,16 +95,20 @@
                         <h3 class="pull-left">ข้อมูลทั่วไป</h3>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12">
-                            <input type="text" placeholder="ชื่อ-นามสกุล"></input>
+                        <div class="col-xs-6">
+                            <input type="text" placeholder="ชื่อ" name="firstname"></input>
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="text" placeholder="นามสกุล" name="lastname"></input>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="ชื่อเล่น"></input>
+                            <input type="text" placeholder="ชื่อเล่น" name="nickname"></input>
                         </div>
                         <div class="col-xs-6">
                             <div class="btn-group dropdown">
+                                <input type="hidden" id="sex" name="sex"></input>
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     เพศ <span class="caret"></span>
                                 </button>
@@ -117,10 +121,10 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" id="datepicker" placeholder="วัน/เดือน/ปีเกิด">
+                            <input type="text" id="datepicker" placeholder="วัน/เดือน/ปีเกิด" name="birthdate">
                         </div>
                         <div class="col-xs-6">
-                            <!--<input type="text" placeholder="ศาสนา"></input>-->
+                            <input type="hidden" id="religion" name="religion"></input>
                             <div class="btn-group dropdown">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     ศาสนา <span class="caret"></span>
@@ -129,15 +133,79 @@
                                     <li><a>พุทธ</a></li>
                                     <li><a>คริสต์</a></li>
                                     <li><a>อิสลาม</a></li>
-                                    <li><a>ฮินดู</a></li>
-                                    <li><a>ซิกข์</a></li>
-                                    <li><a>เต๋า</a></li>
+                                    <li><a>อื่น ๆ</a></li>
                                 </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input type="email" placeholder="E-mail" name="email"></input>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input type="text" placeholder="เบอร์โทรศัพท์" name="tel"></input>
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="hidden" id="size" name="size"></input>
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    ไซต์เสื้อ <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a>S (กว้าง 34" x ยาว 26")</a></li>
+                                    <li><a>M (กว้าง 36" x ยาว 27")</a></li>
+                                    <li><a>L (กว้าง 38" x ยาว 28")</a></li>
+                                    <li><a>XL (กว้าง 40" x ยาว 29")</a></li>
+                                    <li><a>XXL (กว้าง 42" x ยาว 30")</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="textarea">
+                                <textarea rows="8" placeholder="ที่อยู่" name="position"></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+              <br>
+              <div class="school row no-margin">
+                  <div class="col-md-8 col-md-offset-2 general">
+                      <div class="row">
+                          <h3 class="pull-left">ข้อมูลการศึกษา</h3>
+                      </div>
+                      <div class="row">
+                          <div class="col-xs-12">
+                              <input type="text" class="col-md-12" placeholder="โรงเรียน" name="school"></input>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-xs-6">
+                              <input type="hidden" id="level" name="level"></input>
+                              <div class="btn-group dropdown">
+                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      ระดับชั้น <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                      <li><a>ม.4</a></li>
+                                      <li><a>ม.5</a></li>
+                                      <li><a>ม.6</a></li>
+                                      <li><a>ปวช 1</a></li>
+                                      <li><a>ปวช 2</a></li>
+                                      <li><a>ปวช 3</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div class="col-xs-6">
+                              <input class="number" type="tel" placeholder="สายที่เรียน" name="major"></input>
+                          </div>
+                      </div>
+                  </div><!--.parent-->
+              </div>
             <br>
             <div class="parent row no-margin">
                 <div class="col-md-8 col-md-offset-2 general">
@@ -145,16 +213,19 @@
                         <h3 class="pull-left">ข้อมูลผู้ปกครอง</h3>
                     </div>
                     <div class="row">
-                        <div class="col-xs-12">
-                            <input type="text" class="col-md-12" placeholder="ชื่อ-นามสกุล"></input>
+                        <div class="col-xs-6">
+                            <input type="text" class="col-md-12" placeholder="นามสกุล" name="parent_firstname"></input>
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="text" class="col-md-12" placeholder="ชื่อ" name="parent_lastname"></input>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="สถานะที่เกี่ยวข้อง"></input>
+                            <input type="text" placeholder="สถานะที่เกี่ยวข้อง" name="parent"></input>
                         </div>
                         <div class="col-xs-6">
-                            <input class="number" type="tel" placeholder="เบอร์โทรศัพท์"></input>
+                            <input class="number" type="tel" placeholder="เบอร์โทรศัพท์" name="emergency_tel"></input>
                         </div>
                     </div>
                 </div><!--.parent-->
