@@ -1,3 +1,14 @@
+.gallery-section {
+    @extend .container;
+    text-align: center;
+    margin-bottom: 80px;
+    > .title {
+        padding: 0 35px;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+    }
+}
+
 .gallery-container {
     @extend .container;
     padding: 80px 25px;
@@ -18,15 +29,21 @@
         margin-bottom: 15px;
     }
     > .description {
-		font-family: 'THSarabunNew', Arial;
+        font-family: 'THSarabunNew', Arial;
         color: #ffffff;
     }
     > .description > .head {
         font-style: italic;
         text-decoration: underline;
     }
+    > .swipebox {
+        width: 25%;
+        height: 25%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
     > .swipebox > img {
-        box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
         border: 12px solid #efefef;
     }
 }

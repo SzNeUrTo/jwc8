@@ -1,6 +1,12 @@
+.faq-section {
+    @extend .container;
+    margin-bottom: 60px;
+}
+
 .faq-container {
     @extend .container;
     padding: 60px 25px;
+    min-height: 300px;
 }
 
 .faq-item {
@@ -10,8 +16,18 @@
     }
     > .description {
         color: #ffffff;
-		font-family: 'THSarabunNew', Arial;
-		font-size: 28px;
+        font-family: 'THSarabunNew', Arial;
+        font-size: 28px;
+        > a {
+            color: #ffffff;
+            font-style: bold;
+            text-decoration: underline;
+            &:hover,
+            &:active,
+            &:focus {
+                color: #ffffff;
+            }
+        }
     }
     > .description > .head {
         font-style: italic;
@@ -43,10 +59,9 @@
 }
 
 @media (min-width: 768px) {
-	.faq-container {
-		padding: 60px 15%;
-	}
-
+    .faq-container {
+        padding: 60px 15%;
+    }
     #faq-slide {
         .carousel-control > img {
             position: absolute;
