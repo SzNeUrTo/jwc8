@@ -252,3 +252,11 @@ input{
 [disabled="disabled"]{
     border-color: #ccc;
 }
+
+.goto{
+  color: white;
+}
+.goto:hover{
+  color:white;
+  text-decoration: none;
+}
