@@ -5822,7 +5822,7 @@ button.close {
     display: none !important; } }
 
 body {
-  background: url("../images/landing/bg.jpg") fixed center center; }
+  background: url("../images/landing/bg.jpg") no-repeat fixed center center; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "BoonJot", "Helvetica Nueu", Helvetica, Arial;
