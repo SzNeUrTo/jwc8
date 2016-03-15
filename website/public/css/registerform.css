@@ -176,7 +176,7 @@ input{
     outline: none;
     width: 100%;
     text-align: left;
-    color: darkgrey;
+    color: white;
 }
 
 .dropdown-menu{
@@ -250,8 +250,14 @@ input{
     box-shadow: none;
 }
 
+[readonly="readonly"]{
+    border-color: #ccc;
+    color: darkgray;
+}
+
 [disabled="disabled"]{
     border-color: #ccc;
+    cursor: default;;
 }
 
 
@@ -284,3 +290,18 @@ input{
     border: none;
 }
 
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+   color: white;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
+   color: white;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {  /* Firefox 19+ */
+   color: white;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+   color: white;
+}

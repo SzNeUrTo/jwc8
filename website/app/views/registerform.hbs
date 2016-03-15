@@ -6,7 +6,6 @@
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script>
-
 //    var registerType = {{registerType}};
 //      registerType = "marketing" or "content" or "design"
 var registerType = "marketing";
@@ -22,17 +21,27 @@ var registerType = "marketing";
   function changePage(thisPage, destPage) {
       console.log(thisPage + " " + destPage);
       if(destPage=="4") {  // Disable input box
-          $("input").attr("disabled", "disabled");
-          $("button").attr("disabled", "disabled");
-          $("textarea").attr("disabled", "disabled");
-          $(".textarea").attr("disabled", "disabled");
+          $("input").attr("readonly","");
+          $("button").attr("disabled","disabled");
+          $(".birthdate").attr("disabled","disabled");
+          // $(".birthdate").removeClass("hasDatepicker");
+          // $(".birthdate").removeAttr("id");
+          // $("#ui-datepicker-div").addClass("hide");
+          $("textarea").attr("readonly","");
+          $(".textarea").attr("readonly","");
           $(".button-row-1, .button-row-2, .button-row-3").addClass("hide");
-          $("input[type='submit']").removeAttr("disabled");
+          $("input[type='submit']").removeAttr("readonly");
+          var tmp = $("#datepicker").val();
+          $("#dateofbirth").val(tmp);
       } else {  // Enable input box
-          $("input").removeAttr("disabled");
+          $("input").removeAttr("readonly");
           $("button").removeAttr("disabled");
-          $("textarea").removeAttr("disabled");
-          $(".textarea").removeAttr("disabled");
+          $(".birthdate").removeAttr("disabled");
+          // $(".birthdate").addClass("hasDatepicker");
+          // $(".birthdate").attr("id","datepicker");
+          // $("#ui-datepicker-div").removeClass("hide");
+          $("textarea").removeAttr("readonly");
+          $(".textarea").removeAttr("readonly");
           $(".button-row-1, .button-row-2, .button-row-3").removeClass("hide");
       }
       $('html,body').scrollTop(0);
@@ -71,7 +80,7 @@ var registerType = "marketing";
 </script>
 
   <div class="register-form">
-    <form action="/xxx" method="POST">
+    <form id="form" action="/content" method="get" name="" class="">
     <div class="container body-container">
         <!--<div class="sponsor-row-big sponsor-row">-->
             <!--<div class="row">-->
@@ -214,7 +223,8 @@ var registerType = "marketing";
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" id="datepicker" placeholder="วัน/เดือน/ปีเกิด" name="birthdate">
+                            <input type="hidden" id="dateofbirth" name"birthdate">
+                            <input type="text" id="datepicker" class="birthdate" placeholder="วัน/เดือน/ปีเกิด">
                         </div>
                         <div class="col-xs-6">
                             <input type="hidden" id="religion" name="religion"/>
@@ -865,4 +875,10 @@ var registerType = "marketing";
             }
         });
     });
+
+    // $("#datepicker").focusout(function(){
+    //   var tmp = $("#datepicker").val();
+    //   $("#dateofbirth").val(tmp);
+    //   alert(tmp);
+    // });
 </script>
