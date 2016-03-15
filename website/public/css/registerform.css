@@ -55,8 +55,8 @@ div{
     color: black;
 }
 .step-background-future-text{
-    margin-top: 23px;
-    margin-bottom: 34px;
+    margin-top: 32px;
+    margin-bottom: 40px;
     color: rgb(30,52,39);
 }
 
@@ -204,14 +204,14 @@ input{
 }
 
 
-/*.flip {*/
-    /*-moz-transform: scaleX(-1);*/
-    /*-o-transform: scaleX(-1);*/
-    /*-webkit-transform: scaleX(-1);*/
-    /*transform: scaleX(-);*/
-    /*filter: FlipH;*/
-    /*-ms-filter: "FlipH";*/
-/*}*/
+.flip {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
 
 .fancy-file-upload {
     position: relative;
