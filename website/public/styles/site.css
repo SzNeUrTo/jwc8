@@ -5822,7 +5822,7 @@ button.close {
     display: none !important; } }
 
 body {
-  background: url("../images/landing/bg.jpg") no-repeat center center;
+  background: url("../images/landing/bg.jpg") no-repeat center center !important;
   background-color: #356243;
   background-attachment: fixed; }
 
@@ -6088,17 +6088,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -30px; }
   .detail-item.--marketing > .title,
   .detail-item.--marketing > .counter {
-    color: #68cbf2; }
+    color: #68cbf2 !important; }
 
 .detail-item.--design > .title,
 .detail-item.--design > .counter {
-  color: #fff458; }
+  color: #fff458 !important; }
 
 .detail-item.--content {
   margin-top: -45px; }
   .detail-item.--content > .title,
   .detail-item.--content > .counter {
-    color: #f08c95; }
+    color: #f08c95 !important; }
 
 .detail-item.-timeline > .image {
   width: 75%; }
