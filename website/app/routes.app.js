@@ -4,12 +4,10 @@ module.exports = function(app, passport) {
 	// require('../app/routes/time.routes')(app);
 	// require('../app/routes/query.routes')(app, passport);
 
-	
+
 	require('../app/routes/index.routes')(app);
 
 	require('../app/routes/register.routes')(app);
-	require('../app/routes/complete.routes')(app);
-
 	require('../app/routes/passport.routes.js')(app, passport);
 
 }

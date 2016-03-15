@@ -6028,6 +6028,11 @@ h1, h2, h3, h4, h5, h6 {
     background: url("../images/landing/title-dark-bg.png") no-repeat center center;
     background-size: 100%; }
 
+  .detail-item > .counter {
+    font-family: "Counter", "Helvetica Nueu", Helvetica, Arial;
+    font-size: 56px;
+  }
+
 .detail-item.--marketing > .title,
 .detail-item.--marketing > .counter {
   color: #68cbf2; }

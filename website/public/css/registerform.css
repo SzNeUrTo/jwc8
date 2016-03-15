@@ -55,8 +55,8 @@ div{
     color: black;
 }
 .step-background-future-text{
-    margin-top: 23px;
-    margin-bottom: 34px;
+    margin-top: 32px;
+    margin-bottom: 40px;
     color: rgb(30,52,39);
 }
 
@@ -102,6 +102,7 @@ div{
 
 .back-button{
     cursor: pointer;
+    color: rgb(37,64,47);
 }
 
 .head-background{
@@ -175,7 +176,7 @@ input{
     outline: none;
     width: 100%;
     text-align: left;
-    color: darkgrey;
+    color: white;
 }
 
 .dropdown-menu{
@@ -204,14 +205,14 @@ input{
 }
 
 
-/*.flip {*/
-    /*-moz-transform: scaleX(-1);*/
-    /*-o-transform: scaleX(-1);*/
-    /*-webkit-transform: scaleX(-1);*/
-    /*transform: scaleX(-);*/
-    /*filter: FlipH;*/
-    /*-ms-filter: "FlipH";*/
-/*}*/
+.flip {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
 
 .fancy-file-upload {
     position: relative;
@@ -249,6 +250,58 @@ input{
     box-shadow: none;
 }
 
+[readonly="readonly"]{
+    border-color: #ccc;
+    color: darkgray;
+}
+
 [disabled="disabled"]{
     border-color: #ccc;
+    cursor: default;;
+}
+
+
+.goto{
+  color: white;
+}
+.goto:hover{
+  color:white;
+  text-decoration: none;
+}
+
+.major-header{
+    margin-top: 0;
+}
+
+.head-1,.head-2,.head-3,.head-4{
+    margin-bottom: 25px;
+}
+
+.send-form-button{
+    background-image:url('/pictures/form/bgถัดไป.png');
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70px;
+    font-size: 31px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    border: none;
+}
+
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+   color: white;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
+   color: white;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {  /* Firefox 19+ */
+   color: white;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+   color: white;
 }

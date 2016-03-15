@@ -1,37 +1,35 @@
 var User = require('../models/db.model.js');
+var multer = require('multer');
 module.exports = function(app, passport) {
     // var register = require('../controllers/register.controller');
     // app.get('/register',register.render);
-
-    app.get('/register', isLoggedIn, function(req, res) {
-    	res.render('registerform');
+    var testMiddle = function (req, res, next) {
+      console.log("============*=========");
+    	console.log(req._filename = req.user.auth.facebook.id);
+    	next();
+    }
+    var storage = multer.diskStorage({
+    	destination: function (req, file, cb) {
+    		cb(null, './uploads')
+    	},
+    	filename: function (req, file, cb) {
+    		cb(null, req._filename + '.jpg');
+    	}
     });
+    var multerMiddle = multer({
+    	storage: storage,
+    	limits: {
+    		fileSize: 1000*1000*10, // not sure 10 MB
+    		files: 1,
+    		fields: 1
+    	}
+    }).single('upl');
 
-    app.post('/complete', isLoggedIn, function(req, res) {
-    	// res.send(req.body);
-		User.findOne({'auth.facebook.id': req.user.auth.facebook.id}, function(err, user){
-			var data = req.body;
-			registerData(user, data);
-			if (err) {
-				res.redirect('/');
-				console.log('err');
-				throw err;
-			}
-			if (!user) {
-				res.redirect('/');
-			}
-			else {
-				user.save(function(err) {
-					if (err) {
-						res.redirect('/');
-						throw err;
-					}
-					// res.redirect('/complete');
-					res.send(user);
-				});
-			}
-			// res.send(user);
-		});
+
+    app.get('/register/:major', isLoggedIn, function(req, res) {
+    	res.render('registerform',{
+        'major': req.params.major
+      });
     });
 
 	app.get('/userdata', isLoggedIn, function(req, res) {
@@ -51,7 +49,7 @@ module.exports = function(app, passport) {
 		});
 	});
 
-    app.post('/complete', isLoggedIn, function(req, res) {
+    app.post('/complete', [isLoggedIn, testMiddle, multerMiddle], function(req, res) {
     	// res.send(req.body);
 		User.findOne({'auth.facebook.id': req.user.auth.facebook.id}, function(err, user){
 			var data = req.body;

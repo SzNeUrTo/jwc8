@@ -1,3 +1,6 @@
 exports.render = function(req, res) {
-	res.render('registerform');
+	var major = req.params.major;
+	res.render('registerform',{
+		'major': major
+	});
 }

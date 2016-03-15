@@ -6,8 +6,14 @@
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script>
-
+//    var registerType = {{registerType}};
+//      registerType = "marketing" or "content" or "design"
+var marketing = "marketing";
+var content = "content";
+var design = "design";
+var registerType = {{major}};
   $(function() {
+
     $(".head-2, .head-3, .head-4").addClass("hide");
     $(".step-2, .step-3, .step-4").addClass("hide");
     $( "#datepicker" ).datepicker({
@@ -16,29 +22,69 @@
   });
 
   function changePage(thisPage, destPage) {
-    // Out
-    if(thisPage < destPage) {
-      $('.head-'+thisPage).addClass('hide');
-      $('.step-'+thisPage).addClass('animated slideOutLeft hide');
-    } else if(thisPage > destPage) {
-      $('.head-'+thisPage).addClass('hide');
-      $('.step-'+thisPage).addClass('animated slideOutRight hide');
-    }
+      console.log(thisPage + " " + destPage);
+      if(destPage=="4") {  // Disable input box
+          $("input").attr("readonly","");
+          $("button").attr("disabled","disabled");
+          $(".birthdate").attr("disabled","disabled");
+          // $(".birthdate").removeClass("hasDatepicker");
+          // $(".birthdate").removeAttr("id");
+          // $("#ui-datepicker-div").addClass("hide");
+          $("textarea").attr("readonly","");
+          $(".textarea").attr("readonly","");
+          $(".button-row-1, .button-row-2, .button-row-3").addClass("hide");
+          $("input[type='submit']").removeAttr("readonly");
+          var tmp = $("#datepicker").val();
+          $("#dateofbirth").val(tmp);
+      } else {  // Enable input box
+          $("input").removeAttr("readonly");
+          $("button").removeAttr("disabled");
+          $(".birthdate").removeAttr("disabled");
+          // $(".birthdate").addClass("hasDatepicker");
+          // $(".birthdate").attr("id","datepicker");
+          // $("#ui-datepicker-div").removeClass("hide");
+          $("textarea").removeAttr("readonly");
+          $(".textarea").removeAttr("readonly");
+          $(".button-row-1, .button-row-2, .button-row-3").removeClass("hide");
+      }
+      $('html,body').scrollTop(0);
+    if(parseInt(thisPage) < parseInt(destPage)) {
+        // Out
+        console.log("Next");
+        if(destPage=="4")
+            $(".sub-head").removeClass("hide");
+        if(thisPage=="3" || thisPage=="4")
+            thisPage = thisPage+"-"+registerType;
+        $('.head-'+thisPage).addClass('hide');
+        $('.step-'+thisPage).removeClass('animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideOutLeft hide');
 
-    // In
-    if(thisPage < destPage) {
-      $('.head-'+destPage).removeClass('hide');
-      $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight').addClass('animated slideInLeft');
-    } else if(thisPage > destPage) {
-      $('.head-'+destPage).removeClass('hide');
-      $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight').addClass('animated slideInRight');
+        // In
+        if(destPage=="3" || destPage=="4")
+            destPage = destPage+"-"+registerType;
+        $('.head-'+destPage).removeClass('hide');
+        $('.step-'+destPage).removeClass('hide animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideInRight');
+    } else if(parseInt(thisPage) > parseInt(destPage)) {
+        // Out
+        console.log("Prev");
+        if(thisPage=="4")
+            $(".sub-head").addClass("hide");
+        if(thisPage=="3" || thisPage=="4"){
+            thisPage = thisPage+"-"+registerType;}
+        $('.head-'+thisPage).addClass('hide');
+        $('.step-'+thisPage).removeClass('animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideOutRight hide');
+
+        // In
+        if(destPage=="3" || destPage=="4"){
+            destPage = destPage+"-"+registerType;}
+        $('.head-'+destPage).removeClass('hide');
+        $('.step-'+destPage).removeClass('hide animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideInLeft');
     }
   }
 </script>
 <form class="register" action="/complete" method="post">
 
   <div class="register-form">
-
+    <form id="form" action="/complete" method="post" name="" class="">
     <div class="container body-container">
         <!--<div class="sponsor-row-big sponsor-row">-->
             <!--<div class="row">-->
@@ -67,6 +113,46 @@
 <br>
       <div class="row question-form">
 
+        <section id="form">
+
+          <div class="row step-bar-row text-center head-4 head-4-content head-4-design head-4-marketing">
+              <div class="col-xs-3 step-bar-main">
+                  <div class="row step-background-pass">
+                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+                  </div>
+                  <div class="row">
+                      <h2>ประวัติส่วนตัว</h2>
+                  </div>
+              </div>
+              <div class="col-xs-3 step-bar">
+                  <div class="row step-background-pass  flip">
+                      <h4 class="step-background-pass-text  flip"><i class="fa fa-check"></i></h4>
+                  </div>
+                  <div class="row">
+                      <h2>คำถามค่าย</h2>
+                  </div>
+              </div>
+              <div class="col-xs-3 step-bar">
+                  <div class="row step-background-pass">
+                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+                  </div>
+                  <div class="row">
+                      <h2>คำถามสาขา</h2>
+                  </div>
+              </div>
+              <div class="col-xs-3 step-bar">
+                  <div class="row step-background-now  flip">
+                      <h2 class="step-background-now-text  flip">4</h2>
+                  </div>
+                  <div class="row">
+                      <h2>สรุปภาพรวม</h2>
+                  </div>
+              </div>
+          </div>
+
+
+
+        <section id="form">
           <div class="row step-bar-row text-center head-1">
               <div class="col-xs-3 step-bar-main">
                   <div class="row step-background-now">
@@ -77,8 +163,8 @@
                   </div>
               </div>
               <div class="col-xs-3 step-bar">
-                  <div class="row step-background-future">
-                      <h2 class="step-background-future-text">2</h2>
+                  <div class="row step-background-future flip">
+                      <h4 class="step-background-future-text flip">2</h4>
                   </div>
                   <div class="row">
                       <h2>คำถามค่าย</h2>
@@ -86,25 +172,28 @@
               </div>
               <div class="col-xs-3 step-bar">
                   <div class="row step-background-future">
-                      <h2 class="step-background-future-text">3</h2>
+                      <h4 class="step-background-future-text">3</h4>
                   </div>
                   <div class="row">
                       <h2>คำถามสาขา</h2>
                   </div>
               </div>
               <div class="col-xs-3 step-bar">
-                  <div class="row step-background-future">
-                      <h2 class="step-background-future-text">4</h2>
+                  <div class="row step-background-future flip">
+                      <h4 class="step-background-future-text flip">4</h4>
                   </div>
                   <div class="row">
                       <h2>สรุปภาพรวม</h2>
                   </div>
               </div>
           </div>
+        </section>
 
 
-          <section class="container step-1">
-
+          <section class="container step-1 step-4-design step-4-content step-4-marketing">
+              <div class="row no-margin sub-head hide">
+                  <h2>ประวัติส่วนตัว</h2>
+              </div>
             <div class="student row no-margin">
                 <div class="col-md-8 col-md-offset-2 general">
                     <div class="row">
@@ -112,19 +201,19 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="ชื่อ" name="firstname"/>
+                            <input type="text" placeholder="ชื่อ" name="firstname" required>
                         </div>
                         <div class="col-xs-6">
-                            <input type="text" placeholder="นามสกุล" name="lastname"/>
+                            <input type="text" placeholder="นามสกุล" name="lastname" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="ชื่อเล่น" name="nickname"/>
+                            <input type="text" placeholder="ชื่อเล่น" name="nickname" required>
                         </div>
                         <div class="col-xs-6">
                             <div class="btn-group dropdown">
-                                <input type="hidden" id="sex" name="sex"/>
+                                <input type="hidden" id="sex" name="sex" required>
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     เพศ <span class="caret"></span>
                                 </button>
@@ -137,10 +226,11 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" id="datepicker" placeholder="วัน/เดือน/ปีเกิด" name="birthdate">
+                            <input type="hidden" id="dateofbirth" name"birthdate" required>
+                            <input type="text" id="datepicker" class="birthdate" placeholder="วัน/เดือน/ปีเกิด">
                         </div>
                         <div class="col-xs-6">
-                            <input type="hidden" id="religion" name="religion"/>
+                            <input type="hidden" id="religion" name="religion" required>
                             <div class="btn-group dropdown">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     ศาสนา <span class="caret"></span>
@@ -156,15 +246,15 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <input type="email" placeholder="E-mail" name="email"/>
+                            <input type="email" placeholder="E-mail" name="email" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="เบอร์โทรศัพท์" name="tel"/>
+                            <input type="text" class="number" placeholder="เบอร์โทรศัพท์" name="tel" required>
                         </div>
                         <div class="col-xs-6">
-                            <input type="hidden" id="size" name="size"/>
+                            <input type="hidden" id="size" name="size" required>
                             <div class="btn-group dropdown">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     ไซต์เสื้อ <span class="caret"></span>
@@ -182,7 +272,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="textarea">
-                                <textarea rows="3" placeholder="ที่อยู่" name="position"></textarea>
+                                <textarea rows="3" placeholder="ที่อยู่" name="position" required></textarea>
                             </div>
                         </div>
                     </div>
@@ -196,12 +286,12 @@
                       </div>
                       <div class="row">
                           <div class="col-xs-12">
-                              <input type="text" class="col-md-12" placeholder="โรงเรียน" name="school"/>
+                              <input type="text" class="col-md-12" placeholder="โรงเรียน" name="school" required>
                           </div>
                       </div>
                       <div class="row">
                           <div class="col-xs-6">
-                              <input type="hidden" id="level" name="level"/>
+                              <input type="hidden" id="level" name="level" required>
                               <div class="btn-group dropdown">
                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       ระดับชั้น <span class="caret"></span>
@@ -218,7 +308,7 @@
                               </div>
                           </div>
                           <div class="col-xs-6">
-                              <input class="number" type="tel" placeholder="สายที่เรียน" name="major"/>
+                              <input type="tel" placeholder="สายที่เรียน" name="major" required>
                           </div>
                       </div>
                   </div><!--.parent-->
@@ -231,18 +321,18 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" class="col-md-12" placeholder="นามสกุล" name="parent_firstname"/>
+                            <input type="text" class="col-md-12" placeholder="นามสกุล" name="parent_firstname" required>
                         </div>
                         <div class="col-xs-6">
-                            <input type="text" class="col-md-12" placeholder="ชื่อ" name="parent_lastname"/>
+                            <input type="text" class="col-md-12" placeholder="ชื่อ" name="parent_lastname" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="สถานะที่เกี่ยวข้อง" name="parent"/>
+                            <input type="text" placeholder="สถานะที่เกี่ยวข้อง" name="parent" required>
                         </div>
                         <div class="col-xs-6">
-                            <input class="number" type="tel" placeholder="เบอร์โทรศัพท์" name="emergency_tel"/>
+                            <input class="number" type="tel" placeholder="เบอร์โทรศัพท์" name="emergency_tel" required>
                         </div>
                     </div>
                 </div><!--.parent-->
@@ -250,9 +340,9 @@
 
             <br>
             <br>
-              <div class="row text-center">
+              <div class="row text-center button-row-1">
                   <div class="col-xs-4 col-xs-offset-4">
-                      <h3 class="next-button next-button-1" onclick="changePage('1','2')">ถัดไป</h3>
+                      <h3 class="next-button next-button-1" onclick="changePage('1','2')"><a class="goto" href="#form">ถัดไป</a></h3>
                   </div>
               </div>
 
@@ -268,8 +358,8 @@
                   </div>
               </div>
               <div class="col-xs-3 step-bar">
-                  <div class="row step-background-now">
-                      <h2 class="step-background-now-text">2</h2>
+                  <div class="row step-background-now  flip">
+                      <h2 class="step-background-now-text  flip">2</h2>
                   </div>
                   <div class="row">
                       <h2>คำถามค่าย</h2>
@@ -277,15 +367,15 @@
               </div>
               <div class="col-xs-3 step-bar">
                   <div class="row step-background-future">
-                      <h2 class="step-background-future-text">3</h2>
+                      <h4 class="step-background-future-text">3</h4>
                   </div>
                   <div class="row">
                       <h2>คำถามสาขา</h2>
                   </div>
               </div>
               <div class="col-xs-3 step-bar">
-                  <div class="row step-background-future">
-                      <h2 class="step-background-future-text">4</h2>
+                  <div class="row step-background-future  flip">
+                      <h4 class="step-background-future-text  flip">4</h4>
                   </div>
                   <div class="row">
                       <h2>สรุปภาพรวม</h2>
@@ -294,7 +384,10 @@
           </div>
 
 
-          <section class="container step-2">
+          <section class="container step-2 step-4-design step-4-content step-4-marketing">
+              <div class="row no-margin sub-head hide">
+                  <h2>คำถามค่าย</h2>
+              </div>
               <div class="row no-margin">
                   <div class="col-md-8 col-md-offset-2 general">
                       <div class="row no-margin">
@@ -303,7 +396,7 @@
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea name="g_your_experience" rows="8"></textarea>
+                                  <textarea name="g_your_experience" rows="8" required></textarea>
                               </div>
                           </div>
                       </div>
@@ -318,7 +411,7 @@
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea name="g_your_hobbies" rows="8"></textarea>
+                                  <textarea name="g_your_hobbies" rows="8" required></textarea>
                               </div>
                           </div>
                       </div>
@@ -334,7 +427,7 @@
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea name="g_your_strong_point" rows="8"></textarea>
+                                  <textarea name="g_your_strong_point" rows="8" required></textarea>
                               </div>
                           </div>
                       </div>
@@ -349,7 +442,7 @@
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea name="g_your_like_unlike" rows="8"></textarea>
+                                  <textarea name="g_your_like_unlike" rows="8" required></textarea>
                               </div>
                           </div>
                       </div>
@@ -365,7 +458,7 @@
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea name="g_your_created_websites" rows="8"></textarea>
+                                  <textarea name="g_your_created_websites" rows="8" required></textarea>
                               </div>
                           </div>
                       </div>
@@ -373,20 +466,20 @@
               </div>
                 <br>
                 <br>
-                <div class="row">
+                <div class="row button-row-2">
                     <div class="col-xs-4" onclick="changePage('2','1')">
                         <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                        <h3 class="back-button back-button-text back-button-2">กลับไปแก้ไข</h3>
+                        <h3 class="back-button back-button-text back-button-2"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
                     </div>
                     <div class="col-xs-4 text-center">
-                        <h3 class="next-button next-button-2" onclick="changePage('2','3')">ถัดไป</h3>
+                        <h3 class="next-button next-button-2" onclick="changePage('2','3')"><a class="goto" href="#form">ถัดไป</a></h3>
                     </div>
                 </div>
 
           </section><!--.step-2-->
 
 
-          <div class="row step-bar-row text-center head-3">
+          <div class="row step-bar-row text-center head-3 head-3-marketing head-3-content head-3-design">
               <div class="col-xs-3 step-bar-main">
                   <div class="row step-background-pass">
                       <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
@@ -396,8 +489,8 @@
                   </div>
               </div>
               <div class="col-xs-3 step-bar">
-                  <div class="row step-background-pass">
-                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+                  <div class="row step-background-pass flip">
+                      <h4 class="step-background-pass-text flip"><i class="fa fa-check"></i></h4>
                   </div>
                   <div class="row">
                       <h2>คำถามค่าย</h2>
@@ -413,7 +506,7 @@
               </div>
               <div class="col-xs-3 step-bar">
                   <div class="row step-background-future">
-                      <h2 class="step-background-future-text">4</h2>
+                      <h4 class="step-background-future-text">4</h4>
                   </div>
                   <div class="row">
                       <h2>สรุปภาพรวม</h2>
@@ -444,8 +537,11 @@
           <!--</div>-->
 
 
-          <section class="container step-3 step-3-marketing">
-              <h2 class="head-background text-center">Web Marketing</h2>
+          <section class="container step-3 step-3-marketing step-4-marketing">
+              <div class="row no-margin sub-head hide">
+                  <h2>คำถามสาขา</h2>
+              </div>
+              <h2 class="head-background text-center major-header">Web Marketing</h2>
 
                 <div class="row no-margin">
                     <div class="col-md-8 col-md-offset-2 general">
@@ -494,19 +590,22 @@
 
                 <br>
                 <br>
-                <div class="row">
+                <div class="row button-row-3">
                     <div class="col-xs-4" onclick="changePage('3','2')">
                         <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                        <h3 class="back-button back-button-text">กลับไปแก้ไข</h3>
+                        <h3 class="back-button back-button-text"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
                     </div>
                     <div class="col-xs-4 text-center">
-                        <h3 class="next-button" onclick="changePage('3','4')">ถัดไป</h3>
+                        <h3 class="next-button" onclick="changePage('3','4')"><a class="goto" href="#form">ถัดไป</a></h3>
                     </div>
                 </div>
             </section>
 
-            <section class="container step-3 step-3-content">
-                <h2 class="head-background text-center">Web Content</h2>
+            <section class="container step-3 step-3-content step-4-content">
+                <div class="row no-margin sub-head hide">
+                    <h2>คำถามสาขา</h2>
+                </div>
+                <h2 class="head-background text-center major-header">Web Content</h2>
 
                   <div class="row no-margin">
                       <div class="col-md-8 col-md-offset-2 general">
@@ -540,19 +639,22 @@
 
                   <br>
                   <br>
-                  <div class="row">
+                  <div class="row button-row-3">
                       <div class="col-xs-4" onclick="changePage('3','2')">
                           <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                          <h3 class="back-button back-button-text">กลับไปแก้ไข</h3>
+                          <h3 class="back-button back-button-text"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
                       </div>
                       <div class="col-xs-4 text-center">
-                          <h3 class="next-button" onclick="changePage('3','4')">ถัดไป</h3>
+                          <h3 class="next-button" onclick="changePage('3','4')"><a class="goto" href="#form">ถัดไป</a></h3>
                       </div>
                   </div>
                 </section>
 
-              <section class="container step-3 step-3-design">
-                  <h2 class="head-background text-center">Web Design</h2>
+              <section class="container step-3 step-3-design step-4-design">
+                  <div class="row no-margin sub-head hide">
+                      <h2>คำถามสาขา</h2>
+                  </div>
+                  <h2 class="head-background text-center major-header">Web Design</h2>
 
                     <div class="row no-margin">
                         <div class="col-md-8 col-md-offset-2 general">
@@ -601,13 +703,13 @@
 
                     <br>
                     <br>
-                    <div class="row">
+                    <div class="row button-row-3">
                         <div class="col-xs-4" onclick="changePage('3','2')">
                             <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                            <h3 class="back-button back-button-text">กลับไปแก้ไข</h3>
+                            <h3 class="back-button back-button-text"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
                         </div>
                         <div class="col-xs-4 text-center">
-                            <h3 class="next-button" onclick="changePage('3','4')">ถัดไป</h3>
+                            <h3 class="next-button" onclick="changePage('3','4')"><a class="goto" href="#form">ถัดไป</a></h3>
                         </div>
                     </div>
                   </section>
@@ -615,73 +717,48 @@
 
 
 
-          <br>
-          <br>
-          <br>
-          <br>
+          <!--<br>-->
+          <!--<br>-->
+          <!--<br>-->
+          <!--<br>-->
 
-          <div class="row step-bar-row text-center head-4">
-              <div class="col-xs-3 step-bar-main">
-                  <div class="row step-background-pass">
-                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>ประวัติส่วนตัว</h2>
-                  </div>
+          <!---->
+
+          <!--<br><br>-->
+
+          <section class="step-4 step-4-design step-4-content step-4-marketing">
+              <div class="row no-margin sub-head hide">
+                  <h2>สรุปภาพรวม</h2>
               </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-pass">
-                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามค่าย</h2>
-                  </div>
+
+              <div class="row text-center">
+                  <p>ให้น้องๆ ตรวจสอบข้อมูลทุกอย่างให้เรียบร้อย</p>
+                  <p>หากพบข้อมูลส่วนใดไม่ถูกต้อง สามารถกดปุ่ม "กลับไปแก้ไข" ได้</p>
+                  <p>หลังจากตรวจสอบและกด "ส่งคำตอบ" แล้ว จะไม่สามารถกลับมาแก้ไขได้อีก</p>
+
               </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-pass">
-                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามสาขา</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-now">
-                      <h2 class="step-background-now-text">4</h2>
-                  </div>
-                  <div class="row">
-                      <h2>สรุปภาพรวม</h2>
-                  </div>
-              </div>
-          </div>
-
-          <br><br>
-
-          <section class="step-4">
-
-            <p>มีข้อความประมาณว่า “ให้น้องๆ ตรวจสอบข้อมูลประวัติ และคำตอบ</p>
-            <p>หลังจากกดส่งแล้ว คำตอบไม่สามารถกลับมาแก้ไขได้ บลาๆ</p>
-            <br>
-
-            <p>เอาทุก Field มาโชว์ แบบ View Only ถ้า User จะแก้ไข</p>
-            <p>ให้กด “กลับไปแก้ไข”</p>
 
 
             <br><br>
 
-            <div class="row">
+            <div class="row button-row-4">
                 <div class="col-xs-4" onclick="changePage('4','3')">
                     <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                    <h3 class="back-button back-button-text back-button-4">กลับไปแก้ไข</h3>
+                    <h3 class="back-button back-button-text back-button-4"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
                 </div>
                 <div class="col-xs-4 text-center">
-                    <h3 class="next-button next-button-4" onclick="changePage('4','5')">ถัดไป</h3>
+
+                    <!-- <h3 class="next-button next-button-4" onclick="changePage('4','5')"><a class="goto" href="#form">ถัดไป</a></h3> -->
+
+                    <input type="submit" class="send-form-button" value="ส่งคำตอบ">
+
                 </div>
             </div>
             <br>
 
 
           </section><!--.step-4-->
+
 
           <br><br>
 
@@ -698,7 +775,7 @@
 
 
     </div><!--.container-->
-
+    </form>
   </div><!--.register-form-->
   <input type="submit" name="submitbtn">
 </form>
@@ -800,4 +877,10 @@
             }
         });
     });
+
+    // $("#datepicker").focusout(function(){
+    //   var tmp = $("#datepicker").val();
+    //   $("#dateofbirth").val(tmp);
+    //   alert(tmp);
+    // });
 </script>

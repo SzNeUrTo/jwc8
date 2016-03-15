@@ -16,7 +16,7 @@ exports.render = function(req, res) {
 	      '/pictures/sponser/Logo_WebSamakom.png',
 	      '/pictures/sponser/Logo_WebSamakom.png'];
 
-	res.render('test',{
+	res.render('onepage',{
 		'pictures': pictures,
 		'event': eventPic
 	});
