@@ -39,26 +39,26 @@ var registerType = "marketing";
         if(thisPage=="3" || thisPage=="4")
             thisPage = thisPage+"-"+registerType;
         $('.head-'+thisPage).addClass('hide');
-        $('.step-'+thisPage).removeClass('slideOutLeft slideOutRight').addClass('animated slideOutLeft hide');
+        $('.step-'+thisPage).removeClass('animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideOutLeft hide');
 
         // In
         if(destPage=="3" || destPage=="4")
             destPage = destPage+"-"+registerType;
         $('.head-'+destPage).removeClass('hide');
-        $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight').addClass('animated slideInRight');
+        $('.step-'+destPage).removeClass('hide animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideInRight');
     } else if(parseInt(thisPage) > parseInt(destPage)) {
         // Out
         console.log("Prev");
-        if(thisPage=="3" || thisPage=="4")
-            thisPage = thisPage+"-"+registerType;
+        if(thisPage=="3" || thisPage=="4"){
+            thisPage = thisPage+"-"+registerType;console.log("Prev5555");}
         $('.head-'+thisPage).addClass('hide');
-        $('.step-'+thisPage).removeClass('slideOutLeft slideOutRight').addClass('animated slideOutRight hide');
+        $('.step-'+thisPage).removeClass('animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideOutRight hide');
 
         // In
-        if(destPage=="3" || destPage=="4")
-            destPage = destPage+"-"+registerType;
+        if(destPage=="3" || destPage=="4"){
+            destPage = destPage+"-"+registerType;console.log("Prev666");}
         $('.head-'+destPage).removeClass('hide');
-        $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight').addClass('animated slideInLeft');
+        $('.step-'+destPage).removeClass('hide animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideInLeft');
     }
   }
 </script>
@@ -561,7 +561,7 @@ var registerType = "marketing";
                               </div> -->
 
                               <!--////-->
-                          </div> 
+                          </div>
                       </div>
 
 
