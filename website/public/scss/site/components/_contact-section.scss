@@ -1,19 +1,22 @@
 .contact-section {
     @extend .container;
+    margin-top: 60px;
     margin-bottom: 60px;
     > .title {
         margin-bottom: 10px;
     }
-
     > .text {
         font-family: 'THSarabunNew';
         font-weight: 200;
         color: #ffffff;
         margin-top: 0;
     }
-
     > .qrcode {
         float: right;
         margin-top: 25px;
     }
+}
+
+.fb-page {
+    float: right;
 }

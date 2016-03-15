@@ -5860,7 +5860,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 400px;
     max-width: 100%;
     margin: 0 auto;
-    margin-bottom: 5px;
+    margin-top: 100px;
+    margin-bottom: 20px;
     padding: 0 30px; }
     .first-section > .main-logo:before, .first-section > .main-logo:after {
       content: " ";
@@ -5890,6 +5891,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 25px; }
 
 .contact-section {
+  margin-top: 60px;
   margin-bottom: 60px; }
   .contact-section > .title {
     margin-bottom: 10px; }
@@ -5901,6 +5903,9 @@ h1, h2, h3, h4, h5, h6 {
   .contact-section > .qrcode {
     float: right;
     margin-top: 25px; }
+
+.fb-page {
+  float: right; }
 
 .main-logo {
   margin-bottom: 45px;
