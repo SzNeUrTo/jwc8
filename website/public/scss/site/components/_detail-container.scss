@@ -1,0 +1,100 @@
+.detail-container {
+    @include make-row();
+}
+
+.detail-item {
+    @include make-sm-column(4);
+    margin-bottom: 55px;
+    position: relative;
+    text-align: center;
+
+    &:last-child {
+    	margin-bottom: 0px;
+    }
+
+    > .image {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+    > .title {
+        width: 230px;
+    }
+    > .description {
+		font-family: 'THSarabunNew', Arial;
+		font-size: 28px;
+        color: $main-font-color;
+        font-weight: 200;
+        margin-bottom: 15px;
+    }
+    > .skills {
+    	display: block;
+    	margin: 0 auto;
+    	max-width: 235px;
+    	width: 100%;
+    }
+	> .btn,
+	> .counter {
+		border-radius: 0;
+		padding: 0;
+		margin-top: 0;
+		margin-bottom: 25px;
+		margin-left: auto;
+		margin-right: auto;
+
+		width: 180px;
+		height: 80px;
+
+		line-height: 80px;
+		color: $main-font-color;
+		font-family: $title-font;
+		font-size: 24px;
+		background: url('../images/landing/title-dark-bg.png') no-repeat center center;
+		background-size: 100%;
+	}
+}
+
+.detail-item.--marketing {
+	> .title,
+	> .counter {
+		color: #68cbf2;
+	}
+}
+
+.detail-item.--design {
+	> .title,
+	> .counter {
+		color: #fff458;
+	}
+}
+
+.detail-item.--content {
+	> .title,
+	> .counter {
+		color: #f08c95;
+	}
+}
+
+.detail-item.-timeline {
+	> .image {
+		width: 75%;
+	}
+}
+
+@media (min-width: 768px) {
+    .detail-item.-activity {
+        &:after {
+            content: " ";
+            background: url('../images/landing/arrow-right.png') no-repeat center center;
+            background-size: 100%;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            right: -40px;
+            top: 20%;
+        }
+        &:last-child:after {
+            display: none;
+        }
+    }
+}

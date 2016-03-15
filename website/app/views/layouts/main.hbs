@@ -8,25 +8,26 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.0.0/js/smooth-scroll.min.js"></script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Kanit:400,100,200,300,500' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/fonts.css">
-  <link rel="stylesheet" href="/css/site.css">
+  <link rel="stylesheet" href="/styles/site.css">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1065330750192936";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 <div class="border-blackboard -top"></div>
-<div class="navigation">
-  <div class="menu">
-    <div id="whatis" class="sub-nav">JWC คืออะไร</div>
-    <div id="register" class="sub-nav">สาขาที่สมัคร</div>
-    <div id="calendar" class="sub-nav">กำหนดการ</div>
-    <div id="eventpic" class="sub-nav">ภาพกิจกรรม</div>
-    <div id="about" class="sub-nav">ติดตามค่าย</div>
-  </div>
-</div>
   {{{body}}}
-  <div class="border-blackboard -bottom"></div>
-  <script type="text/javascript" src="/js/main.js">
-  </script>
+<div class="border-blackboard -bottom"></div>
+<script type="text/javascript" src="/js/main.js">
+</script>
 </body>
 </html>
