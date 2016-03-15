@@ -34,10 +34,12 @@ var registerType = "marketing";
           $(".textarea").removeAttr("disabled");
           $(".button-row-1, .button-row-2, .button-row-3").removeClass("hide");
       }
-
+      $('html,body').scrollTop(0);
     if(parseInt(thisPage) < parseInt(destPage)) {
         // Out
         console.log("Next");
+        if(destPage=="4")
+            $(".sub-head").removeClass("hide");
         if(thisPage=="3" || thisPage=="4")
             thisPage = thisPage+"-"+registerType;
         $('.head-'+thisPage).addClass('hide');
@@ -51,14 +53,16 @@ var registerType = "marketing";
     } else if(parseInt(thisPage) > parseInt(destPage)) {
         // Out
         console.log("Prev");
+        if(thisPage=="4")
+            $(".sub-head").addClass("hide");
         if(thisPage=="3" || thisPage=="4"){
-            thisPage = thisPage+"-"+registerType;console.log("Prev5555");}
+            thisPage = thisPage+"-"+registerType;}
         $('.head-'+thisPage).addClass('hide');
         $('.step-'+thisPage).removeClass('animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideOutRight hide');
 
         // In
         if(destPage=="3" || destPage=="4"){
-            destPage = destPage+"-"+registerType;console.log("Prev666");}
+            destPage = destPage+"-"+registerType;}
         $('.head-'+destPage).removeClass('hide');
         $('.step-'+destPage).removeClass('hide animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideInLeft');
     }
@@ -95,6 +99,41 @@ var registerType = "marketing";
 <br>
 
       <div class="row question-form">
+          <div class="row step-bar-row text-center head-4 head-4-content head-4-design head-4-marketing">
+              <div class="col-xs-3 step-bar-main">
+                  <div class="row step-background-pass">
+                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+                  </div>
+                  <div class="row">
+                      <h2>ประวัติส่วนตัว</h2>
+                  </div>
+              </div>
+              <div class="col-xs-3 step-bar">
+                  <div class="row step-background-pass  flip">
+                      <h4 class="step-background-pass-text  flip"><i class="fa fa-check"></i></h4>
+                  </div>
+                  <div class="row">
+                      <h2>คำถามค่าย</h2>
+                  </div>
+              </div>
+              <div class="col-xs-3 step-bar">
+                  <div class="row step-background-pass">
+                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+                  </div>
+                  <div class="row">
+                      <h2>คำถามสาขา</h2>
+                  </div>
+              </div>
+              <div class="col-xs-3 step-bar">
+                  <div class="row step-background-now  flip">
+                      <h2 class="step-background-now-text  flip">4</h2>
+                  </div>
+                  <div class="row">
+                      <h2>สรุปภาพรวม</h2>
+                  </div>
+              </div>
+          </div>
+
 
           <div class="row step-bar-row text-center head-1">
               <div class="col-xs-3 step-bar-main">
@@ -133,7 +172,9 @@ var registerType = "marketing";
 
 
           <section class="container step-1 step-4-design step-4-content step-4-marketing">
-
+              <div class="row no-margin sub-head hide">
+                  <h2>ประวัติส่วนตัว</h2>
+              </div>
             <div class="student row no-margin">
                 <div class="col-md-8 col-md-offset-2 general">
                     <div class="row">
@@ -324,6 +365,9 @@ var registerType = "marketing";
 
 
           <section class="container step-2 step-4-design step-4-content step-4-marketing">
+              <div class="row no-margin sub-head hide">
+                  <h2>คำถามค่าย</h2>
+              </div>
               <div class="row no-margin">
                   <div class="col-md-8 col-md-offset-2 general">
                       <div class="row no-margin">
@@ -415,7 +459,7 @@ var registerType = "marketing";
           </section><!--.step-2-->
 
 
-          <div class="row step-bar-row text-center head-3">
+          <div class="row step-bar-row text-center head-3 head-3-marketing head-3-content head-3-design">
               <div class="col-xs-3 step-bar-main">
                   <div class="row step-background-pass">
                       <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
@@ -474,7 +518,10 @@ var registerType = "marketing";
 
 
           <section class="container step-3 step-3-marketing step-4-marketing">
-              <h2 class="head-background text-center">Web Marketing</h2>
+              <div class="row no-margin sub-head hide">
+                  <h2>คำถามสาขา</h2>
+              </div>
+              <h2 class="head-background text-center major-header">Web Marketing</h2>
 
                 <div class="row no-margin">
                     <div class="col-md-8 col-md-offset-2 general">
@@ -535,7 +582,10 @@ var registerType = "marketing";
             </section>
 
             <section class="container step-3 step-3-content step-4-content">
-                <h2 class="head-background text-center">Web Content</h2>
+                <div class="row no-margin sub-head hide">
+                    <h2>คำถามสาขา</h2>
+                </div>
+                <h2 class="head-background text-center major-header">Web Content</h2>
 
                   <div class="row no-margin">
                       <div class="col-md-8 col-md-offset-2 general">
@@ -581,7 +631,10 @@ var registerType = "marketing";
                 </section>
 
               <section class="container step-3 step-3-design step-4-design">
-                  <h2 class="head-background text-center">Web Design</h2>
+                  <div class="row no-margin sub-head hide">
+                      <h2>คำถามสาขา</h2>
+                  </div>
+                  <h2 class="head-background text-center major-header">Web Design</h2>
 
                     <div class="row no-margin">
                         <div class="col-md-8 col-md-offset-2 general">
@@ -644,56 +697,28 @@ var registerType = "marketing";
 
 
 
-          <br>
-          <br>
-          <br>
-          <br>
+          <!--<br>-->
+          <!--<br>-->
+          <!--<br>-->
+          <!--<br>-->
 
-          <div class="row step-bar-row text-center head-4">
-              <div class="col-xs-3 step-bar-main">
-                  <div class="row step-background-pass">
-                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>ประวัติส่วนตัว</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-pass  flip">
-                      <h4 class="step-background-pass-text  flip"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามค่าย</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-pass">
-                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามสาขา</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-now  flip">
-                      <h2 class="step-background-now-text  flip">4</h2>
-                  </div>
-                  <div class="row">
-                      <h2>สรุปภาพรวม</h2>
-                  </div>
-              </div>
-          </div>
+          <!---->
 
-          <br><br>
+          <!--<br><br>-->
 
           <section class="step-4 step-4-design step-4-content step-4-marketing">
+              <div class="row no-margin sub-head hide">
+                  <h2>สรุปภาพรวม</h2>
+              </div>
 
-            <p>มีข้อความประมาณว่า “ให้น้องๆ ตรวจสอบข้อมูลประวัติ และคำตอบ</p>
-            <p>หลังจากกดส่งแล้ว คำตอบไม่สามารถกลับมาแก้ไขได้ บลาๆ</p>
-            <br>
+              <div class="row text-center">
+                  <p>มีข้อความประมาณว่า “ให้น้องๆ ตรวจสอบข้อมูลประวัติ และคำตอบ</p>
+                  <p>หลังจากกดส่งแล้ว คำตอบไม่สามารถกลับมาแก้ไขได้ บลาๆ</p>
+                  <br>
 
-            <p>เอาทุก Field มาโชว์ แบบ View Only ถ้า User จะแก้ไข</p>
-            <p>ให้กด “กลับไปแก้ไข”</p>
+                  <p>เอาทุก Field มาโชว์ แบบ View Only ถ้า User จะแก้ไข</p>
+                  <p>ให้กด “กลับไปแก้ไข”</p>
+              </div>
 
 
             <br><br>

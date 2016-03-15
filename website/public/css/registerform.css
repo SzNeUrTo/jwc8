@@ -252,3 +252,11 @@ input{
 [disabled="disabled"]{
     border-color: #ccc;
 }
+
+.major-header{
+    margin-top: 0;
+}
+
+.head-1,.head-2,.head-3,.head-4{
+    margin-bottom: 25px;
+}
