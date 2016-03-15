@@ -5847,6 +5847,14 @@ h1, h2, h3, h4, h5, h6 {
 .step-bar-main h2 {
   font-size: 20px; }
 
+@media (max-width: 768px) {
+  .visible-xs.text {
+    display: inline-block !important; } }
+
+@media (min-height: 768px) {
+  .hidden-xs.text {
+    display: inline-block !important; } }
+
 .title {
   display: inline-block;
   color: #ffffff;
