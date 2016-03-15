@@ -7,7 +7,11 @@
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script>
 
+//    var registerType = {{registerType}};
+//      registerType = "marketing" or "content" or "design"
+var registerType = "marketing";
   $(function() {
+
     $(".head-2, .head-3, .head-4").addClass("hide");
     $(".step-2, .step-3, .step-4").addClass("hide");
     $( "#datepicker" ).datepicker({
@@ -16,22 +20,45 @@
   });
 
   function changePage(thisPage, destPage) {
-    // Out
-    if(thisPage < destPage) {
-      $('.head-'+thisPage).addClass('hide');
-      $('.step-'+thisPage).addClass('animated slideOutLeft hide');
-    } else if(thisPage > destPage) {
-      $('.head-'+thisPage).addClass('hide');
-      $('.step-'+thisPage).addClass('animated slideOutRight hide');
-    }
+      console.log(thisPage + " " + destPage);
+      if(destPage=="4") {  // Disable input box
+          $("input").attr("disabled", "disabled");
+          $("button").attr("disabled", "disabled");
+          $("textarea").attr("disabled", "disabled");
+          $(".textarea").attr("disabled", "disabled");
+      } else {  // Enable input box
+          $("input").removeAttr("disabled");
+          $("button").removeAttr("disabled");
+          $("textarea").removeAttr("disabled");
+          $(".textarea").removeAttr("disabled");
+      }
 
-    // In
-    if(thisPage < destPage) {
-      $('.head-'+destPage).removeClass('hide');
-      $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight').addClass('animated slideInLeft');
-    } else if(thisPage > destPage) {
-      $('.head-'+destPage).removeClass('hide');
-      $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight').addClass('animated slideInRight');
+    if(parseInt(thisPage) < parseInt(destPage)) {
+        // Out
+        console.log("Next");
+        if(thisPage=="3" || thisPage=="4")
+            thisPage = thisPage+"-"+registerType;
+        $('.head-'+thisPage).addClass('hide');
+        $('.step-'+thisPage).removeClass('slideOutLeft slideOutRight').addClass('animated slideOutLeft hide');
+
+        // In
+        if(destPage=="3" || destPage=="4")
+            destPage = destPage+"-"+registerType;
+        $('.head-'+destPage).removeClass('hide');
+        $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight').addClass('animated slideInRight');
+    } else if(parseInt(thisPage) > parseInt(destPage)) {
+        // Out
+        console.log("Prev");
+        if(thisPage=="3" || thisPage=="4")
+            thisPage = thisPage+"-"+registerType;
+        $('.head-'+thisPage).addClass('hide');
+        $('.step-'+thisPage).removeClass('slideOutLeft slideOutRight').addClass('animated slideOutRight hide');
+
+        // In
+        if(destPage=="3" || destPage=="4")
+            destPage = destPage+"-"+registerType;
+        $('.head-'+destPage).removeClass('hide');
+        $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight').addClass('animated slideInLeft');
     }
   }
 </script>
