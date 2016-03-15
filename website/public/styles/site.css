@@ -6174,7 +6174,7 @@ h1, h2, h3, h4, h5, h6 {
   .gallery-item > .description > .head {
     font-style: italic;
     text-decoration: underline; }
-  .gallery-item > img {
+  .gallery-item > .swipebox > img {
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
     border: 12px solid #efefef; }
 

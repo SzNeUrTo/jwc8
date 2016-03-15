@@ -8,6 +8,7 @@
           navbar.removeClass('show');
         }
     smoothScroll.init();
+    $( '.swipebox' ).swipebox();
   });
 
   $document.scroll(function(e) {
