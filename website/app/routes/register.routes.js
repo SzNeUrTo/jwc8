@@ -37,37 +37,43 @@ module.exports = function(app, passport) {
 }
 
 function registerData(user, data) {
-	user.profile.major = data.major || '';
-	user.profile.firstname = data.firstname;
-	user.profile.lastname = data.lastname;
-	user.profile.nickname = data.nickname;
-	user.profile.sex = data.sex;
-	user.profile.birthdate = data.birthdate;
-	user.profile.religion = data.religion;
-	user.profile.email = data.email;
-	user.profile.tel = data.tel;
-	user.profile.size = data.size;
-	user.profile.position = data.position;
-	user.profile.school = data.school;
-	user.profile.level = data.level;
+	var profile = {};
+	profile.major = data.major || '';
+	profile.firstname = data.firstname;
+	profile.lastname = data.lastname;
+	profile.nickname = data.nickname;
+	profile.sex = data.sex;
+	profile.birthdate = data.birthdate;
+	profile.religion = data.religion;
+	profile.email = data.email;
+	profile.tel = data.tel;
+	profile.size = data.size;
+	profile.position = data.position;
+	profile.school = data.school;
+	profile.level = data.level;
 
-	user.profile.contact_person = {};
-	user.profile.contact_person.firstname = data.parent_firstname;
-	user.profile.contact_person.lastname = data.parent_lastname;
-	user.profile.contact_person.relation = data.parent;
-	user.profile.contact_person.emergency_tel = data.emergency_tel;
+	profile.contact_person = {};
+	profile.contact_person.firstname = data.parent_firstname;
+	profile.contact_person.lastname = data.parent_lastname;
+	profile.contact_person.relation = data.parent;
+	profile.contact_person.emergency_tel = data.emergency_tel;
 
-	user.jwcinfo = {};
-	user.jwcinfo.major = data.major || '';
-	user.jwcinfo.generalquestion.answers = [];
-	user.jwcinfo.generalquestion.answers.push({answer: data.g_your_experience, point: 0});
-	user.jwcinfo.generalquestion.answers.push({answer: data.g_your_hobbies, point: 0});
-	user.jwcinfo.generalquestion.answers.push({answer: data.g_your_strong_point, point: 0});
-	user.jwcinfo.generalquestion.answers.push({answer: data.g_your_like_unlike, point: 0});
-	user.jwcinfo.generalquestion.answers.push({answer: data.g_your_created_websites, point: 0});
+	var jwcinfo = {};
+	jwcinfo.major = data.major || '';
 
-	user.jwcinfo.specialquestion = {};
-	user.jwcinfo.specialquestion.answers = [];
+	jwcinfo.generalquestion = {};
+	jwcinfo.generalquestion.answers = [];
+	jwcinfo.generalquestion.answers.push({answer: data.g_your_experience, point: 0});
+	jwcinfo.generalquestion.answers.push({answer: data.g_your_hobbies, point: 0});
+	jwcinfo.generalquestion.answers.push({answer: data.g_your_strong_point, point: 0});
+	jwcinfo.generalquestion.answers.push({answer: data.g_your_like_unlike, point: 0});
+	jwcinfo.generalquestion.answers.push({answer: data.g_your_created_websites, point: 0});
+
+	jwcinfo.specialquestion = {};
+	jwcinfo.specialquestion.answers = [];
+	
+	user.profile = profile;
+	user.jwcinfo = jwcinfo;
 }
 
 function isLoggedIn(req, res, next) {
