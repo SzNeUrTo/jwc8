@@ -35,7 +35,7 @@ module.exports = function(passport) {
 				} 
 				if(!req.user) {
 					var newUser = new User();
-					newUser.auth.auth_type = 'local';
+					var auth = {auth_type: 'local', local: {}};
 					newUser.auth.local.username = email;
 					newUser.auth.local.password = newUser.generateHash(password);
 
@@ -46,8 +46,7 @@ module.exports = function(passport) {
 					})
 				} else {
 					var user = req.user;
-					var auth = {};
-					auth.auth_type = 'local';
+					var auth = {auth_type: 'local', local: {}};
 					auth.local.username = email;
 					auth.local.password = user.generateHash(password);
 					user.auth = auth;
@@ -101,8 +100,7 @@ module.exports = function(passport) {
 		    				return done(err);
 		    			if(user){
 		    				if(!user.auth.facebook.token){
-		    					var auth = {};
-		    					auth.auth_type = 'facebook';
+		    					var auth = {auth_type: 'facebook', facebook: {}};
 		    					auth.facebook.token = accessToken;
 		    					auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
 		    					auth.facebook.email = profile.emails[0].value;
@@ -120,8 +118,7 @@ module.exports = function(passport) {
 		    				console.log("======== Debug ==========");
 		    				console.log(newUser);
 		    				console.log("======== Debug ==========");
-		    				var auth = {};
-		    				auth.auth_type = 'facebook';
+		    				var auth = {auth_type: 'facebook', facebook: {}};
 		    				auth.facebook.id = profile.id;
 		    				auth.facebook.token = accessToken;
 		    				auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
@@ -140,8 +137,7 @@ module.exports = function(passport) {
 	    		//user is logged in already, and needs to be merged
 	    		else {
 	    			var user = req.user;
-					var auth = {};
-	    			auth.auth_type = 'facebook';
+					var auth = {auth_type: 'facebook', facebook: {}};
 	    			auth.facebook.id = profile.id;
 	    			auth.facebook.token = accessToken;
 	    			auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
