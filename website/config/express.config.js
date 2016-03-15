@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var ejs = require('ejs');
+var exphbs  = require('express-handlebars');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var configDB = require('./database.config.js');
@@ -12,7 +12,6 @@ var passport = require('passport');
 var flash = require('connect-flash');
 var MongoStore = require('connect-mongo')(session);
 
-var configDB = require('./database.config.js'); // server.js --> edit path here
 mongoose.connect(configDB.url);
 require('./passport.config.js')(passport); // server.js --> edit path here
 
@@ -28,7 +27,7 @@ module.exports = function() {
 				 store: new MongoStore({ mongooseConnection: mongoose.connection,
 				 							ttl: 2 * 24 * 60 * 60 })}));
 
-  	app.use(passport.initialize());
+  app.use(passport.initialize());
 	app.use(passport.session()); // persistent login sessions
 	app.use(flash()); // use connect-flash for flash messages stored in session
 
@@ -41,7 +40,14 @@ module.exports = function() {
 
 	app.set('views', './app/views');
 	app.use(express.static('./public'));
-	app.engine('html', ejs.renderFile);
+
+	app.engine('.hbs', exphbs({
+		defaultLayout: 'main',
+	 	extname: '.hbs',
+		layoutsDir:'./app/views/layouts',
+		partialsDir: './app/views/partials'
+	}));
+	app.set('view engine', '.hbs');
 	require('../app/routes.app.js')(app, passport);
 	return app;
 }

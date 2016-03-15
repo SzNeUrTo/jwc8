@@ -1,0 +1,76 @@
+.navigation{
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/pictures/allpage/menuBG6.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+.sub-nav{
+  padding: 0 20px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+.sub-nav:hover{
+  color: white;
+  text-decoration:underline;
+}
+*{
+  color: white;
+}
+body, html{
+  background-image: url('/pictures/allpage/background.png');
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+}
+.menu-logo{
+  height: 100px
+}
+.menu-logo:hover{
+  cursor: pointer;
+}
+div{
+  display: inline-block;
+}
+.head{
+  font-family: 'Quark-Bold';
+}
+*{
+  font-family: 'THSarabunNew';
+}
+section{
+  margin-bottom: 100px;
+}
+.index{
+  padding-top: 40px;
+}
+footer{
+  background-image: url('/pictures/allpage/footer.png');
+}
+footer > div{
+  color: rgba(247, 207, 217, 0);
+  padding: 10px;
+}
+.about{
+  margin-bottom: 10px;
+}
+.eventpic{
+  margin-bottom: 160px;
+}
+.head{
+  background-image: url('/pictures/whatis/what_is_jwcBG.png');
+  display: block;
+  padding: 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

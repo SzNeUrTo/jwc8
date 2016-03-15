@@ -1,0 +1,254 @@
+body{
+    color: white;
+}
+.logo-regis{
+    text-align: center;
+}
+.sponsor{
+    margin-top: 30px;
+    text-align: center;
+    padding: 0px;
+}
+.sponsor-row img{
+    width: 75%;
+}
+.sponsor-row-footer{
+    margin-top: 150px;
+}
+.sponsor-row-footer .sponsor-row-footer-bar{
+    width: 100%;
+    height: 70px;
+}
+.sponsor-row-footer .sponsor-row-footer-logo{
+    position: relative;
+    margin-top: -120px;
+    width: 30%;
+}
+
+.hide{
+    display: none;
+}
+div{
+    display: block;
+}
+
+.step-background-now{
+    background-image: url('/pictures/form/icon_in.png');
+    background-size: 90px;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    color: black;
+    background-position-x: 50%;
+    background-position-y: 0%;
+    background-position: 50% 0%;
+}
+.step-background-now-text{
+    margin-top: 17px;
+    margin-bottom: 40px;
+}
+
+.step-background-future{
+    background-image: url('/pictures/form/icon_not_go.png');
+    background-size: 55px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+}
+.step-background-future-text{
+    margin-top: 23px;
+    margin-bottom: 34px;
+    color: rgb(30,52,39);
+}
+
+.step-background-pass{
+    /*height: 90px;*/
+    /*padding-top: 13px;*/
+    background-image: url('/pictures/form/icon_in.png');
+    background-size: 75px;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    color: black;
+    background-position-x: 50%;
+    background-position-y: 13px;
+    background-position: 50% 13px;
+}
+
+.step-background-pass-text{
+    margin-top: 29px;
+    margin-bottom: 40px;
+}
+
+.no-margin{
+    margin: 0px;
+}
+
+.question{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.next-button{
+    background-image:url('/pictures/form/bgถัดไป.png');
+    background-size: 150px;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+    height: 70px;
+    padding-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.back-button{
+    cursor: pointer;
+}
+
+.head-background{
+    background-image:url('/pictures/whatis/what_is_jwcBG.png');
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70px;
+    padding-top: 15px;
+}
+
+.textarea{
+    padding: 10px;
+    background: none;
+    border: solid white 2px;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.textarea textarea{
+    background: none;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 100%;
+}
+
+.textarea textarea::-webkit-scrollbar,
+.textarea textarea::-moz-scrollbar{
+    background: none;
+    width: 10px;
+    margin: 5px;
+}
+
+
+.textarea textarea::-webkit-scrollbar-track,
+.textarea textarea::-moz-scrollbar-track {
+    background: rgb(37,64,47);
+    width: 15px;
+    border-radius: 10px;
+}
+
+.textarea textarea::-webkit-scrollbar-thumb,
+.textarea textarea::-moz-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+}
+
+input{
+    padding: 10px;
+    background: none;
+    border: solid white 2px;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.dropdown button, .dropdown button:hover,.dropdown button:focus ,.open button:hover,.open button{
+    padding: 10px !important;
+    background: none !important;
+    border: solid white 2px !important;
+    border-radius: 10px !important;
+    outline: none;
+    width: 100%;
+    text-align: left;
+    color: darkgrey;
+}
+
+.dropdown-menu{
+    border-radius: 5px !important;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dropdown{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-group.dropdown button {
+    position: relative;
+}
+
+.btn-group.dropdown button .caret{
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+}
+
+
+/*.flip {*/
+    /*-moz-transform: scaleX(-1);*/
+    /*-o-transform: scaleX(-1);*/
+    /*-webkit-transform: scaleX(-1);*/
+    /*transform: scaleX(-);*/
+    /*filter: FlipH;*/
+    /*-ms-filter: "FlipH";*/
+/*}*/
+
+.fancy-file-upload {
+    position: relative;
+    height: 40px;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.fancy-file-upload input[type=file] {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 8px 10px;
+    position: absolute;
+    -moz-opacity: 0;
+    opacity: 0;
+    z-index: 11;
+    bottom: 0;
+    right: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.fancy-file-upload>input[type=text] {
+    background-color: transparent;
+    padding-left: 36px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.form-control {
+    border: #ddd 2px solid;
+    box-shadow: none;
+}
+
+[disabled="disabled"]{
+    border-color: #ccc;
+}
