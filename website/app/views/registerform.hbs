@@ -28,12 +28,10 @@
     // In
     if(thisPage < destPage) {
       $('.head-'+destPage).removeClass('hide');
-      $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight');
-      $('.step-'+destPage).addClass('animated slideInLeft');
+      $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight').addClass('animated slideInLeft');
     } else if(thisPage > destPage) {
       $('.head-'+destPage).removeClass('hide');
-      $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight');
-      $('.step-'+destPage).addClass('animated slideInRight');
+      $('.step-'+destPage).removeClass('hide slideOutLeft slideOutRight').addClass('animated slideInRight');
     }
   }
 </script>
@@ -114,19 +112,19 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="ชื่อ" name="firstname"></input>
+                            <input type="text" placeholder="ชื่อ" name="firstname"/>
                         </div>
                         <div class="col-xs-6">
-                            <input type="text" placeholder="นามสกุล" name="lastname"></input>
+                            <input type="text" placeholder="นามสกุล" name="lastname"/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="ชื่อเล่น" name="nickname"></input>
+                            <input type="text" placeholder="ชื่อเล่น" name="nickname"/>
                         </div>
                         <div class="col-xs-6">
                             <div class="btn-group dropdown">
-                                <input type="hidden" id="sex" name="sex"></input>
+                                <input type="hidden" id="sex" name="sex"/>
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     เพศ <span class="caret"></span>
                                 </button>
@@ -142,7 +140,7 @@
                             <input type="text" id="datepicker" placeholder="วัน/เดือน/ปีเกิด" name="birthdate">
                         </div>
                         <div class="col-xs-6">
-                            <input type="hidden" id="religion" name="religion"></input>
+                            <input type="hidden" id="religion" name="religion"/>
                             <div class="btn-group dropdown">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     ศาสนา <span class="caret"></span>
@@ -158,15 +156,15 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <input type="email" placeholder="E-mail" name="email"></input>
+                            <input type="email" placeholder="E-mail" name="email"/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="เบอร์โทรศัพท์" name="tel"></input>
+                            <input type="text" placeholder="เบอร์โทรศัพท์" name="tel"/>
                         </div>
                         <div class="col-xs-6">
-                            <input type="hidden" id="size" name="size"></input>
+                            <input type="hidden" id="size" name="size"/>
                             <div class="btn-group dropdown">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     ไซต์เสื้อ <span class="caret"></span>
@@ -198,12 +196,12 @@
                       </div>
                       <div class="row">
                           <div class="col-xs-12">
-                              <input type="text" class="col-md-12" placeholder="โรงเรียน" name="school"></input>
+                              <input type="text" class="col-md-12" placeholder="โรงเรียน" name="school"/>
                           </div>
                       </div>
                       <div class="row">
                           <div class="col-xs-6">
-                              <input type="hidden" id="level" name="level"></input>
+                              <input type="hidden" id="level" name="level"/>
                               <div class="btn-group dropdown">
                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       ระดับชั้น <span class="caret"></span>
@@ -220,7 +218,7 @@
                               </div>
                           </div>
                           <div class="col-xs-6">
-                              <input class="number" type="tel" placeholder="สายที่เรียน" name="major"></input>
+                              <input class="number" type="tel" placeholder="สายที่เรียน" name="major"/>
                           </div>
                       </div>
                   </div><!--.parent-->
@@ -233,18 +231,18 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" class="col-md-12" placeholder="นามสกุล" name="parent_firstname"></input>
+                            <input type="text" class="col-md-12" placeholder="นามสกุล" name="parent_firstname"/>
                         </div>
                         <div class="col-xs-6">
-                            <input type="text" class="col-md-12" placeholder="ชื่อ" name="parent_lastname"></input>
+                            <input type="text" class="col-md-12" placeholder="ชื่อ" name="parent_lastname"/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="สถานะที่เกี่ยวข้อง" name="parent"></input>
+                            <input type="text" placeholder="สถานะที่เกี่ยวข้อง" name="parent"/>
                         </div>
                         <div class="col-xs-6">
-                            <input class="number" type="tel" placeholder="เบอร์โทรศัพท์" name="emergency_tel"></input>
+                            <input class="number" type="tel" placeholder="เบอร์โทรศัพท์" name="emergency_tel"/>
                         </div>
                     </div>
                 </div><!--.parent-->
@@ -446,7 +444,7 @@
           <!--</div>-->
 
 
-          <section class="container step-3-marketing">
+          <section class="container step-3 step-3-marketing">
               <h2 class="head-background text-center">Web Marketing</h2>
 
                 <div class="row no-margin">
@@ -507,7 +505,7 @@
                 </div>
             </section>
 
-            <section class="container step-3-content">
+            <section class="container step-3 step-3-content">
                 <h2 class="head-background text-center">Web Content</h2>
 
                   <div class="row no-margin">
@@ -538,7 +536,6 @@
                               <!--////-->
                           </div> -->
                       </div>
-                  </div>
 
 
                   <br>
@@ -554,7 +551,7 @@
                   </div>
                 </section>
 
-              <section class="container step-3-design">
+              <section class="container step-3 step-3-design">
                   <h2 class="head-background text-center">Web Design</h2>
 
                     <div class="row no-margin">
@@ -575,7 +572,7 @@
                                 <div style="text-align: left; position: relative; background-color: transparent; border: medium solid white; padding-right: 10px; border-radius: 10px; cursor: pointer;">
                                     <a class="btn btn-primary" style="margin: 5px; background-color: white; border-radius: 10px; color: black; border-color: white; cursor: pointer;" href="javascript:;">
                                         Choose File...
-                                        <input name="design-1-pic" style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file">
+                                        <input name="design-1-pic" style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file"/>
                                     </a>
                                     &nbsp;
                                     <span class="label" id="upload-file-info" style="font-size: 18px;">อัพโหลดรูปภาพ</span>
