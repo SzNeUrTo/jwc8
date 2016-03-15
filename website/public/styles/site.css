@@ -5823,6 +5823,7 @@ button.close {
 
 body {
   background: url("../images/landing/bg.jpg") no-repeat center center;
+  background-color: #356243;
   background-attachment: fixed; }
 
 h1, h2, h3, h4, h5, h6 {
