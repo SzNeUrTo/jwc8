@@ -11,7 +11,7 @@
 
 .gallery-container {
     @extend .container;
-    padding: 80px 25px;
+    padding: 0px 25px;
 }
 
 .gallery-row {
@@ -49,6 +49,9 @@
 }
 
 #gallery-slide {
+    .carousel-indicators {
+        bottom: -35px;
+    }
     .carousel-indicators > li {
         border: none;
         background-color: #688772;
@@ -61,7 +64,7 @@
     }
     .carousel-control > img {
         position: absolute;
-        bottom: 8px;
+        bottom: -35px;
     }
     .right.carousel-control > img {
         right: 25px;
@@ -73,7 +76,7 @@
 
 @media (min-width: 768px) {
     .gallery-container {
-        padding: 60px 15%;
+        padding: 0px 15%;
     }
     #gallery-slide {
         .carousel-control > img {
@@ -83,7 +86,7 @@
     }
     @media(min-width: 768px) {
         .carousel-indicators {
-            bottom: 10px;
+            bottom: -30px;
         }
     }
 }

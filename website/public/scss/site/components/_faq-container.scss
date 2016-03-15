@@ -1,6 +1,6 @@
 .faq-section {
     @extend .container;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
 }
 
 .faq-container {
@@ -36,6 +36,9 @@
 }
 
 #faq-slide {
+    .carousel-indicators {
+        bottom: -20px;
+    }
     .carousel-indicators > li {
         border: none;
         background-color: #688772;
@@ -60,12 +63,16 @@
 
 @media (min-width: 768px) {
     .faq-container {
-        padding: 60px 15%;
+        padding: 10px 15%;
+        min-height: 1px;
     }
     #faq-slide {
         .carousel-control > img {
             position: absolute;
             top: 50%;
+        }
+        .carousel-indicators {
+            bottom: -50px;
         }
     }
 }

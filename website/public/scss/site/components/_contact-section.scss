@@ -11,6 +11,16 @@
         color: #ffffff;
         margin-top: 0;
     }
+
+    > .text > a {
+        color: #ffffff;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: #ffffff;
+        }
+    }
     > .qrcode {
         float: right;
         margin-top: 25px;
