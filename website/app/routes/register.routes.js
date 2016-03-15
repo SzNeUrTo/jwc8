@@ -33,6 +33,50 @@ module.exports = function(app, passport) {
 			// res.send(user);
 		});
     });
+
+	app.get('/userdata', isLoggedIn, function(req, res) {
+		User.findOne({'auth.facebook.id': req.user.auth.facebook.id}, function(err, user){
+			if (err) {
+				console.log('err');
+				res.send('go_error'); // EditHere
+				throw err;
+			}
+			if (!user) {
+				console.log('!user');
+				res.send('go_regis'); // editHere
+			}
+			else {
+				res.json(user);
+			}
+		});
+	});
+
+    app.post('/complete', isLoggedIn, function(req, res) {
+    	// res.send(req.body);
+		User.findOne({'auth.facebook.id': req.user.auth.facebook.id}, function(err, user){
+			var data = req.body;
+			registerData(user, data);
+			if (err) {
+				res.redirect('/');
+				console.log('err');
+				throw err;
+			}
+			if (!user) {
+				res.redirect('/');
+			}
+			else {
+				user.save(function(err) {
+					if (err) {
+						res.redirect('/');
+						throw err;
+					}
+					// res.redirect('/complete');
+					res.send(user);
+				});
+			}
+			// res.send(user);
+		});
+    });
     
 }
 
