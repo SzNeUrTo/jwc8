@@ -198,19 +198,19 @@ var registerType = "marketing";
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="ชื่อ" name="firstname"/>
+                            <input type="text" placeholder="ชื่อ" name="firstname" required>
                         </div>
                         <div class="col-xs-6">
-                            <input type="text" placeholder="นามสกุล" name="lastname"/>
+                            <input type="text" placeholder="นามสกุล" name="lastname" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="ชื่อเล่น" name="nickname"/>
+                            <input type="text" placeholder="ชื่อเล่น" name="nickname" required>
                         </div>
                         <div class="col-xs-6">
                             <div class="btn-group dropdown">
-                                <input type="hidden" id="sex" name="sex"/>
+                                <input type="hidden" id="sex" name="sex" required>
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     เพศ <span class="caret"></span>
                                 </button>
@@ -223,11 +223,11 @@ var registerType = "marketing";
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="hidden" id="dateofbirth" name"birthdate">
+                            <input type="hidden" id="dateofbirth" name"birthdate" required>
                             <input type="text" id="datepicker" class="birthdate" placeholder="วัน/เดือน/ปีเกิด">
                         </div>
                         <div class="col-xs-6">
-                            <input type="hidden" id="religion" name="religion"/>
+                            <input type="hidden" id="religion" name="religion" required>
                             <div class="btn-group dropdown">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     ศาสนา <span class="caret"></span>
@@ -243,15 +243,15 @@ var registerType = "marketing";
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <input type="email" placeholder="E-mail" name="email"/>
+                            <input type="email" placeholder="E-mail" name="email" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" class="number" placeholder="เบอร์โทรศัพท์" name="tel"/>
+                            <input type="text" class="number" placeholder="เบอร์โทรศัพท์" name="tel" required>
                         </div>
                         <div class="col-xs-6">
-                            <input type="hidden" id="size" name="size"/>
+                            <input type="hidden" id="size" name="size" required>
                             <div class="btn-group dropdown">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     ไซต์เสื้อ <span class="caret"></span>
@@ -269,7 +269,7 @@ var registerType = "marketing";
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="textarea">
-                                <textarea rows="3" placeholder="ที่อยู่" name="position"></textarea>
+                                <textarea rows="3" placeholder="ที่อยู่" name="position" required></textarea>
                             </div>
                         </div>
                     </div>
@@ -283,12 +283,12 @@ var registerType = "marketing";
                       </div>
                       <div class="row">
                           <div class="col-xs-12">
-                              <input type="text" class="col-md-12" placeholder="โรงเรียน" name="school"/>
+                              <input type="text" class="col-md-12" placeholder="โรงเรียน" name="school" required>
                           </div>
                       </div>
                       <div class="row">
                           <div class="col-xs-6">
-                              <input type="hidden" id="level" name="level"/>
+                              <input type="hidden" id="level" name="level" required>
                               <div class="btn-group dropdown">
                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       ระดับชั้น <span class="caret"></span>
@@ -305,7 +305,7 @@ var registerType = "marketing";
                               </div>
                           </div>
                           <div class="col-xs-6">
-                              <input type="tel" placeholder="สายที่เรียน" name="major"/>
+                              <input type="tel" placeholder="สายที่เรียน" name="major" required>
                           </div>
                       </div>
                   </div><!--.parent-->
@@ -318,18 +318,18 @@ var registerType = "marketing";
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" class="col-md-12" placeholder="นามสกุล" name="parent_firstname"/>
+                            <input type="text" class="col-md-12" placeholder="นามสกุล" name="parent_firstname" required>
                         </div>
                         <div class="col-xs-6">
-                            <input type="text" class="col-md-12" placeholder="ชื่อ" name="parent_lastname"/>
+                            <input type="text" class="col-md-12" placeholder="ชื่อ" name="parent_lastname" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
-                            <input type="text" placeholder="สถานะที่เกี่ยวข้อง" name="parent"/>
+                            <input type="text" placeholder="สถานะที่เกี่ยวข้อง" name="parent" required>
                         </div>
                         <div class="col-xs-6">
-                            <input class="number" type="tel" placeholder="เบอร์โทรศัพท์" name="emergency_tel"/>
+                            <input class="number" type="tel" placeholder="เบอร์โทรศัพท์" name="emergency_tel" required>
                         </div>
                     </div>
                 </div><!--.parent-->
@@ -393,7 +393,7 @@ var registerType = "marketing";
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea name="your_experience" rows="8"></textarea>
+                                  <textarea name="your_experience" rows="8" required></textarea>
                               </div>
                           </div>
                       </div>
@@ -408,7 +408,7 @@ var registerType = "marketing";
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea name="your_hobbies" rows="8"></textarea>
+                                  <textarea name="your_hobbies" rows="8" required></textarea>
                               </div>
                           </div>
                       </div>
@@ -424,7 +424,7 @@ var registerType = "marketing";
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea name="strong_point" rows="8"></textarea>
+                                  <textarea name="strong_point" rows="8" required></textarea>
                               </div>
                           </div>
                       </div>
@@ -439,7 +439,7 @@ var registerType = "marketing";
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea name="your_like_unlike" rows="8"></textarea>
+                                  <textarea name="your_like_unlike" rows="8" required></textarea>
                               </div>
                           </div>
                       </div>
@@ -455,7 +455,7 @@ var registerType = "marketing";
                       <div class="row">
                           <div class="col-xs-12">
                               <div class="textarea">
-                                  <textarea name="your_created_websites" rows="8"></textarea>
+                                  <textarea name="your_created_websites" rows="8" required></textarea>
                               </div>
                           </div>
                       </div>
