@@ -102,6 +102,7 @@ div{
 
 .back-button{
     cursor: pointer;
+    color: rgb(37,64,47);
 }
 
 .head-background{
@@ -259,4 +260,17 @@ input{
 
 .head-1,.head-2,.head-3,.head-4{
     margin-bottom: 25px;
+}
+
+.send-form-button{
+    background-image:url('/pictures/form/bgถัดไป.png');
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70px;
+    font-size: 31px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    border: none;
 }

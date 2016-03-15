@@ -27,6 +27,7 @@ var registerType = "marketing";
           $("textarea").attr("disabled", "disabled");
           $(".textarea").attr("disabled", "disabled");
           $(".button-row-1, .button-row-2, .button-row-3").addClass("hide");
+          $("input[type='submit']").removeAttr("disabled");
       } else {  // Enable input box
           $("input").removeAttr("disabled");
           $("button").removeAttr("disabled");
@@ -729,13 +730,15 @@ var registerType = "marketing";
                     <h3 class="back-button back-button-text back-button-4">กลับไปแก้ไข</h3>
                 </div>
                 <div class="col-xs-4 text-center">
-                    <h3 class="next-button next-button-4" onclick="changePage('4','5')">ถัดไป</h3>
+                    <!--<h3 class="next-button next-button-4" onclick="changePage('4','5')">ถัดไป</h3>-->
+                    <input type="submit" class="send-form-button" value="ส่งคำตอบ">
                 </div>
             </div>
             <br>
 
 
           </section><!--.step-4-->
+
 
           <br><br>
 
