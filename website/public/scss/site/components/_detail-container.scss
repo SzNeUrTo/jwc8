@@ -37,8 +37,6 @@
 	> .counter {
 		border-radius: 0;
 		padding: 0;
-		margin-top: 0;
-		margin-bottom: 25px;
 		margin-left: auto;
 		margin-right: auto;
 
@@ -52,6 +50,11 @@
 		background: url('../images/landing/title-dark-bg.png') no-repeat center center;
 		background-size: 100%;
 	}
+
+    > .counter {
+        font-family: 'Counter';
+        font-size: 62px;
+    }
 }
 
 .detail-item.--marketing {

@@ -5825,7 +5825,7 @@ body {
   background: url("../images/landing/bg.jpg") fixed center center; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Kanit", "Helvetica Nueu", Helvetica, Arial;
+  font-family: "BoonJot", "Helvetica Nueu", Helvetica, Arial;
   font-weight: 400; }
 
 .border-blackboard {
@@ -6030,18 +6030,19 @@ h1, h2, h3, h4, h5, h6 {
   .detail-item > .counter {
     border-radius: 0;
     padding: 0;
-    margin-top: 0;
-    margin-bottom: 25px;
     margin-left: auto;
     margin-right: auto;
     width: 180px;
     height: 80px;
     line-height: 80px;
     color: #ffffff;
-    font-family: "Kanit", "Helvetica Nueu", Helvetica, Arial;
+    font-family: "BoonJot", "Helvetica Nueu", Helvetica, Arial;
     font-size: 24px;
     background: url("../images/landing/title-dark-bg.png") no-repeat center center;
     background-size: 100%; }
+  .detail-item > .counter {
+    font-family: 'Counter';
+    font-size: 62px; }
 
 .detail-item.--marketing > .title,
 .detail-item.--marketing > .counter {
@@ -6276,7 +6277,7 @@ h1, h2, h3, h4, h5, h6 {
       display: inline-block;
       float: none !important; }
       .navbar.navbar-jwc > .container > .navbar-nav > li, .navbar.navbar-jwc > .section > .navbar-nav > li, .navbar.navbar-jwc > .first-section > .navbar-nav > li, .navbar.navbar-jwc > .about-section > .navbar-nav > li, .navbar.navbar-jwc > .register-section > .navbar-nav > li, .navbar.navbar-jwc > .contact-section > .navbar-nav > li, .navbar.navbar-jwc > .sponsor-section > .navbar-nav > li, .navbar.navbar-jwc > .gallery-container > .navbar-nav > li, .navbar.navbar-jwc > .faq-container > .navbar-nav > li {
-        font-family: 'Kanit', Arial; }
+        font-family: 'BoonJot', Arial; }
       .navbar.navbar-jwc > .container > .navbar-nav > li > a, .navbar.navbar-jwc > .section > .navbar-nav > li > a, .navbar.navbar-jwc > .first-section > .navbar-nav > li > a, .navbar.navbar-jwc > .about-section > .navbar-nav > li > a, .navbar.navbar-jwc > .register-section > .navbar-nav > li > a, .navbar.navbar-jwc > .contact-section > .navbar-nav > li > a, .navbar.navbar-jwc > .sponsor-section > .navbar-nav > li > a, .navbar.navbar-jwc > .gallery-container > .navbar-nav > li > a, .navbar.navbar-jwc > .faq-container > .navbar-nav > li > a {
         color: #ffffff;
         font-size: 20px;
