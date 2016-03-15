@@ -24,11 +24,11 @@
             <div class="well">
                 <h3><span class="fa fa-user"></span> Local</h3>
 
-                <% if (user.local.username) { %>
+                <% if (user.auth.local.username) { %>
                     <p>
                         <strong>id</strong>: <%= user._id %><br>
-                        <strong>email</strong>: <%= user.local.email %><br>
-                        <strong>password</strong>: <%= user.local.password %>
+                        <strong>email</strong>: <%= user.auth.local.email %><br>
+                        <strong>password</strong>: <%= user.auth.local.password %>
                     </p>
                     
                     <a href="/unlink/local" class="btn btn-default">Unlink</a>
@@ -45,12 +45,12 @@
                 <h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
 
                 <!-- check if the user has this token (is the user authenticated with this social account) -->
-                <% if (user.facebook.token) { %>
+                <% if (user.auth.facebook.token) { %>
                     <p>
-                        <strong>id</strong>: <%= user.facebook.id %><br>
-                        <strong>token</strong>: <%= user.facebook.token %><br>
-                        <strong>email</strong>: <%= user.facebook.email %><br>
-                        <strong>name</strong>: <%= user.facebook.name %><br>
+                        <strong>id</strong>: <%= user.auth.facebook.id %><br>
+                        <strong>token</strong>: <%= user.auth.facebook.token %><br>
+                        <strong>email</strong>: <%= user.auth.facebook.email %><br>
+                        <strong>name</strong>: <%= user.auth.facebook.name %><br>
                     </p>
 
                     <a href="/unlink/facebook" class="btn btn-primary">Unlink</a>
@@ -72,12 +72,12 @@
                 <h3 class="text-danger"><span class="fa fa-google-plus"></span> Google+</h3>
 
                 <!-- check if the user has this token (is the user authenticated with this social account) -->
-                <% if (user.google.token) { %>
+                <% if (user.auth.google.token) { %>
                     <p>
-                        <strong>id</strong>: <%= user.google.id %><br>
-                        <strong>token</strong>: <%= user.google.token %><br>
-                        <strong>email</strong>: <%= user.google.email %><br>
-                        <strong>name</strong>: <%= user.google.name %>
+                        <strong>id</strong>: <%= user.auth.google.id %><br>
+                        <strong>token</strong>: <%= user.auth.google.token %><br>
+                        <strong>email</strong>: <%= user.auth.google.email %><br>
+                        <strong>name</strong>: <%= user.auth.google.name %>
                     </p>
 
                     <a href="/unlink/google" class="btn btn-danger">Unlink</a>

@@ -60,7 +60,7 @@ module.exports = function(app, passport){
 	app.get('/unlink/facebook', function(req, res){
 		var user = req.user;
 
-		user.facebook.token = null;
+		user.auth.facebook.token = null;
 
 		user.save(function(err){
 			if(err)
@@ -72,8 +72,8 @@ module.exports = function(app, passport){
 	app.get('/unlink/local', function(req, res){
 		var user = req.user;
 
-		user.local.username = null;
-		user.local.password = null;
+		user.auth.local.username = null;
+		user.auth.local.password = null;
 
 		user.save(function(err){
 			if(err)
@@ -85,7 +85,7 @@ module.exports = function(app, passport){
 
 	app.get('/unlink/google', function(req, res){
 		var user = req.user;
-		user.google.token = null;
+		user.auth.google.token = null;
 
 		user.save(function(err){
 			if(err)
