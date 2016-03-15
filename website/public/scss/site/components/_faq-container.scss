@@ -1,6 +1,6 @@
 .faq-section {
     @extend .container;
-    margin-bottom: 120px;
+    margin-bottom: 45px;
 }
 
 .faq-container {
@@ -37,7 +37,7 @@
 
 #faq-slide {
     .carousel-indicators {
-        bottom: -20px;
+        bottom: 2px;
     }
     .carousel-indicators > li {
         border: none;
@@ -61,7 +61,16 @@
     }
 }
 
+@media (max-width: 768px) {
+    #faq-slide {
+        margin-top: -40px;
+    }
+}
+
 @media (min-width: 768px) {
+    .faq-section {
+        margin-bottom: 120px;
+    }
     .faq-container {
         padding: 10px 15%;
         min-height: 1px;

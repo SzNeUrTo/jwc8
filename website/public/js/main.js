@@ -1,5 +1,6 @@
 (function ($) {
   var navbar = $('#jwc-navbar');
+  var navbarm = $('#jwc-navbarm');
   var $document = $(document);
   var button = $('#jwc-m-navbar-btn');
 
@@ -12,10 +13,12 @@
   });
 
   $document.scroll(function(e) {
-    if (window.scrollY !== 0 && !navbar.hasClass('show')) {
+    if (window.scrollY > 31 && !navbar.hasClass('show')) {
         navbar.addClass('show');
-    } else if (window.scrollY === 0 && navbar.hasClass('show')) {
+        navbarm.addClass('show');
+    } else if (window.scrollY < 30 && navbar.hasClass('show')) {
         navbar.removeClass('show');
+        navbarm.removeClass('show');
     }
   });
 
