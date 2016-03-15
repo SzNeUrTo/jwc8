@@ -248,3 +248,7 @@ input{
     border: #ddd 2px solid;
     box-shadow: none;
 }
+
+[disabled="disabled"]{
+    border-color: #ccc;
+}
