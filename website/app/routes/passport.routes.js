@@ -1,6 +1,6 @@
 var User = require('../models/db.model.js'); // routes.js brent --> edit path here
 module.exports = function(app, passport){
-	app.set('view engine', 'ejs');
+	// app.set('view engine', 'ejs');
 
 	app.get('/testauth', function(req, res){
 		res.render('index.ejs');
@@ -32,9 +32,13 @@ module.exports = function(app, passport){
 
 	app.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));
 
+
 	app.get('/auth/facebook/callback',
-	  passport.authenticate('facebook', { successRedirect: '/profile',
-	                                      failureRedirect: '/testauth' }));
+	  // passport.authenticate('facebook', { successRedirect: '/profile',
+	                                      // failureRedirect: '/testauth' }));
+		passport.authenticate('facebook', { successRedirect: '/register', // EditHere
+	                                      failureRedirect: '/' })); // EditHere
+
 
 	app.get('/auth/google', passport.authenticate('google', {scope: ['profile', 'email']}));
 
@@ -101,7 +105,7 @@ module.exports = function(app, passport){
 
 	app.get('/logout', function(req, res){
 		req.logout();
-		res.redirect('/testauth');
+		res.redirect('/');
 	})
 };
 

@@ -35,7 +35,7 @@ module.exports = function(passport) {
 				} 
 				if(!req.user) {
 					var newUser = new User();
-					newUser.auth.auth_type = 'local';
+					var auth = {auth_type: 'local', local: {}};
 					newUser.auth.local.username = email;
 					newUser.auth.local.password = newUser.generateHash(password);
 
@@ -46,9 +46,10 @@ module.exports = function(passport) {
 					})
 				} else {
 					var user = req.user;
-					user.auth.auth_type = 'local';
-					user.auth.local.username = email;
-					user.auth.local.password = user.generateHash(password);
+					var auth = {auth_type: 'local', local: {}};
+					auth.local.username = email;
+					auth.local.password = user.generateHash(password);
+					user.auth = auth;
 
 					user.save(function(err){
 						if(err)
@@ -99,10 +100,11 @@ module.exports = function(passport) {
 		    				return done(err);
 		    			if(user){
 		    				if(!user.auth.facebook.token){
-		    					user.auth.auth_type = 'facebook';
-		    					user.auth.facebook.token = accessToken;
-		    					user.auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
-		    					user.auth.facebook.email = profile.emails[0].value;
+		    					var auth = {auth_type: 'facebook', facebook: {}};
+		    					auth.facebook.token = accessToken;
+		    					auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
+		    					auth.facebook.email = profile.emails[0].value;
+								user.auth = auth;
 		    					user.save(function(err){
 		    						if(err)
 		    							throw err;
@@ -113,11 +115,15 @@ module.exports = function(passport) {
 		    			}
 		    			else {
 		    				var newUser = new User();
-		    				newUser.auth.auth_type = 'facebook';
-		    				newUser.auth.facebook.id = profile.id;
-		    				newUser.auth.facebook.token = accessToken;
-		    				newUser.auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
-		    				newUser.auth.facebook.email = profile.emails[0].value;
+		    				console.log("======== Debug ==========");
+		    				console.log(newUser);
+		    				console.log("======== Debug ==========");
+		    				var auth = {auth_type: 'facebook', facebook: {}};
+		    				auth.facebook.id = profile.id;
+		    				auth.facebook.token = accessToken;
+		    				auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
+		    				auth.facebook.email = profile.emails[0].value;
+							newUser.auth = auth;
 
 		    				newUser.save(function(err){
 		    					if(err)
@@ -131,11 +137,12 @@ module.exports = function(passport) {
 	    		//user is logged in already, and needs to be merged
 	    		else {
 	    			var user = req.user;
-	    			user.auth.auth_type = 'facebook';
-	    			user.auth.facebook.id = profile.id;
-	    			user.auth.facebook.token = accessToken;
-	    			user.auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
-	    			user.auth.facebook.email = profile.emails[0].value;
+					var auth = {auth_type: 'facebook', facebook: {}};
+	    			auth.facebook.id = profile.id;
+	    			auth.facebook.token = accessToken;
+	    			auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
+	    			auth.facebook.email = profile.emails[0].value;
+					user.auth = auth;
 
 	    			user.save(function(err){
 	    				if(err)
