@@ -18,6 +18,10 @@
         navbar.removeClass('show');
     }
   });
-
+$('.marketingBtn, .contentBtn, .designBtn').on('click',function(){
+   var id = '#'+$(this).attr('class').split(' ')[1];
+   console.log(id);
+  $(id)[0].click(true);
+});
 
 })(jQuery)
