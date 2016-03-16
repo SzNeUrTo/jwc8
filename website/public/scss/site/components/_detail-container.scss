@@ -31,7 +31,7 @@
     	display: block;
     	margin: 0 auto;
     	max-width: 235px;
-    	width: 100%;
+    	width: 125%;
     }
 	> .btn,
 	> .counter {
@@ -58,23 +58,25 @@
 }
 
 .detail-item.--marketing {
+    margin-top: -30px;
 	> .title,
 	> .counter {
-		color: #68cbf2;
+		color: #68cbf2 !important;
 	}
 }
 
 .detail-item.--design {
 	> .title,
 	> .counter {
-		color: #fff458;
+		color: #fff458 !important;
 	}
 }
 
 .detail-item.--content {
+    margin-top: -45px;
 	> .title,
 	> .counter {
-		color: #f08c95;
+		color: #f08c95 !important;
 	}
 }
 
@@ -84,7 +86,17 @@
 	}
 }
 
+@media (max-width: 768px) {
+    .detail-item.-timeline {
+        margin-bottom: 15px;
+    }
+}
+
 @media (min-width: 768px) {
+    .detail-item.--marketing,
+    .detail-item.--content {
+        margin-top: 0px;
+    }
     .detail-item.-activity {
         &:after {
             content: " ";
