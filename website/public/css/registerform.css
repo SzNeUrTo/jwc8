@@ -346,7 +346,7 @@ textarea:-ms-input-placeholder {
 .logo-regis.--fixed-top {
     position: absolute;
     top: 0;
-    left: calc(50% - 60px);
+    left: calc(50% - 50px);
 }
 
 .logo-regis.--fixed-top > img {
