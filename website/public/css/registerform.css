@@ -385,12 +385,16 @@ img.back-button {
         margin-left: -32px;
     }
 
+    .next-button.next-button-1 {
+        margin-left: -5px;
+    }
+
     .send-form-button {
         width: 150px;
         margin-left: -22px;
     }
 
-    input {
+    input, .btn.dropdown-toggle {
         font-size: 14px !important;
     }
 }
