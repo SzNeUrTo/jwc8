@@ -1,5 +1,8 @@
 body {
-	background: url('../images/landing/bg.jpg') fixed center center;
+	background: url('../images/landing/bg.jpg') no-repeat center center;
+	background-color: #356243;
+	background-size: 100% 100%;
+	background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,5 +28,23 @@ h1, h2, h3, h4, h5, h6 {
 .section {
 	@extend .container;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+}
+
+.step-bar-main {
+	h2 {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.visible-xs.text {
+		display: inline-block !important;
+	}
+}
+
+@media (min-height: 768px) {
+	.hidden-xs.text {
+		display: inline-block !important;
+	}
 }

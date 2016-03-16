@@ -36,18 +36,28 @@
         height: 30px;
         border-radius: 30px;
     }
+    &.-top {
+        margin-bottom: -30px;
+    }
+
+    &.-top:last-child:after {
+        bottom: -18px;
+    }
+
     &.-top:after {
         left: calc(50% - 8px);
-        bottom: -47px;
+        bottom: -25px;
     }
     &.-bottom:after {
         left: calc(50% - 15px);
         top: -43px;
     }
     &.-top.--active:after {
-        bottom: -54px;
+        bottom: -25px;
     }
     &.-bottom.--active:after {
         top: -51px;
     }
+
+
 }

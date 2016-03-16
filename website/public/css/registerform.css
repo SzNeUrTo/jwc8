@@ -33,8 +33,9 @@ div{
 }
 
 .step-background-now{
+    margin-top: 16px;
     background-image: url('/pictures/form/icon_in.png');
-    background-size: 90px;
+    background-size: 70px;
     background-repeat: no-repeat;
     /* background-position: center; */
     color: black;
@@ -43,7 +44,7 @@ div{
     background-position: 50% 0%;
 }
 .step-background-now-text{
-    margin-top: 17px;
+    margin-top: 22px;
     margin-bottom: 40px;
 }
 
@@ -305,3 +306,38 @@ input::-moz-placeholder, textarea::-moz-placeholder {  /* Firefox 19+ */
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
    color: white;
 }
+
+.step-background-now > .step-background-now-text {
+    font-size: 23px !important;
+    margin-top: 14px !important;
+}
+.step-bar-main > .row > h2 {
+    margin-top: 2px;
+    font-size: 38px;
+}
+
+.step-bar > .row > h2 {
+    margin-top: 0px;
+}
+
+
+.logo-regis.--fixed-top {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 60px);
+}
+
+.logo-regis.--fixed-top > img {
+    width: 100px;
+}
+
+.back-button > .goto {
+    padding-left: 30px;
+}
+
+img.back-button {
+    margin-top: 10px;
+}
+
+
+
