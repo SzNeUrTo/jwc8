@@ -20,8 +20,8 @@ module.exports = function(app, passport) {
     	storage: storage,
     	limits: {
     		fileSize: 1000*1000*10, // not sure 10 MB
-    		files: 1,
-    		fields: 1
+    		//files: 1,
+    		// fields: 1
     	}
     }).single('design-1-pic');
 

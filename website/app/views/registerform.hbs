@@ -81,20 +81,9 @@ var registerType = {{major}};
     }
   }
 </script>
-<!-- TEST UPLOAD IMAGE -->
-<div style="background-color:red;">
-<h1> TEST UPLOAD </h1>
-<form method="post" enctype="multipart/form-data" action="/complete">
-  <p><input type="text" name="title" placeholder="title"/></p>
-  <p><input type="file" name="design-1-pic"/></p>
-  <p><input type="submit"/></p>
-</form>
-</div>
-<!-- TEST UPLOAD IMAGE -->
-<form class="register" action="/complete" method="post">
-
   <div class="register-form">
-    <form id="form" action="/complete" method="post" name="" class="">
+    <form id="form" enctype="multipart/form-data" action="/complete" method="post">
+    <input type="file" name="design-1-pic"/>
     <div class="container body-container">
         <!--<div class="sponsor-row-big sponsor-row">-->
             <!--<div class="row">-->
@@ -787,8 +776,6 @@ var registerType = {{major}};
     </div><!--.container-->
     </form>
   </div><!--.register-form-->
-  <input type="submit" name="submitbtn">
-</form>
 <script>
     $('.dropdown-menu a').on('click', function(){
         $(this).parent().parent().prev().html($(this).html() + '<span class="caret"></span>');
