@@ -82,686 +82,631 @@ var registerType = {{major}};
   }
 </script>
 
-  <div class="register-form">
-    <form id="form" action="/complete" method="post" name="" class="">
+<div class="register-form">
+  <form id="form" action="/complete" method="post" name="" class="">
     <div class="container body-container">
-        <!--<div class="sponsor-row-big sponsor-row">-->
-            <!--<div class="row">-->
-                <!--<div class="col-xs-2 sponsor">-->
-                    <!--<img src="/pictures/sponser/Logo_Jankasem.png" alt="">-->
-                <!--</div>-->
-                <!--<div class="col-xs-2 sponsor">-->
-                    <!--<img src="/pictures/sponser/Logo_Jankasem.png" alt="">-->
-                <!--</div>-->
-                <!--<div class="col-xs-4 logo-regis">-->
-                    <!--<img src="/pictures/form/logo_regis.png" alt="">-->
-                <!--</div>-->
-                <!--<div class="col-xs-2 sponsor">-->
-                    <!--<img src="/pictures/sponser/Logo_Jankasem.png" alt="">-->
-                <!--</div>-->
-                <!--<div class="col-xs-2 sponsor">-->
-                    <!--<img src="/pictures/sponser/Logo_Jankasem.png" alt="">-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<h2 class="head-background">ฟอร์มสมัครค่าย</h2>-->
-        <!--</div>-->
-
-
-
-
-<br>
-
-      <div class="row question-form">
-
-        <section id="form">
-
-          <div class="row step-bar-row text-center head-4 head-4-content head-4-design head-4-marketing">
-              <div class="col-xs-3 step-bar-main">
-                  <div class="row step-background-pass">
-                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>ประวัติส่วนตัว</h2>
-                  </div>
+        {{!-- <div class="sponsor-row-big sponsor-row">
+            <div class="row">
+                <div class="col-xs-2 sponsor">
+                    <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
+                </div>
+                <div class="col-xs-2 sponsor">
+                    <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
+                </div>
+                <div class="col-xs-4 logo-regis">
+                    <img src="/pictures/form/logo_regis.png" alt="">
+                </div>
+                <div class="col-xs-2 sponsor">
+                    <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
+                </div>
+                <div class="col-xs-2 sponsor">
+                    <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
+                </div>
+            </div>
+            <h2 class="head-background">ฟอร์มสมัครค่าย</h2>
+        </div> --}}
+    <br>
+    <div class="row question-form">
+      <section id="form">
+        <div class="row step-bar-row text-center head-4 head-4-content head-4-design head-4-marketing">
+          <div class="col-xs-3 step-bar-main">
+              <div class="row step-background-pass">
+                  <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
               </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-pass  flip">
-                      <h4 class="step-background-pass-text  flip"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามค่าย</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-pass">
-                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามสาขา</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-now  flip">
-                      <h2 class="step-background-now-text  flip">4</h2>
-                  </div>
-                  <div class="row">
-                      <h2>สรุปภาพรวม</h2>
-                  </div>
-              </div>
-          </div>
-
-
-
-        <section id="form">
-          <div class="row step-bar-row text-center head-1">
-              <div class="col-xs-3 step-bar-main">
-                  <div class="row step-background-now">
-                      <h2 class="step-background-now-text">1</h2>
-                  </div>
-                  <div class="row">
-                      <h2>ประวัติส่วนตัว</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-future flip">
-                      <h4 class="step-background-future-text flip">2</h4>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามค่าย</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-future">
-                      <h4 class="step-background-future-text">3</h4>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามสาขา</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-future flip">
-                      <h4 class="step-background-future-text flip">4</h4>
-                  </div>
-                  <div class="row">
-                      <h2>สรุปภาพรวม</h2>
-                  </div>
-              </div>
-          </div>
-        </section>
-
-
-          <section class="container step-1 step-4-design step-4-content step-4-marketing">
-              <div class="row no-margin sub-head hide">
+              <div class="row">
                   <h2>ประวัติส่วนตัว</h2>
               </div>
-            <div class="student row no-margin">
-                <div class="col-md-8 col-md-offset-2 general">
-                    <div class="row">
-                        <h3 class="pull-left">ข้อมูลทั่วไป</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <input type="text" placeholder="ชื่อ" name="firstname" required>
-                        </div>
-                        <div class="col-xs-6">
-                            <input type="text" placeholder="นามสกุล" name="lastname" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <input type="text" placeholder="ชื่อเล่น" name="nickname" required>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="btn-group dropdown">
-                                <input type="hidden" id="sex" name="sex" required>
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    เพศ <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a>ชาย</a></li>
-                                    <li><a>หญิง</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <input type="hidden" id="dateofbirth" name"birthdate" required>
-                            <input type="text" id="datepicker" class="birthdate" placeholder="วัน/เดือน/ปีเกิด">
-                        </div>
-                        <div class="col-xs-6">
-                            <input type="hidden" id="religion" name="religion" required>
-                            <div class="btn-group dropdown">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    ศาสนา <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a>พุทธ</a></li>
-                                    <li><a>คริสต์</a></li>
-                                    <li><a>อิสลาม</a></li>
-                                    <li><a>อื่น ๆ</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <input type="email" placeholder="E-mail" name="email" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <input type="text" class="number" placeholder="เบอร์โทรศัพท์" name="tel" required>
-                        </div>
-                        <div class="col-xs-6">
-                            <input type="hidden" id="size" name="size" required>
-                            <div class="btn-group dropdown">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    ไซต์เสื้อ <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a>S (กว้าง 34" x ยาว 26")</a></li>
-                                    <li><a>M (กว้าง 36" x ยาว 27")</a></li>
-                                    <li><a>L (กว้าง 38" x ยาว 28")</a></li>
-                                    <li><a>XL (กว้าง 40" x ยาว 29")</a></li>
-                                    <li><a>XXL (กว้าง 42" x ยาว 30")</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="textarea">
-                                <textarea rows="3" placeholder="ที่อยู่" name="position" required></textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-              <br>
-              <div class="school row no-margin">
-                  <div class="col-md-8 col-md-offset-2 general">
-                      <div class="row">
-                          <h3 class="pull-left">ข้อมูลการศึกษา</h3>
-                      </div>
-                      <div class="row">
-                          <div class="col-xs-12">
-                              <input type="text" class="col-md-12" placeholder="โรงเรียน" name="school" required>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-xs-6">
-                              <input type="hidden" id="level" name="level" required>
-                              <div class="btn-group dropdown">
-                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      ระดับชั้น <span class="caret"></span>
-                                  </button>
-                                  <ul class="dropdown-menu">
-                                      <li><a>จบการศึกษาระดับ ม.3</a></li>
-                                      <li><a>มัธยมศึกษาปีที่ 4</a></li>
-                                      <li><a>มัธยมศึกษาปีที่ 5</a></li>
-                                      <li><a>มัธยมศึกษาปีที่ 6</a></li>
-                                      <li><a>ประกาศนียบัตรวิชาชีพปี 1</a></li>
-                                      <li><a>ประกาศนียบัตรวิชาชีพปี 2</a></li>
-                                      <li><a>ประกาศนียบัตรวิชาชีพปี 3</a></li>
-                                  </ul>
-                              </div>
-                          </div>
-                          <div class="col-xs-6">
-                              <input type="tel" placeholder="สายที่เรียน" name="major" required>
-                          </div>
-                      </div>
-                  </div><!--.parent-->
-              </div>
-            <br>
-            <div class="parent row no-margin">
-                <div class="col-md-8 col-md-offset-2 general">
-                    <div class="row">
-                        <h3 class="pull-left">ข้อมูลผู้ปกครอง</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <input type="text" class="col-md-12" placeholder="นามสกุล" name="parent_firstname" required>
-                        </div>
-                        <div class="col-xs-6">
-                            <input type="text" class="col-md-12" placeholder="ชื่อ" name="parent_lastname" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <input type="text" placeholder="สถานะที่เกี่ยวข้อง" name="parent" required>
-                        </div>
-                        <div class="col-xs-6">
-                            <input class="number" type="tel" placeholder="เบอร์โทรศัพท์" name="emergency_tel" required>
-                        </div>
-                    </div>
-                </div><!--.parent-->
-            </div>
-
-            <br>
-            <br>
-              <div class="row text-center button-row-1">
-                  <div class="col-xs-4 col-xs-offset-4">
-                      <h3 class="next-button next-button-1" onclick="changePage('1','2')"><a class="goto" href="#form">ถัดไป</a></h3>
-                  </div>
-              </div>
-
-          </section><!--.step-1-->
-
-          <div class="row step-bar-row text-center head-2">
-              <div class="col-xs-3 step-bar-main">
-                  <div class="row step-background-pass">
-                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>ประวัติส่วนตัว</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-now  flip">
-                      <h2 class="step-background-now-text  flip">2</h2>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามค่าย</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-future">
-                      <h4 class="step-background-future-text">3</h4>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามสาขา</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-future  flip">
-                      <h4 class="step-background-future-text  flip">4</h4>
-                  </div>
-                  <div class="row">
-                      <h2>สรุปภาพรวม</h2>
-                  </div>
-              </div>
           </div>
-
-
-          <section class="container step-2 step-4-design step-4-content step-4-marketing">
-              <div class="row no-margin sub-head hide">
+          <div class="col-xs-3 step-bar">
+              <div class="row step-background-pass  flip">
+                  <h4 class="step-background-pass-text  flip"><i class="fa fa-check"></i></h4>
+              </div>
+              <div class="row">
                   <h2>คำถามค่าย</h2>
               </div>
-              <div class="row no-margin">
-                  <div class="col-md-8 col-md-offset-2 general">
-                      <div class="row no-margin">
-                          <h3 class="pull-left question">1.  เล่ากิจกรรมและประสบการณ์ที่คุณเคยทำ</h3>
-                      </div>
-                      <div class="row">
-                          <div class="col-xs-12">
-                              <div class="textarea">
-                                  <textarea name="your_experience" rows="8" required></textarea>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <br>
-              <div class="row no-margin">
-                  <div class="col-md-8 col-md-offset-2 general">
-                      <div class="row no-margin">
-                          <h3 class="pull-left question">2.  ความสามารถพิเศษหรืออดิเรกที่ชื่นชอบ</h3>
-                      </div>
-                      <div class="row">
-                          <div class="col-xs-12">
-                              <div class="textarea">
-                                  <textarea name="your_hobbies" rows="8" required></textarea>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <br>
-
-              <div class="row no-margin">
-                  <div class="col-md-8 col-md-offset-2 general">
-                      <div class="row no-margin">
-                          <h3 class="pull-left question">3.  จุดเด่นที่คุณคิดว่าแตกต่างจากผู้อื่นคือ</h3>
-                      </div>
-                      <div class="row">
-                          <div class="col-xs-12">
-                              <div class="textarea">
-                                  <textarea name="strong_point" rows="8" required></textarea>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <br>
-              <div class="row no-margin">
-                  <div class="col-md-8 col-md-offset-2 general">
-                      <div class="row no-margin">
-                          <h3 class="pull-left question">4.  นิสัยใดของตัวเองที่คุณไม่ชอบ เพราะอะไร คุณมีวิธีจัดการอย่างไร</h3>
-                      </div>
-                      <div class="row">
-                          <div class="col-xs-12">
-                              <div class="textarea">
-                                  <textarea name="your_like_unlike" rows="8" required></textarea>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <br>
-
-              <div class="row no-margin">
-                  <div class="col-md-8 col-md-offset-2 general">
-                      <div class="row no-margin">
-                          <h3 class="pull-left question">5.  เว็บไซต์แบบไหน ที่คุณอยากสร้างเพื่อแก้ไขปัญหาในวัยเรียนของคุณให้ดีขึ้น</h3>
-                      </div>
-                      <div class="row">
-                          <div class="col-xs-12">
-                              <div class="textarea">
-                                  <textarea name="your_created_websites" rows="8" required></textarea>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-                <br>
-                <br>
-                <div class="row button-row-2">
-                    <div class="col-xs-4" onclick="changePage('2','1')">
-                        <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                        <h3 class="back-button back-button-text back-button-2"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                        <h3 class="next-button next-button-2" onclick="changePage('2','3')"><a class="goto" href="#form">ถัดไป</a></h3>
-                    </div>
-                </div>
-
-          </section><!--.step-2-->
-
-
-          <div class="row step-bar-row text-center head-3 head-3-marketing head-3-content head-3-design">
-              <div class="col-xs-3 step-bar-main">
-                  <div class="row step-background-pass">
-                      <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>ประวัติส่วนตัว</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-pass flip">
-                      <h4 class="step-background-pass-text flip"><i class="fa fa-check"></i></h4>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามค่าย</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-now">
-                      <h2 class="step-background-now-text">3</h2>
-                  </div>
-                  <div class="row">
-                      <h2>คำถามสาขา</h2>
-                  </div>
-              </div>
-              <div class="col-xs-3 step-bar">
-                  <div class="row step-background-future">
-                      <h4 class="step-background-future-text">4</h4>
-                  </div>
-                  <div class="row">
-                      <h2>สรุปภาพรวม</h2>
-                  </div>
-              </div>
           </div>
-
-          <!--<div class="row step-bar-row">-->
-            <!--<div class="col-xs-3 step-bar-main">-->
-              <!--<img src="/pictures/form/icon_finish.png" alt="" width="60px">-->
-              <!--<h2>ประวัติส่วนตัว</h2>-->
-            <!--</div>-->
-            <!--<div class="col-xs-3 step-bar">-->
-              <!--<img class="flip" src="/pictures/form/icon_finish.png" alt="" width="60px">-->
-              <!--<h2>คำถามค่าย</h2>-->
-            <!--</div>-->
-            <!--<div class="col-xs-3 step-bar">-->
-              <!--<img src="/pictures/form/icon_in.png" alt="" width="75px">-->
-              <!--<h2>3</h2>-->
-              <!--<h2>คำถามสาขา</h2>-->
-            <!--</div>-->
-            <!--<div class="col-xs-3 step-bar">-->
-              <!--<img class="flip" src="/pictures/form/icon_not_go.png" alt="" width="40px">-->
-              <!--<h4>4</h4>-->
-              <!--<h2>สรุปภาพรวม</h2>-->
-            <!--</div>-->
-
-          <!--</div>-->
-
-
-          <section class="container step-3 step-3-marketing step-4-marketing">
-              <div class="row no-margin sub-head hide">
+          <div class="col-xs-3 step-bar">
+              <div class="row step-background-pass">
+                  <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+              </div>
+              <div class="row">
                   <h2>คำถามสาขา</h2>
               </div>
-              <h2 class="head-background text-center major-header">Web Marketing</h2>
-
-                <div class="row no-margin">
-                    <div class="col-md-8 col-md-offset-2 general">
-                        <div class="row no-margin">
-                            <h3 class="pull-left question">1.  ถ้าคุณมีถั่วงอกอยู่ 1 กำ คุณจะมีวิธีเพิ่มมูลค่ามันได้อย่างไร</h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="textarea">
-                                    <textarea rows="8" name="marketing-1"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row no-margin">
-                            <!---->
-                            <!-- <div style="text-align: left; position: relative; background-color: transparent; border: medium solid white; padding-right: 10px; border-radius: 10px; cursor: pointer;">
-                                <a class="btn btn-primary" style="margin: 5px; background-color: white; border-radius: 10px; color: black; border-color: white; cursor: pointer;" href="javascript:;">
-                                    Choose File...
-                                    <input style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" name="file_source" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file">
-                                </a>
-                                &nbsp;
-                                <span class="label" id="upload-file-info" style="font-size: 18px;">อัพโหลดรูปภาพ</span>
-                            </div> -->
-
-                            <!--////-->
-                        </div>
-                    </div>
+          </div>
+            <div class="col-xs-3 step-bar">
+                <div class="row step-background-now  flip">
+                    <h2 class="step-background-now-text  flip">4</h2>
                 </div>
-              <br>
-
-                <div class="row no-margin">
-                    <div class="col-md-8 col-md-offset-2 general">
-                        <div class="row no-margin">
-                            <h3 class="pull-left question">2.  ถ้าคุณเป็นเจ้าของเว็บไซต์ คอนเทนต์เกี่ยวกับการศึกษา ที่พึ่งเปิดใหม่ คุณอยากนำเสนอเรื่องราวเกี่ยวกับอะไร แล้วมีวิธีดึงคนเข้าเว็บไซต์อย่างไร</h3>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="textarea">
-                                    <textarea rows="8" name="marketing-2"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <br>
-                <br>
-                <div class="row button-row-3">
-                    <div class="col-xs-4" onclick="changePage('3','2')">
-                        <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                        <h3 class="back-button back-button-text"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                        <h3 class="next-button" onclick="changePage('3','4')"><a class="goto" href="#form">ถัดไป</a></h3>
-                    </div>
-                </div>
-            </section>
-
-            <section class="container step-3 step-3-content step-4-content">
-                <div class="row no-margin sub-head hide">
-                    <h2>คำถามสาขา</h2>
-                </div>
-                <h2 class="head-background text-center major-header">Web Content</h2>
-
-                  <div class="row no-margin">
-                      <div class="col-md-8 col-md-offset-2 general">
-                          <div class="row no-margin">
-                              <h3 class="pull-left question">1. ถ้าสมมติว่ามีถั่วงอกกำลังจะกลายพันธุ์อยู่ตรงหน้าคุณ มันกำลังจะกลายพันธุ์เป็นอะไร และมันกำลังทำอะไรอยู่ จงบรรยายเกี่ยวกับเรื่องราวของมัน
-<br>จากเรื่องที่แต่งมา จงย่อให้เหลือไม่เกิน 140 ตัวอักษร  </h3>
-                          </div>
-                          <div class="row">
-                              <div class="col-xs-12">
-                                  <div class="textarea">
-                                      <textarea rows="8" maxlength=140 name="content-1"></textarea>
-                                  </div>
-                              </div>
-                          </div>
-                          <br>
-                          <!-- <div class="row no-margin">
-                              <!---->
-                              <!-- <div style="text-align: left; position: relative; background-color: transparent; border: medium solid white; padding-right: 10px; border-radius: 10px; cursor: pointer;">
-                                  <a class="btn btn-primary" style="margin: 5px; background-color: white; border-radius: 10px; color: black; border-color: white; cursor: pointer;" href="javascript:;">
-                                      Choose File...
-                                      <input style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" name="file_source" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file">
-                                  </a>
-                                  &nbsp;
-                                  <span class="label" id="upload-file-info" style="font-size: 18px;">อัพโหลดรูปภาพ</span>
-                              </div> -->
-
-                              <!--////-->
-                          </div>
-                      </div>
-
-
-                  <br>
-                  <br>
-                  <div class="row button-row-3">
-                      <div class="col-xs-4" onclick="changePage('3','2')">
-                          <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                          <h3 class="back-button back-button-text"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
-                      </div>
-                      <div class="col-xs-4 text-center">
-                          <h3 class="next-button" onclick="changePage('3','4')"><a class="goto" href="#form">ถัดไป</a></h3>
-                      </div>
-                  </div>
-                </section>
-
-              <section class="container step-3 step-3-design step-4-design">
-                  <div class="row no-margin sub-head hide">
-                      <h2>คำถามสาขา</h2>
-                  </div>
-                  <h2 class="head-background text-center major-header">Web Design</h2>
-
-                    <div class="row no-margin">
-                        <div class="col-md-8 col-md-offset-2 general">
-                            <div class="row no-margin">
-                                <h3 class="pull-left question">1.  ให้คุณออกแบบถั่วงอกกลายพันธุ์ในแบบของคุณ โดยใช้โปรแกรม PSD หรือ AI พร้อมอธิบายภาพดังกล่าว (ให้อัพโหลดรูป)</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <div class="textarea">
-                                        <textarea rows="8" name="design-1"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row no-margin">
-                                <!---->
-                                <div style="text-align: left; position: relative; background-color: transparent; border: medium solid white; padding-right: 10px; border-radius: 10px; cursor: pointer;">
-                                    <a class="btn btn-primary" style="margin: 5px; background-color: white; border-radius: 10px; color: black; border-color: white; cursor: pointer;" href="javascript:;">
-                                        Choose File...
-                                        <input name="design-1-pic" style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file"/>
-                                    </a>
-                                    &nbsp;
-                                    <span class="label" id="upload-file-info" style="font-size: 18px;">อัพโหลดรูปภาพ</span>
-                                </div>
-
-                                <!--////-->
-                            </div>
-                        </div>
-                    </div>
-                  <br>
-
-                    <div class="row no-margin">
-                        <div class="col-md-8 col-md-offset-2 general">
-                            <div class="row no-margin">
-                                <h3 class="pull-left question">2.  คุณชอบดีไซน์ของเว็บไซต์ไหนมากที่สุด เพราะอะไร และหากคุณสามารถพัฒนาดีไซน์ในเว็บไซต์นั้นได้ คุณจะพัฒนาหรือแก้ไขส่วนใด</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <div class="textarea">
-                                        <textarea rows="8" name="design-2"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <br>
-                    <br>
-                    <div class="row button-row-3">
-                        <div class="col-xs-4" onclick="changePage('3','2')">
-                            <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                            <h3 class="back-button back-button-text"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
-                        </div>
-                        <div class="col-xs-4 text-center">
-                            <h3 class="next-button" onclick="changePage('3','4')"><a class="goto" href="#form">ถัดไป</a></h3>
-                        </div>
-                    </div>
-                  </section>
-
-
-
-
-          <!--<br>-->
-          <!--<br>-->
-          <!--<br>-->
-          <!--<br>-->
-
-          <!---->
-
-          <!--<br><br>-->
-
-          <section class="step-4 step-4-design step-4-content step-4-marketing">
-              <div class="row no-margin sub-head hide">
-                  <h2>สรุปภาพรวม</h2>
-              </div>
-
-              <div class="row text-center">
-                  <p>ให้น้องๆ ตรวจสอบข้อมูลทุกอย่างให้เรียบร้อย</p>
-                  <p>หากพบข้อมูลส่วนใดไม่ถูกต้อง สามารถกดปุ่ม "กลับไปแก้ไข" ได้</p>
-                  <p>หลังจากตรวจสอบและกด "ส่งคำตอบ" แล้ว จะไม่สามารถกลับมาแก้ไขได้อีก</p>
-
-              </div>
-
-
-            <br><br>
-
-            <div class="row button-row-4">
-                <div class="col-xs-4" onclick="changePage('4','3')">
-                    <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
-                    <h3 class="back-button back-button-text back-button-4"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
-                </div>
-                <div class="col-xs-4 text-center">
-
-                    <!-- <h3 class="next-button next-button-4" onclick="changePage('4','5')"><a class="goto" href="#form">ถัดไป</a></h3> -->
-
-                    <input type="submit" class="send-form-button" value="ส่งคำตอบ">
-
+                <div class="row">
+                    <h2>สรุปภาพรวม</h2>
                 </div>
             </div>
-            <br>
-
-
-          </section><!--.step-4-->
-
-
-          <br><br>
-
+        </div>
+      </section>
+      <section id="form">
+        <div class="row step-bar-row text-center head-1">
+          <div class="col-xs-3 step-bar-main">
+              <div class="row step-background-now">
+                  <h2 class="step-background-now-text">1</h2>
+              </div>
+              <div class="row">
+                  <h2>ประวัติส่วนตัว</h2>
+              </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+              <div class="row step-background-future flip">
+                  <h4 class="step-background-future-text flip">2</h4>
+              </div>
+              <div class="row">
+                  <h2>คำถามค่าย</h2>
+              </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+              <div class="row step-background-future">
+                  <h4 class="step-background-future-text">3</h4>
+              </div>
+              <div class="row">
+                  <h2>คำถามสาขา</h2>
+              </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+              <div class="row step-background-future flip">
+                  <h4 class="step-background-future-text flip">4</h4>
+              </div>
+              <div class="row">
+                  <h2>สรุปภาพรวม</h2>
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="container step-1 step-4-design step-4-content step-4-marketing">
+        <div class="row no-margin sub-head hide">
+          <h2>ประวัติส่วนตัว</h2>
+        </div>
+        <div class="student row no-margin">
+          <div class="col-md-8 col-md-offset-2 general">
+            <div class="row">
+              <h3 class="pull-left">ข้อมูลทั่วไป</h3>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text" placeholder="ชื่อ" name="firstname" required>
+              </div>
+              <div class="col-xs-6">
+                <input type="text" placeholder="นามสกุล" name="lastname" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text" placeholder="ชื่อเล่น" name="nickname" required>
+              </div>
+              <div class="col-xs-6">
+                <div class="btn-group dropdown">
+                  <input type="hidden" id="sex" name="sex" required>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    เพศ <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a>ชาย</a></li>
+                    <li><a>หญิง</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="hidden" id="dateofbirth" name"birthdate" required>
+                <input type="text" id="datepicker" class="birthdate" placeholder="วัน/เดือน/ปีเกิด">
+              </div>
+              <div class="col-xs-6">
+                <input type="hidden" id="religion" name="religion" required>
+                <div class="btn-group dropdown">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ศาสนา <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a>พุทธ</a></li>
+                    <li><a>คริสต์</a></li>
+                    <li><a>อิสลาม</a></li>
+                    <li><a>อื่น ๆ</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <input type="email" placeholder="E-mail" name="email" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text" class="number" placeholder="เบอร์โทรศัพท์" name="tel"  required>
+              </div>
+              <div class="col-xs-6">
+                <input type="hidden" id="size" name="size" required>
+                <div class="btn-group dropdown">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle=  "dropdown" aria-haspopup="true" aria-expanded="false">
+                    ไซต์เสื้อ <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a>S (กว้าง 34" x ยาว 26")</a></li>
+                    <li><a>M (กว้าง 36" x ยาว 27")</a></li>
+                    <li><a>L (กว้าง 38" x ยาว 28")</a></li>
+                    <li><a>XL (กว้าง 40" x ยาว 29")</a></li>
+                    <li><a>XXL (กว้าง 42" x ยาว 30")</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="textarea">
+                  <textarea rows="3" placeholder="ที่อยู่" name="position" required></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="school row no-margin">
+          <div class="col-md-8 col-md-offset-2 general">
+            <div class="row">
+              <h3 class="pull-left">ข้อมูลการศึกษา</h3>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <input type="text" class="col-md-12" placeholder="โรงเรียน" name="school" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="hidden" id="level" name="level" required>
+                <div class="btn-group dropdown">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ระดับชั้น <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a>จบการศึกษาระดับ ม.3</a></li>
+                    <li><a>มัธยมศึกษาปีที่ 4</a></li>
+                    <li><a>มัธยมศึกษาปีที่ 5</a></li>
+                    <li><a>มัธยมศึกษาปีที่ 6</a></li>
+                    <li><a>ประกาศนียบัตรวิชาชีพปี 1</a></li>
+                    <li><a>ประกาศนียบัตรวิชาชีพปี 2</a></li>
+                    <li><a>ประกาศนียบัตรวิชาชีพปี 3</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <input type="tel" placeholder="สายที่เรียน" name="major" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="parent row no-margin">
+          <div class="col-md-8 col-md-offset-2 general">
+            <div class="row">
+              <h3 class="pull-left">ข้อมูลผู้ปกครอง</h3>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text" class="col-md-12" placeholder="ชื่อ" name="parent_lastname" required>
+              </div>
+              <div class="col-xs-6">
+                <input type="text" class="col-md-12" placeholder="นามสกุล" name="parent_firstname" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text" placeholder="สถานะที่เกี่ยวข้อง" name="parent" required>
+              </div>
+              <div class="col-xs-6">
+                <input class="number" type="tel" placeholder="เบอร์โทรศัพท์" name="emergency_tel" required>
+              </div>
+            </div>
+          </div>
+          <!--.parent-->
+        </div>
+        <br>
+        <br>
+        <div class="row text-center button-row-1">
+          <div class="col-xs-4 col-xs-offset-4">
+            <h3 class="next-button next-button-1" onclick="changePage('1','2')"><a class="goto" href="#form">ถัดไป</a></h3>
+          </div>
+        </div>
+        </section>
+        <!--.step-1-->
+        <div class="row step-bar-row text-center head-2">
+          <div class="col-xs-3 step-bar-main">
+            <div class="row step-background-pass">
+              <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+            </div>
+            <div class="row">
+              <h2>ประวัติส่วนตัว</h2>
+            </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+            <div class="row step-background-now  flip">
+              <h2 class="step-background-now-text  flip">2</h2>
+            </div>
+            <div class="row">
+              <h2>คำถามค่าย</h2>
+            </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+            <div class="row step-background-future">
+              <h4 class="step-background-future-text">3</h4>
+            </div>
+            <div class="row">
+              <h2>คำถามสาขา</h2>
+            </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+            <div class="row step-background-future  flip">
+              <h4 class="step-background-future-text  flip">4</h4>
+            </div>
+            <div class="row">
+              <h2>สรุปภาพรวม</h2>
+            </div>
+          </div>
+        </div>
+        <section class="container step-2 step-4-design step-4-content step-4-marketing">
+          <div class="row no-margin sub-head hide">
+            <h2>คำถามค่าย</h2>
+          </div>
+          <div class="row no-margin">
+            <div class="col-md-8 col-md-offset-2 general">
+              <div class="row no-margin">
+                <h3 class="pull-left question">1.  เล่ากิจกรรมและประสบการณ์ที่คุณเคยทำ</h3>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="textarea">
+                    <textarea name="your_experience" rows="8" required></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row no-margin">
+            <div class="col-md-8 col-md-offset-2 general">
+              <div class="row no-margin">
+                <h3 class="pull-left question">2.  ความสามารถพิเศษหรืออดิเรกที่ชื่นชอบ</h3>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="textarea">
+                    <textarea name="your_hobbies" rows="8" required></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row no-margin">
+            <div class="col-md-8 col-md-offset-2 general">
+              <div class="row no-margin">
+                <h3 class="pull-left question">3.  จุดเด่นที่คุณคิดว่าแตกต่างจากผู้อื่นคือ</h3>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="textarea">
+                    <textarea name="strong_point" rows="8" required></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row no-margin">
+            <div class="col-md-8 col-md-offset-2 general">
+              <div class="row no-margin">
+                <h3 class="pull-left question">4.  นิสัยใดของตัวเองที่คุณไม่ชอบ เพราะอะไร คุณมีวิธีจัดการอย่างไร</h3>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="textarea">
+                    <textarea name="your_like_unlike" rows="8" required></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row no-margin">
+            <div class="col-md-8 col-md-offset-2 general">
+              <div class="row no-margin">
+                <h3 class="pull-left question">5.  เว็บไซต์แบบไหน ที่คุณอยากสร้างเพื่อแก้ไขปัญหาในวัยเรียนของคุณให้ดีขึ้น</h3>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="textarea">
+                    <textarea name="your_created_websites" rows="8" required></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row button-row-2">
+            <div class="col-xs-4" onclick="changePage('2','1')">
+              <img class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
+              <h3 class="back-button back-button-text back-button-2"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
+            </div>
+            <div class="col-xs-4 text-center">
+              <h3 class="next-button next-button-2" onclick="changePage('2','3')"><a class="goto" href="#form">ถัดไป</a></h3>
+            </div>
+          </div>
+        </section>
+        <!--.step-2-->
+        <div class="row step-bar-row text-center head-3 head-3-marketing head-3-content head-3-design">
+          <div class="col-xs-3 step-bar-main">
+            <div class="row step-background-pass">
+              <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+            </div>
+            <div class="row">
+              <h2>ประวัติส่วนตัว</h2>
+            </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+            <div class="row step-background-pass flip">
+              <h4 class="step-background-pass-text flip"><i class="fa fa-check"></i></h4>
+            </div>
+            <div class="row">
+              <h2>คำถามค่าย</h2>
+            </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+            <div class="row step-background-now">
+              <h2 class="step-background-now-text">3</h2>
+            </div>
+            <div class="row">
+              <h2>คำถามสาขา</h2>
+            </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+            <div class="row step-background-future">
+              <h4 class="step-background-future-text">4</h4>
+            </div>
+            <div class="row">
+              <h2>สรุปภาพรวม</h2>
+            </div>
+          </div>
+        </div>
+        {{!-- <div class="row step-bar-row">
+        <div class="col-xs-3 step-bar-main">
+        <img src="/pictures/form/icon_finish.png" alt="" width="60px">
+        <h2>ประวัติส่วนตัว</h2>
+        </div>
+        <div class="col-xs-3 step-bar">
+        <img class="flip" src="/pictures/form/icon_finish.png" alt="" width="60px">
+        <h2>คำถามค่าย</h2>
+        </div>
+        <div class="col-xs-3 step-bar">
+        <img src="/pictures/form/icon_in.png" alt="" width="75px">
+        <h2>3</h2>
+        <h2>คำถามสาขา</h2>
+        </div>
+        <div class="col-xs-3 step-bar">
+        <img class="flip" src="/pictures/form/icon_not_go.png" alt="" width="40px">
+        <h4>4</h4>
+        <h2>สรุปภาพรวม</h2>
+        </div>
+        </div> --}}
+        <section class="container step-3 step-3-marketing step-4-marketing">
+          <div class="row no-margin sub-head hide">
+            <h2>คำถามสาขา</h2>
+          </div>
+          <h2 class="head-background text-center major-header">Web Marketing</h2>
+          <div class="row no-margin">
+            <div class="col-md-8 col-md-offset-2 general">
+              <div class="row no-margin">
+                <h3 class="pull-left question">1.  ถ้าคุณมีถั่วงอกอยู่ 1 กำ คุณจะมีวิธีเพิ่มมูลค่ามันได้อย่างไร</h3>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="textarea">
+                    <textarea rows="8" name="marketing-1"></textarea>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row no-margin">
+                <!---->
+                <!-- <div style="text-align: left; position: relative; background-color: transparent; border: medium solid white; padding-right: 10px; border-radius: 10px; cursor: pointer;">
+                                        <a class="btn btn-primary" style="margin: 5px; background-color: white; border-radius: 10px; color: black; border-color: white; cursor: pointer;" href="javascript:;">
+                                            Choose File...
+                                            <input style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" name="file_source" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file">
+                                        </a>
+                                        &nbsp;
+                                        <span class="label" id="upload-file-info" style="font-size: 18px;">อัพโหลดรูปภาพ</span>
+                                    </div> -->
+                <!--////-->
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row no-margin">
+            <div class="col-md-8 col-md-offset-2 general">
+              <div class="row no-margin">
+                <h3 class="pull-left question">2.  ถ้าคุณเป็นเจ้าของเว็บไซต์ คอนเทนต์เกี่ยวกับการศึกษา ที่พึ่งเปิดใหม่ คุณอยากนำเสนอเรื่องราวเกี่ยวกับอะไร แล้วมีวิธีดึงคนเข้าเว็บไซต์อย่างไร</h3>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="textarea">
+                    <textarea rows="8" name="marketing-2"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row button-row-3">
+            <div class="col-xs-4" onclick="changePage('3','2')">
+              <img class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
+              <h3 class="back-button back-button-text"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
+            </div>
+            <div class="col-xs-4 text-center">
+              <h3 class="next-button" onclick="changePage('3','4')"><a class="goto" href="#form">ถัดไป</a></h3>
+            </div>
+          </div>
+        </section>
+        <section class="container step-3 step-3-content step-4-content">
+          <div class="row no-margin sub-head hide">
+            <h2>คำถามสาขา</h2>
+          </div>
+          <h2 class="head-background text-center major-header">Web Content</h2>
+          <div class="row no-margin">
+            <div class="col-md-8 col-md-offset-2 general">
+              <div class="row no-margin">
+                <h3 class="pull-left question">1. ถ้าสมมติว่ามีถั่วงอกกำลังจะกลายพันธุ์อยู่ตรงหน้าคุณ มันกำลังจะกลายพันธุ์เป็นอะไร และมันกำลังทำอะไรอยู่ จงบรรยายเกี่ยวกับเรื่องราวของมัน
+                <br>จากเรื่องที่แต่งมา จงย่อให้เหลือไม่เกิน 140 ตัวอักษร  </h3>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="textarea">
+                    <textarea rows="8" maxlength=140 name="content-1"></textarea>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <!-- <div class="row no-margin">
+                                      <!---->
+              <!-- <div style="text-align: left; position: relative; background-color: transparent; border: medium solid white; padding-right: 10px; border-radius: 10px; cursor: pointer;">
+                                          <a class="btn btn-primary" style="margin: 5px; background-color: white; border-radius: 10px; color: black; border-color: white; cursor: pointer;" href="javascript:;">
+                                              Choose File...
+                                              <input style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" name="file_source" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file">
+                                          </a>
+                                          &nbsp;
+                                          <span class="label" id="upload-file-info" style="font-size: 18px;">อัพโหลดรูปภาพ</span>
+                                      </div> -->
+              <!--////-->
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row button-row-3">
+            <div class="col-xs-4" onclick="changePage('3','2')">
+              <img class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
+              <h3 class="back-button back-button-text"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
+            </div>
+            <div class="col-xs-4 text-center">
+              <h3 class="next-button" onclick="changePage('3','4')"><a class="goto" href="#form">ถัดไป</a></h3>
+            </div>
+          </div>
+        </section>
+        <section class="container step-3 step-3-design step-4-design">
+          <div class="row no-margin sub-head hide">
+            <h2>คำถามสาขา</h2>
+          </div>
+          <h2 class="head-background text-center major-header">Web Design</h2>
+          <div class="row no-margin">
+            <div class="col-md-8 col-md-offset-2 general">
+              <div class="row no-margin">
+                <h3 class="pull-left question">1.  ให้คุณออกแบบถั่วงอกกลายพันธุ์ในแบบของคุณ โดยใช้โปรแกรม PSD หรือ AI พร้อมอธิบายภาพดังกล่าว (ให้อัพโหลดรูป)</h3>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="textarea">
+                    <textarea rows="8" name="design-1"></textarea>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="row no-margin">
+                <!---->
+                <div style="text-align: left; position: relative; background-color: transparent; border: medium solid white; padding-right: 10px; border-radius: 10px; cursor: pointer;">
+                  <a class="btn btn-primary" style="margin: 5px; background-color: white; border-radius: 10px; color: black; border-color: white; cursor: pointer;" href="javascript:;">
+                    Choose File...
+                    <input name="design-1-pic" style="position: absolute; z-index: 2; top: 0px; left: 0px; background-color: blue; color: blue; opacity: 0;" size="40" onchange="$(&quot;#upload-file-info&quot;).html($(this).val());" type="file"/>
+                  </a> &nbsp;
+                  <span class="label" id="upload-file-info" style="font-size: 18px;">อัพโหลดรูปภาพ</span>
+                </div>
+                <!--////-->
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row no-margin">
+            <div class="col-md-8 col-md-offset-2 general">
+              <div class="row no-margin">
+                <h3 class="pull-left question">2.  คุณชอบดีไซน์ของเว็บไซต์ไหนมากที่สุด เพราะอะไร และหากคุณสามารถพัฒนาดีไซน์ในเว็บไซต์นั้นได้ คุณจะพัฒนาหรือแก้ไขส่วนใด</h3>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="textarea">
+                    <textarea rows="8" name="design-2"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row button-row-3">
+            <div class="col-xs-4" onclick="changePage('3','2')">
+              <img class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
+              <h3 class="back-button back-button-text"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
+            </div>
+            <div class="col-xs-4 text-center">
+              <h3 class="next-button" onclick="changePage('3','4')"><a class="goto" href="#form">ถัดไป</a></h3>
+            </div>
+          </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section class="step-4 step-4-design step-4-content step-4-marketing">
+          <div class="row no-margin sub-head hide">
+            <h2>สรุปภาพรวม</h2>
+          </div>
+          <div class="row text-center">
+            <p>ให้น้องๆ ตรวจสอบข้อมูลทุกอย่างให้เรียบร้อย</p>
+            <p>หากพบข้อมูลส่วนใดไม่ถูกต้อง สามารถกดปุ่ม "กลับไปแก้ไข" ได้</p>
+            <p>หลังจากตรวจสอบและกด "ส่งคำตอบ" แล้ว จะไม่สามารถกลับมาแก้ไขได้อีก</p>
+          </div>
+          <br>
+          <br>
+          <div class="row button-row-4">
+            <div class="col-xs-4" onclick="changePage('4','3')">
+              <img class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
+              <h3 class="back-button back-button-text back-button-4"><a class="goto" href="#form">กลับไปแก้ไข</a></h3>
+            </div>
+            <div class="col-xs-4 text-center">
+              <!-- <h3 class="next-button next-button-4" onclick="changePage('4','5')"><a class="goto" href="#form">ถัดไป</a></h3> -->
+              <input type="submit" class="send-form-button" value="ส่งคำตอบ">
+            </div>
+          </div>
+          <br>
+        </section>
+        <!--.step-4-->
+        <br><br>
           <!-- <div class="row">
               <div class="col-xs-4">
                   <img  class="pull-left back-button" src="/pictures/form/arrow.png" alt="" width="80px" height="70px">
@@ -775,8 +720,8 @@ var registerType = {{major}};
 
 
     </div><!--.container-->
-    </form>
-  </div><!--.register-form-->
+  </form>
+</div><!--.register-form-->
 
 <script>
     $('.dropdown-menu a').on('click', function(){

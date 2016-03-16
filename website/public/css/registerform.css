@@ -33,6 +33,7 @@ div{
 }
 
 .step-background-now{
+    margin-top: 10px;
     background-image: url('/pictures/form/icon_in.png');
     background-size: 90px;
     background-repeat: no-repeat;
@@ -43,7 +44,7 @@ div{
     background-position: 50% 0%;
 }
 .step-background-now-text{
-    margin-top: 17px;
+    margin-top: 22px;
     margin-bottom: 40px;
 }
 
@@ -304,4 +305,13 @@ input::-moz-placeholder, textarea::-moz-placeholder {  /* Firefox 19+ */
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
    color: white;
+}
+
+.step-bar-main > .step-background-now >.step-background-now-text {
+    font-size: 23px;
+    margin-top: 23px;
+}
+.step-bar-main > .row > h2 {
+    margin-top: 24px;
+    font-size: 38px;
 }
