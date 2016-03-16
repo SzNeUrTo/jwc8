@@ -323,12 +323,12 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .logo-regis.--fixed-top {
     position: absolute;
-    top: -15px;
+    top: 0;
     left: calc(50% - 60px);
 }
 
 .logo-regis.--fixed-top > img {
-    width: 120px;
+    width: 100px;
 }
 
 
