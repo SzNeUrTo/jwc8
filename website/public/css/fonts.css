@@ -21,3 +21,22 @@
     font-style: normal;
     font-weight: normal;
 }
+@font-face{
+      font-family: 'THSarabunNew';
+      src: url('../fonts/THSarabunNew.ttf') format('truetype');
+      font-style: normal;
+      font-weight: normal;
+}
+@font-face{
+      font-family: 'Quark-Bold';
+      src: url('../fonts/Quark-Bold.otf') format("opentype");
+      font-style: normal;
+      font-weight: normal;
+}
+
+@font-face{
+      font-family: 'Counter';
+      src: url('../fonts/vtks_noise.ttf') format("opentype");
+      font-style: normal;
+      font-weight: normal;
+}

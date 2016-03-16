@@ -1,0 +1,20 @@
+.embed{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.facebook{
+  margin-right: 5%;
+}
+.tidtor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10%;
+  margin-top: 50px;
+  margin-right: 10%;
+}
+.tidtor > img{
+  width: 96px;
+}
