@@ -1,0 +1,9 @@
+.faq{
+  text-align: left;
+}
+.faq > h3{
+  padding-left: 15px;
+}
+#myCarousel{
+  width: 70%;
+}

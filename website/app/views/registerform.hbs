@@ -1,0 +1,371 @@
+<link rel="stylesheet" href="/css/registerform.css" >
+<link rel="stylesheet" href="/css/fonts.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script>
+  //    var registerType = {{registerType}};
+  //      registerType = "marketing" or "content" or "design"
+  var marketing = "marketing";
+  var content = "content";
+  var design = "design";
+  var registerType = {{major}};
+    $(function() {
+
+      $(".head-2, .head-3, .head-4").addClass("hide");
+      $(".step-2, .step-3, .step-4").addClass("hide");
+      $( "#datepicker" ).datepicker({
+        dateFormat: "dd/mm/yy"
+      });
+    });
+
+    function changePage(thisPage, destPage) {
+        console.log(thisPage + " " + destPage);
+        if(destPage=="4") {  // Disable input box
+            $("input").attr("readonly","");
+            $("button").attr("disabled","disabled");
+            $(".birthdate").attr("disabled","disabled");
+            // $(".birthdate").removeClass("hasDatepicker");
+            // $(".birthdate").removeAttr("id");
+            // $("#ui-datepicker-div").addClass("hide");
+            $("textarea").attr("readonly","");
+            $(".textarea").attr("readonly","");
+            $(".button-row-1, .button-row-2, .button-row-3").addClass("hide");
+            $("input[type='submit']").removeAttr("readonly");
+            var tmp = $("#datepicker").val();
+            $("#dateofbirth").val(tmp);
+        } else {  // Enable input box
+            $("input").removeAttr("readonly");
+            $("button").removeAttr("disabled");
+            $(".birthdate").removeAttr("disabled");
+            // $(".birthdate").addClass("hasDatepicker");
+            // $(".birthdate").attr("id","datepicker");
+            // $("#ui-datepicker-div").removeClass("hide");
+            $("textarea").removeAttr("readonly");
+            $(".textarea").removeAttr("readonly");
+            $(".button-row-1, .button-row-2, .button-row-3").removeClass("hide");
+        }
+        $('html,body').scrollTop(0);
+      if(parseInt(thisPage) < parseInt(destPage)) {
+          // Out
+          console.log("Next");
+          if(destPage=="4")
+              $(".sub-head").removeClass("hide");
+          if(thisPage=="3" || thisPage=="4")
+              thisPage = thisPage+"-"+registerType;
+          $('.head-'+thisPage).addClass('hide');
+          $('.step-'+thisPage).removeClass('animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideOutLeft hide');
+
+          // In
+          if(destPage=="3" || destPage=="4")
+              destPage = destPage+"-"+registerType;
+          $('.head-'+destPage).removeClass('hide');
+          $('.step-'+destPage).removeClass('hide animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideInRight');
+      } else if(parseInt(thisPage) > parseInt(destPage)) {
+          // Out
+          console.log("Prev");
+          if(thisPage=="4")
+              $(".sub-head").addClass("hide");
+          if(thisPage=="3" || thisPage=="4"){
+              thisPage = thisPage+"-"+registerType;}
+          $('.head-'+thisPage).addClass('hide');
+          $('.step-'+thisPage).removeClass('animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideOutRight hide');
+
+          // In
+          if(destPage=="3" || destPage=="4"){
+              destPage = destPage+"-"+registerType;}
+          $('.head-'+destPage).removeClass('hide');
+          $('.step-'+destPage).removeClass('hide animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideInLeft');
+      }
+    }
+</script>
+
+<div class="register-form">
+  <form id="form" enctype="multipart/form-data"  action="/complete" method="post" name="" class="">
+    <input class="ttt" type="text" name="jwc" value={{major}} style="display:none;">
+    <div class="container body-container">
+      <div class="logo-regis --fixed-top">
+        <img src="/images/landing/logo.png" alt="">
+      </div>
+      {{!-- โค้ดตรงนี้ใช้ตอนมีสปอนเซ่อมาแล้ว --}}
+      {{!-- <div class="sponsor-row-big sponsor-row">
+          <div class="row">
+              <div class="col-xs-2 sponsor">
+                  <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
+              </div>
+              <div class="col-xs-2 sponsor">
+                  <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
+              </div>
+              <div class="col-xs-4 logo-regis">
+                  <img src="/pictures/form/logo_regis.png" alt="">
+              </div>
+              <div class="col-xs-2 sponsor">
+                  <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
+              </div>
+              <div class="col-xs-2 sponsor">
+                  <img src="/pictures/sponser/Logo_Jankasem.png" alt="">
+              </div>
+          </div>
+          <h2 class="head-background">ฟอร์มสมัครค่าย</h2>
+      </div> --}}
+    <br>
+    <div class="row question-form">
+      <section id="form">
+        <div class="row step-bar-row text-center head-4 head-4-content head-4-design head-4-marketing">
+          <div class="col-xs-3 step-bar-main">
+              <div class="row step-background-pass">
+                  <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+              </div>
+              <div class="row">
+                  <h2>ประวัติส่วนตัว</h2>
+              </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+              <div class="row step-background-pass  flip">
+                  <h4 class="step-background-pass-text  flip"><i class="fa fa-check"></i></h4>
+              </div>
+              <div class="row">
+                  <h2>คำถามค่าย</h2>
+              </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+              <div class="row step-background-pass">
+                  <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+              </div>
+              <div class="row">
+                  <h2>คำถามสาขา</h2>
+              </div>
+          </div>
+            <div class="col-xs-3 step-bar">
+                <div class="row step-background-now  flip">
+                    <h2 class="step-background-now-text  flip">4</h2>
+                </div>
+                <div class="row">
+                    <h2>สรุปภาพรวม</h2>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section id="form">
+        <div class="row step-bar-row text-center head-1">
+          <div class="col-xs-3 step-bar-main">
+              <div class="row step-background-now">
+                  <h2 class="step-background-now-text">1</h2>
+              </div>
+              <div class="row">
+                  <h2>ประวัติส่วนตัว</h2>
+              </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+              <div class="row step-background-future flip">
+                  <h4 class="step-background-future-text flip">2</h4>
+              </div>
+              <div class="row">
+                  <h2>คำถามค่าย</h2>
+              </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+              <div class="row step-background-future">
+                  <h4 class="step-background-future-text">3</h4>
+              </div>
+              <div class="row">
+                  <h2>คำถามสาขา</h2>
+              </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+              <div class="row step-background-future flip">
+                  <h4 class="step-background-future-text flip">4</h4>
+              </div>
+              <div class="row">
+                  <h2>สรุปภาพรวม</h2>
+              </div>
+          </div>
+        </div>
+      </section>
+      {{>register/profile}}
+      <div class="row step-bar-row text-center head-2">
+        <div class="col-xs-3 step-bar-main">
+          <div class="row step-background-pass">
+            <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+          </div>
+          <div class="row">
+            <h2>ประวัติส่วนตัว</h2>
+          </div>
+        </div>
+        <div class="col-xs-3 step-bar">
+          <div class="row step-background-now  flip">
+            <h2 class="step-background-now-text  flip">2</h2>
+          </div>
+          <div class="row">
+            <h2>คำถามค่าย</h2>
+          </div>
+        </div>
+        <div class="col-xs-3 step-bar">
+          <div class="row step-background-future">
+            <h4 class="step-background-future-text">3</h4>
+          </div>
+          <div class="row">
+            <h2>คำถามสาขา</h2>
+          </div>
+        </div>
+        <div class="col-xs-3 step-bar">
+          <div class="row step-background-future  flip">
+            <h4 class="step-background-future-text  flip">4</h4>
+          </div>
+          <div class="row">
+            <h2>สรุปภาพรวม</h2>
+          </div>
+        </div>
+      </div>
+      {{>register/campq}}
+
+        <div class="row step-bar-row text-center head-3 head-3-marketing head-3-content head-3-design">
+          <div class="col-xs-3 step-bar-main">
+            <div class="row step-background-pass">
+              <h4 class="step-background-pass-text"><i class="fa fa-check"></i></h4>
+            </div>
+            <div class="row">
+              <h2>ประวัติส่วนตัว</h2>
+            </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+            <div class="row step-background-pass flip">
+              <h4 class="step-background-pass-text flip"><i class="fa fa-check"></i></h4>
+            </div>
+            <div class="row">
+              <h2>คำถามค่าย</h2>
+            </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+            <div class="row step-background-now">
+              <h2 class="step-background-now-text">3</h2>
+            </div>
+            <div class="row">
+              <h2>คำถามสาขา</h2>
+            </div>
+          </div>
+          <div class="col-xs-3 step-bar">
+            <div class="row step-background-future">
+              <h4 class="step-background-future-text">4</h4>
+            </div>
+            <div class="row">
+              <h2>สรุปภาพรวม</h2>
+            </div>
+          </div>
+        </div>
+      {{>register/marketing}}
+      {{>register/content}}
+      {{>register/design}}
+      {{>register/overall}}
+        <br><br>
+    </div><!--.container-->
+  </form>
+</div><!--.register-form-->
+
+<script>
+    $('.dropdown-menu a').on('click', function(){
+        $(this).parent().parent().prev().html($(this).html() + '<span class="caret"></span>');
+    });
+
+//    var sponsorBig = '<div class="sponsor-row-big sponsor-row">'
+//            +'<div class="row">'
+//            +'<div class="col-xs-2 sponsor">'
+//            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
+//            +'</div>'
+//            +'<div class="col-xs-2 sponsor">'
+//            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
+//            +'</div>'
+//            +'<div class="col-xs-4 logo-regis">'
+//            +'<img src="/pictures/form/logo_regis.png" alt="">'
+//            +'</div>'
+//            +'<div class="col-xs-2 sponsor">'
+//            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
+//            +'</div>'
+//            +'<div class="col-xs-2 sponsor">'
+//            +'<img src="/pictures/sponser/Logo_Jankasem.png" alt="">'
+//            +'</div>'
+//            +'</div>'
+//            +'<h2 class="head-background">ฟอร์มสมัครค่าย</h2>'
+//            +'</div>';
+//    var sponsorSmall = '<div class="row sponsor-row-small sponsor-row">'
+//            +'<div class="row">'
+//            +'    <div class="col-xs-12 logo-regis">'
+//            +'        <img src="/pictures/form/logo_regis.png" alt="" width="60%">'
+//            +'    </div>'
+//            +'</div>'
+//            +'<div class="row">'
+//            +'<h2 class="head-background">ฟอร์มสมัครค่าย</h2>'
+//            +'</div>'
+//            +'<div class="row">'
+//            +'    <div class="col-xs-5 col-xs-offset-1 sponsor">'
+//            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
+//            +'    </div>'
+//            +'    <div class="col-xs-5 sponsor">'
+//            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
+//            +'    </div>'
+//            +'</div>'
+//            +'<div class="row">'
+//            +'    <div class="col-xs-5 col-xs-offset-1 sponsor">'
+//            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
+//            +'    </div>'
+//            +'    <div class="col-xs-5 sponsor">'
+//            +'        <img src="/pictures/sponser/Logo_Jankasem.png" alt="" width="70%">'
+//            +'    </div>'
+//            +'</div>'
+//            +'<div class="row sponsor-row-footer">' +
+//            '<img src="/pictures/allpage/footer.png" class="sponsor-row-footer-bar">' +
+//            '<img src="/pictures/allpage/JWClogo.png" class="sponsor-row-footer-logo">' +
+//            '</div>'
+//            +'</div>';
+    function resize(windowSize){
+        if (windowSize <768){
+//            $(".sponsor-row").remove();
+//            $(".body-container").prepend(sponsorSmall);
+
+            $(".back-button-text").addClass("hide");
+        }
+        else{
+//            $(".sponsor-row").remove();
+//            $(".body-container").prepend(sponsorBig);
+
+            $(".back-button-text").removeClass("hide");
+        }
+    }
+    $(document).ready(function(){
+        var isRefresh = false;
+        var windowSize = $(window).width();
+        resize(windowSize);
+        $(window).resize(function() {
+            windowSize = $(window).width();
+            resize(windowSize);
+        }).resize();
+
+        $(".number").keydown(function (e) {
+            // Allow: backspace, delete, tab, escape, enter and .
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+                        // Allow: Ctrl+A
+                    (e.keyCode == 65 && e.ctrlKey === true) ||
+                        // Allow: Ctrl+C
+                    (e.keyCode == 67 && e.ctrlKey === true) ||
+                        // Allow: Ctrl+X
+                    (e.keyCode == 88 && e.ctrlKey === true) ||
+                        // Allow: home, end, left, right
+                    (e.keyCode >= 35 && e.keyCode <= 39)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+    });
+
+    // $("#datepicker").focusout(function(){
+    //   var tmp = $("#datepicker").val();
+    //   $("#dateofbirth").val(tmp);
+    //   alert(tmp);
+    // });
+</script>

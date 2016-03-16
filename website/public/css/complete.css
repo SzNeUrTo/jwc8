@@ -1,0 +1,41 @@
+.sponsor-row-footer{
+    margin-top: -150px;
+}
+
+.sponsor-row-footer .sponsor-row-footer-logo{
+    position: relative;
+    margin-top: -80px;
+    width: 18%;
+}
+
+.content{
+    color: white;
+}
+
+h1,h3{
+    font-family: Boonjot;
+}
+
+h4{
+  font-family: THSarabunNew;
+  font-size: 25px;
+}
+
+.next-button{
+    font-family: Boonjot;
+    background-image:url('/pictures/form/bgถัดไป.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+    height: 70px;
+    padding-top: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+a,a:hover,a:focus{
+  color: white;
+  text-decoration: none;
+}

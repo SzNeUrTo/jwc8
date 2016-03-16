@@ -1,0 +1,87 @@
+.faq-section {
+    @extend .container;
+    margin-bottom: 45px;
+}
+
+.faq-container {
+    @extend .container;
+    padding: 60px 25px;
+    min-height: 300px;
+}
+
+.faq-item {
+    > .title {
+        background: none;
+        margin-bottom: 15px;
+    }
+    > .description {
+        color: #ffffff;
+        font-family: 'THSarabunNew', Arial;
+        font-size: 28px;
+        > a {
+            color: #ffffff;
+            font-style: bold;
+            text-decoration: underline;
+            &:hover,
+            &:active,
+            &:focus {
+                color: #ffffff;
+            }
+        }
+    }
+    > .description > .head {
+        font-style: italic;
+        text-decoration: underline;
+    }
+}
+
+#faq-slide {
+    .carousel-indicators {
+        bottom: 2px;
+    }
+    .carousel-indicators > li {
+        border: none;
+        background-color: #688772;
+    }
+    .carousel-indicators > li.active {
+        background-color: #fff;
+    }
+    .carousel-control {
+        background: none;
+    }
+    .carousel-control > img {
+        position: absolute;
+        bottom: 8px;
+    }
+    .right.carousel-control > img {
+        right: 25px;
+    }
+    .left.carousel-control > img {
+        left: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    #faq-slide {
+        margin-top: -40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .faq-section {
+        margin-bottom: 120px;
+    }
+    .faq-container {
+        padding: 10px 15%;
+        min-height: 1px;
+    }
+    #faq-slide {
+        .carousel-control > img {
+            position: absolute;
+            top: 50%;
+        }
+        .carousel-indicators {
+            bottom: -50px;
+        }
+    }
+}

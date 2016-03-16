@@ -1,0 +1,151 @@
+<section class="container step-1 step-4-design step-4-content step-4-marketing">
+  <h2 class="head-background text-center major-header">ประวัติส่วนตัว</h2>
+  <div class="student row no-margin">
+    <div class="col-md-8 col-md-offset-2 general">
+      <div class="row">
+        <h3 class="pull-left">ข้อมูลทั่วไป</h3>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <input type="text" placeholder="ชื่อ" name="firstname" required>
+        </div>
+        <div class="col-xs-6">
+          <input type="text" placeholder="นามสกุล" name="lastname" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <input type="text" placeholder="ชื่อเล่น" name="nickname" required>
+        </div>
+        <div class="col-xs-6">
+          <div class="btn-group dropdown">
+            <input type="hidden" id="sex" name="sex" required>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              เพศ <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a>ชาย</a></li>
+              <li><a>หญิง</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <input type="hidden" id="dateofbirth" name"birthdate" required>
+          <input type="text" id="datepicker" class="birthdate" placeholder="วัน/เดือน/ปีเกิด">
+        </div>
+        <div class="col-xs-6">
+          <input type="hidden" id="religion" name="religion" required>
+          <div class="btn-group dropdown">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ศาสนา <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a>พุทธ</a></li>
+              <li><a>คริสต์</a></li>
+              <li><a>อิสลาม</a></li>
+              <li><a>อื่น ๆ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="email" placeholder="E-mail" name="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <input type="text" class="number" placeholder="เบอร์โทรศัพท์" name="tel"  required>
+        </div>
+        <div class="col-xs-6">
+          <input type="hidden" id="size" name="size" required>
+          <div class="btn-group dropdown">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle=  "dropdown" aria-haspopup="true" aria-expanded="false">
+              ไซส์เสื้อ <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a>S (กว้าง 34" x ยาว 26")</a></li>
+              <li><a>M (กว้าง 36" x ยาว 27")</a></li>
+              <li><a>L (กว้าง 38" x ยาว 28")</a></li>
+              <li><a>XL (กว้าง 40" x ยาว 29")</a></li>
+              <li><a>XXL (กว้าง 42" x ยาว 30")</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="textarea">
+            <textarea rows="3" placeholder="ที่อยู่" name="position" required></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="school row no-margin">
+    <div class="col-md-8 col-md-offset-2 general">
+      <div class="row">
+        <h3 class="pull-left">ข้อมูลการศึกษา</h3>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <input type="text" class="col-md-12" placeholder="โรงเรียน" name="school" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <input type="hidden" id="level" name="level" required>
+          <div class="btn-group dropdown">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ระดับชั้น <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a>จบการศึกษาระดับ ม. 3</a></li>
+              <li><a>มัธยมศึกษาปีที่ 4</a></li>
+              <li><a>มัธยมศึกษาปีที่ 5</a></li>
+              <li><a>มัธยมศึกษาปีที่ 6</a></li>
+              <li><a>ประกาศนียบัตรวิชาชีพปี 1</a></li>
+              <li><a>ประกาศนียบัตรวิชาชีพปี 2</a></li>
+              <li><a>ประกาศนียบัตรวิชาชีพปี 3</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <input type="tel" placeholder="สายการเรียน" name="major" required>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="parent row no-margin">
+    <div class="col-md-8 col-md-offset-2 general">
+      <div class="row">
+        <h3 class="pull-left">ข้อมูลผู้ปกครอง</h3>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <input type="text" class="col-md-12" placeholder="ชื่อ" name="parent_lastname" required>
+        </div>
+        <div class="col-xs-6">
+          <input type="text" class="col-md-12" placeholder="นามสกุล" name="parent_firstname" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <input type="text" placeholder="สถานะที่เกี่ยวข้อง" name="parent" required>
+        </div>
+        <div class="col-xs-6">
+          <input class="number" type="tel" placeholder="เบอร์โทรศัพท์" name="emergency_tel" required>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row text-center button-row-1">
+      <h3 class="next-button next-button-1" onclick="changePage('1','2')"><a class="goto" href="#form">ถัดไป</a></h3>
+  </div>
+</section>
