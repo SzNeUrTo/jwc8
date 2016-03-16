@@ -33,9 +33,9 @@ div{
 }
 
 .step-background-now{
-    margin-top: 10px;
+    margin-top: 16px;
     background-image: url('/pictures/form/icon_in.png');
-    background-size: 90px;
+    background-size: 70px;
     background-repeat: no-repeat;
     /* background-position: center; */
     color: black;
@@ -309,9 +309,26 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .step-bar-main > .step-background-now >.step-background-now-text {
     font-size: 23px;
-    margin-top: 23px;
+    margin-top: 14px;
 }
 .step-bar-main > .row > h2 {
-    margin-top: 24px;
+    margin-top: 2px;
     font-size: 38px;
 }
+
+.step-bar > .row > h2 {
+    margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
