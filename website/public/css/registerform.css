@@ -389,5 +389,9 @@ img.back-button {
         width: 150px;
         margin-left: -22px;
     }
+
+    input {
+        font-size: 14px !important;
+    }
 }
 

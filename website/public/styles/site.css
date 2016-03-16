@@ -5825,7 +5825,8 @@ body {
   background: url("../images/landing/bg.jpg") no-repeat center center;
   background-color: #356243;
   background-size: 100% 100%;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "BoonJot", "Helvetica Nueu", Helvetica, Arial;
@@ -5852,7 +5853,7 @@ h1, h2, h3, h4, h5, h6 {
   .visible-xs.text {
     display: inline-block !important; } }
 
-@media (min-height: 768px) {
+@media (min-width: 768px) {
   .hidden-xs.text {
     display: inline-block !important; } }
 
