@@ -18,4 +18,12 @@
         navbar.removeClass('show');
     }
   });
+
+  ["marketing", "design", "content"].forEach(function(major) {
+  $.get('/count/' + major, function(res) {
+    console.log(major + " " + res);
+      $(".counter-" + major).text(res);
+    });
+  });
+
 })(jQuery)
