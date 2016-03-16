@@ -56,7 +56,8 @@ var jwcinfoSchema = mongoose.Schema({
 		answers : [answerSchema]
 	},
 	specialquestion : {
-		answers : [answerSchema]
+		answers: [answerSchema]
+
 	}
 });
 

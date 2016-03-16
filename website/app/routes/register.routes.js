@@ -69,7 +69,8 @@ module.exports = function(app, passport) {
 						throw err;
 					}
 					// res.redirect('/complete');
-					res.send(user);
+					//res.send(user);
+          res.render('complete');
 				});
 			}
 			// res.send(user);
@@ -101,7 +102,7 @@ function registerData(user, data) {
 	profile.contact_person.emergency_tel = data.emergency_tel;
 
 	var jwcinfo = {};
-	jwcinfo.major = data.major || '';
+	jwcinfo.major = data.jwc || '';
 
 	jwcinfo.generalquestion = {};
 	jwcinfo.generalquestion.answers = [];
@@ -112,7 +113,20 @@ function registerData(user, data) {
 	jwcinfo.generalquestion.answers.push({answer: data.g_your_created_websites, point: 0});
 
 	jwcinfo.specialquestion = {};
-	jwcinfo.specialquestion.answers = [];
+  jwcinfo.specialquestion.answers = [];
+
+  jwcinfo.specialquestion.answers.push({answer: data.jwc ,point: 0});
+  if(data.marketing_1)
+	 jwcinfo.specialquestion.answers.push({answer: data.marketing_1 ,point: 0});
+  if(data.marketing_2)
+   jwcinfo.specialquestion.answers.push({answer: data.marketing_2 ,point: 0});
+  if(data.design_1)
+    jwcinfo.specialquestion.answers.push({answer: data.design_1 ,point: 0});
+  if(data.design_2)
+    jwcinfo.specialquestion.answers.push({answer: data.design_2 ,point: 0});
+  if(data.content_1)
+    jwcinfo.specialquestion.answers.push({answer: data.content_1 ,point: 0});
+
 
 	user.profile = profile;
 	user.jwcinfo = jwcinfo;
