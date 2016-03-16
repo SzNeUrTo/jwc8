@@ -331,11 +331,13 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     width: 100px;
 }
 
+.back-button > .goto {
+    padding-left: 30px;
+}
 
-
-
-
-
+img.back-button {
+    margin-top: 10px;
+}
 
 
 
