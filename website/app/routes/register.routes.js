@@ -13,7 +13,7 @@ module.exports = function(app, passport) {
     		cb(null, './uploads')
     	},
     	filename: function (req, file, cb) {
-    		cb(null, req._filename + '.jpg');
+    		cb(null, 'fb' + req.user.auth.facebook.id + '.jpg');
     	}
     });
     var multerMiddle = multer({
@@ -23,7 +23,7 @@ module.exports = function(app, passport) {
     		files: 1,
     		fields: 1
     	}
-    }).single('upl');
+    }).single('design-1-pic');
 
 
     app.get('/register/:major', isLoggedIn, function(req, res) {
@@ -49,7 +49,7 @@ module.exports = function(app, passport) {
 		});
 	});
 
-    app.post('/complete', [isLoggedIn, testMiddle, multerMiddle], function(req, res) {
+    app.post('/complete', [isLoggedIn, multerMiddle], function(req, res) {
     	// res.send(req.body);
 		User.findOne({'auth.facebook.id': req.user.auth.facebook.id}, function(err, user){
 			var data = req.body;
