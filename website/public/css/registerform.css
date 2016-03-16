@@ -307,9 +307,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
    color: white;
 }
 
-.step-bar-main > .step-background-now >.step-background-now-text {
-    font-size: 23px;
-    margin-top: 14px;
+.step-background-now > .step-background-now-text {
+    font-size: 23px !important;
+    margin-top: 14px !important;
 }
 .step-bar-main > .row > h2 {
     margin-top: 2px;
