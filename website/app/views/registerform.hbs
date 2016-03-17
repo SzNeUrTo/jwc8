@@ -6,8 +6,11 @@
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script>
+  var marketing = "marketing";
+  var content = "content";
+  var design = "design";
+  var registerType = {{major}};
   $(document).ready(function() {
-    var registerType = "marketing";
     $(".head-2, .head-3, .head-4").addClass("hide");
     $(".step-2, .step-3, .step-4").addClass("hide");
     $( "#datepicker" ).datepicker({
@@ -84,6 +87,9 @@
       <div class="logo-regis --fixed-top">
         <img src="/images/landing/logo.png" alt="">
       </div>
+      <br>
+      <br>
+      <h2 class="head-background text-center major-header -title">สาขา Web {{major}}</h2>
       {{!-- โค้ดตรงนี้ใช้ตอนมีสปอนเซ่อมาแล้ว --}}
       {{!-- <div class="sponsor-row-big sponsor-row">
           <div class="row">
