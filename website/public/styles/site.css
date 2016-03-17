@@ -5964,7 +5964,9 @@ h6 {
     text-align: left; }
   .contact-section > .qrcode {
     float: right;
-    margin-top: 25px; } }
+    margin-top: 25px; }
+  span.visible-xs.text {
+    display: none !important; } }
 
 .main-logo {
   margin-bottom: 45px;
@@ -6483,6 +6485,8 @@ h6 {
   background-size: 100% 100%;
   height: 60px;
   top: -60px;
+  right: 0;
+  left: 0;
   opacity: 0;
   transition: all .4s ease-out; }
   .border-blackboard.-navbar > .logo {
