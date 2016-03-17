@@ -6388,7 +6388,14 @@ h6 {
   padding: 0 60px; }
 
 .skills-list {
+  margin-left: -15px;
+  margin-right: -15px;
   text-align: center; }
+  .skills-list:before, .skills-list:after {
+    content: " ";
+    display: table; }
+  .skills-list:after {
+    clear: both; }
 
 .skills-item {
   position: relative;
