@@ -30,12 +30,20 @@ module.exports = function(app, passport){
 		res.render('profile.ejs', { user: req.user });
 	});
 
+	['marketing', 'design', 'content'].forEach(function(major) {
+		app.get('/authen/facebook/' + major, function(req, res, next) {
+			passport.authenticate('facebook', {callbackURL: '/authen/facebook/cb/' + major, authType: 'reauthenticate'}/*, scope: ['email']}*/)(req, res, next);
+		});
+
+		app.get('/authen/facebook/cb/' + major,
+			passport.authenticate('facebook', { callbackURL: '/authen/facebook/cb/' + major, successRedirect: '/register/' + major, // EditHere
+	                                      failureRedirect: '/' })); // EditHere
+	});
 	app.get('/auth/facebook', passport.authenticate('facebook', {authType: 'reauthenticate', scope: ['email']}));
 
-
 	app.get('/auth/facebook/callback',
-	  // passport.authenticate('facebook', { successRedirect: '/profile',
-	                                      // failureRedirect: '/testauth' }));
+	//   // passport.authenticate('facebook', { successRedirect: '/profile',
+	//                                       // failureRedirect: '/testauth' }));
 		passport.authenticate('facebook', { successRedirect: '/', // EditHere
 	                                      failureRedirect: '/' })); // EditHere
 

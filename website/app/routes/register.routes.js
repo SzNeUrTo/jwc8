@@ -26,7 +26,7 @@ module.exports = function(app, passport) {
     }).single('design-1-pic');
 
 
-    app.get('/register/:major', isLoggedIn, function(req, res) {
+    app.get('/register/:major', registerMajor, function(req, res) {
     	res.render('registerform',{
         'major': req.params.major
       });
@@ -138,5 +138,14 @@ function isLoggedIn(req, res, next) {
 	}
 
 	// res.redirect('/login');
-	res.redirect('/auth/facebook'); // if not login go ???
+	res.redirect('/auth/facebook');// + (req.params.major ? '/' + req.params.major : '')); // if not login go ???
+}
+
+function registerMajor(req, res, next) {
+	if(req.isAuthenticated()){
+		return next();
+	}
+
+	// res.redirect('/login');
+	res.redirect('/authen/facebook' + (req.params.major ? '/' + req.params.major : '')); // if not login go ???
 }
