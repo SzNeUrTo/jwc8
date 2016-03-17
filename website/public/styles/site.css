@@ -5868,6 +5868,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 40px;
   margin-bottom: 25px; }
 
+.major-header.-title {
+  text-transform: uppercase;
+  font-size: 56px; }
+
 .first-section {
   text-align: center;
   margin-bottom: 120px; }
