@@ -8,13 +8,20 @@
 }
 
 .section {
-	> .title {
-		padding: 0 40px;
-		margin-bottom: 25px;
-	}
+    > .title {
+        padding: 0 40px;
+        margin-bottom: 25px;
+    }
 }
 
 .major-header.-title {
     text-transform: uppercase;
     font-size: 56px;
+}
+
+@media (max-width: 768px) {
+    .major-header.-title {
+        text-transform: uppercase;
+        font-size: 36px;
+    }
 }
