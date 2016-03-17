@@ -1086,7 +1086,7 @@ figure {
 img {
   vertical-align: middle; }
 
-.img-responsive, .main-logo > .logo, .sponsor-container > .sponsor > img {
+.img-responsive, .main-logo > .logo, .sponsor-container > .sponsor > img, .skills-item > .image {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -5875,6 +5875,10 @@ h6 {
     right: auto;
     width: 100px; } }
 
+@media (min-width: 1920) {
+  .free.-sticky {
+    right: 15%; } }
+
 .title {
   display: inline-block;
   color: #ffffff;
@@ -6378,6 +6382,26 @@ h6 {
   color: #ffffff;
   font-weight: 200;
   margin-bottom: 55px; }
+
+.skills-item {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .skills-item {
+      float: left;
+      width: 33.33333%; } }
+  .skills-item > .image {
+    display: inline-block; }
+  .skills-item > .skill {
+    margin-top: 10px;
+    color: #dedede;
+    font-size: 16px;
+    font-family: 'BoonJot', 'Helvetica Neue', Helvetica, Arial;
+    font-weight: 200;
+    white-space: nowrap; }
 
 .navbar.navbar-jwc {
   background: url("../images/landing/navbar-bg.png") no-repeat center center;

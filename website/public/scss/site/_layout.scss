@@ -68,3 +68,9 @@ h6 {
         width: 100px;
     }
 }
+
+@media (min-width: 1920) {
+    .free.-sticky {
+        right: 15%;
+    }
+}

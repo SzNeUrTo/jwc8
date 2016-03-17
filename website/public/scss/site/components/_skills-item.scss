@@ -1,0 +1,18 @@
+.skills-item {
+    @include make-sm-column(4);
+    text-align: center;
+
+    > .image {
+        @extend .img-responsive;
+        display: inline-block;
+    }
+
+    > .skill {
+        margin-top: 10px;
+        color: #dedede;
+        font-size: 16px;
+        font-family: 'BoonJot', 'Helvetica Neue', Helvetica, Arial;
+        font-weight: 200;
+        white-space: nowrap;
+    }
+}
