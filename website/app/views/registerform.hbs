@@ -6,80 +6,75 @@
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script>
-  //    var registerType = {{registerType}};
-  //      registerType = "marketing" or "content" or "design"
-  var marketing = "marketing";
-  var content = "content";
-  var design = "design";
-  var registerType = {{major}};
-    $(function() {
-
-      $(".head-2, .head-3, .head-4").addClass("hide");
-      $(".step-2, .step-3, .step-4").addClass("hide");
-      $( "#datepicker" ).datepicker({
-        dateFormat: "dd/mm/yy"
-      });
+  $(document).ready(function() {
+    var registerType = "marketing";
+    $(".head-2, .head-3, .head-4").addClass("hide");
+    $(".step-2, .step-3, .step-4").addClass("hide");
+    $( "#datepicker" ).datepicker({
+      dateFormat: "dd/mm/yy",
+      changeYear: true,
+      yearRange: "1980:2016"
     });
+  });
 
-    function changePage(thisPage, destPage) {
-        console.log(thisPage + " " + destPage);
-        if(destPage=="4") {  // Disable input box
-            $("input").attr("readonly","");
-            $("button").attr("disabled","disabled");
-            $(".birthdate").attr("disabled","disabled");
-            // $(".birthdate").removeClass("hasDatepicker");
-            // $(".birthdate").removeAttr("id");
-            // $("#ui-datepicker-div").addClass("hide");
-            $("textarea").attr("readonly","");
-            $(".textarea").attr("readonly","");
-            $(".button-row-1, .button-row-2, .button-row-3").addClass("hide");
-            $("input[type='submit']").removeAttr("readonly");
-            var tmp = $("#datepicker").val();
-            $("#dateofbirth").val(tmp);
-        } else {  // Enable input box
-            $("input").removeAttr("readonly");
-            $("button").removeAttr("disabled");
-            $(".birthdate").removeAttr("disabled");
-            // $(".birthdate").addClass("hasDatepicker");
-            // $(".birthdate").attr("id","datepicker");
-            // $("#ui-datepicker-div").removeClass("hide");
-            $("textarea").removeAttr("readonly");
-            $(".textarea").removeAttr("readonly");
-            $(".button-row-1, .button-row-2, .button-row-3").removeClass("hide");
-        }
-        $('html,body').scrollTop(0);
-      if(parseInt(thisPage) < parseInt(destPage)) {
-          // Out
-          console.log("Next");
-          if(destPage=="4")
-              $(".sub-head").removeClass("hide");
-          if(thisPage=="3" || thisPage=="4")
-              thisPage = thisPage+"-"+registerType;
-          $('.head-'+thisPage).addClass('hide');
-          $('.step-'+thisPage).removeClass('animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideOutLeft hide');
-
-          // In
-          if(destPage=="3" || destPage=="4")
-              destPage = destPage+"-"+registerType;
-          $('.head-'+destPage).removeClass('hide');
-          $('.step-'+destPage).removeClass('hide animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideInRight');
-      } else if(parseInt(thisPage) > parseInt(destPage)) {
-          // Out
-          console.log("Prev");
-          if(thisPage=="4")
-              $(".sub-head").addClass("hide");
-          if(thisPage=="3" || thisPage=="4"){
-              thisPage = thisPage+"-"+registerType;}
-          $('.head-'+thisPage).addClass('hide');
-          $('.step-'+thisPage).removeClass('animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideOutRight hide');
-
-          // In
-          if(destPage=="3" || destPage=="4"){
-              destPage = destPage+"-"+registerType;}
-          $('.head-'+destPage).removeClass('hide');
-          $('.step-'+destPage).removeClass('hide animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideInLeft');
-      }
+  function changePage(thisPage, destPage) {
+    if(destPage=="4") {  // Disable input box
+        $("input").attr("readonly","");
+        $("button").attr("disabled","disabled");
+        $(".birthdate").attr("disabled","disabled");
+        // $(".birthdate").removeClass("hasDatepicker");
+        // $(".birthdate").removeAttr("id");
+        // $("#ui-datepicker-div").addClass("hide");
+        $("textarea").attr("readonly","");
+        $(".textarea").attr("readonly","");
+        $(".button-row-1, .button-row-2, .button-row-3").addClass("hide");
+        $("input[type='submit']").removeAttr("readonly");
+        var tmp = $("#datepicker").val();
+        $("#dateofbirth").val(tmp);
+    } else {  // Enable input box
+        $("input").removeAttr("readonly");
+        $("button").removeAttr("disabled");
+        $(".birthdate").removeAttr("disabled");
+        // $(".birthdate").addClass("hasDatepicker");
+        // $(".birthdate").attr("id","datepicker");
+        // $("#ui-datepicker-div").removeClass("hide");
+        $("textarea").removeAttr("readonly");
+        $(".textarea").removeAttr("readonly");
+        $(".button-row-1, .button-row-2, .button-row-3").removeClass("hide");
     }
+    $('html,body').scrollTop(0);
+    if(parseInt(thisPage) < parseInt(destPage)) {
+      // Out
+      console.log("Next");
+      if(destPage=="4")
+          $(".sub-head").removeClass("hide");
+      if(thisPage=="3" || thisPage=="4")
+          thisPage = thisPage+"-"+registerType;
+      $('.head-'+thisPage).addClass('hide');
+      $('.step-'+thisPage).removeClass('animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideOutLeft hide');
+
+      // In
+      if(destPage=="3" || destPage=="4")
+          destPage = destPage+"-"+registerType;
+      $('.head-'+destPage).removeClass('hide');
+      $('.step-'+destPage).removeClass('hide animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideInRight');
+    } else if(parseInt(thisPage) > parseInt(destPage)) {
+      // Out
+      console.log("Prev");
+      if(thisPage=="4")
+          $(".sub-head").addClass("hide");
+      if(thisPage=="3" || thisPage=="4"){
+          thisPage = thisPage+"-"+registerType;}
+      $('.head-'+thisPage).addClass('hide');
+      $('.step-'+thisPage).removeClass('animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideOutRight hide');
+
+      // In
+      if(destPage=="3" || destPage=="4"){
+          destPage = destPage+"-"+registerType;}
+      $('.head-'+destPage).removeClass('hide');
+      $('.step-'+destPage).removeClass('hide animated slideOutLeft slideOutRight slideInRight slideInLeft').addClass('animated slideInLeft');
+    }
+  }
 </script>
 
 <div class="register-form">
