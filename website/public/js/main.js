@@ -3,13 +3,21 @@
   var navbarm = $('#jwc-navbarm');
   var $document = $(document);
   var button = $('#jwc-m-navbar-btn');
+  var dropdownChoice = $('a[dropdown-choice]');
 
   $document.ready(function() {
-        if (navbar.hasClass('show')) {
-          navbar.removeClass('show');
-        }
+    if (navbar.hasClass('show')) {
+      navbar.removeClass('show');
+    }
+
     smoothScroll.init();
     $( '.swipebox' ).swipebox();
+
+    ["marketing", "design", "content"].forEach(function(major) {
+      $.get('/count/' + major, function(res) {
+        $(".counter-" + major).text(res);
+      });
+    });
   });
 
   $document.scroll(function(e) {
@@ -22,10 +30,9 @@
     }
   });
 
-  ["marketing", "design", "content"].forEach(function(major) {
-  $.get('/count/' + major, function(res) {
-    console.log(major + " " + res);
-      $(".counter-" + major).text(res);
+  dropdownChoice.each(function(index, choice) {
+    $(choice).click(function(e) {
+      $('input[name="' + $(choice).attr('input') + '"]').val($(choice).attr('val'));
     });
   });
 

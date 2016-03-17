@@ -1,0 +1,32 @@
+.skills-list {
+    @include make-row();
+    text-align: center;
+}
+
+.skills-item {
+    @include make-xs-column(4);
+    @include make-sm-column(3);
+    text-align: center;
+    padding: 0 10px;
+
+    > .image {
+        @extend .img-responsive;
+        display: inline-block;
+    }
+
+    > .skill {
+        display: inline-block;
+        margin-top: 10px;
+        color: #dedede;
+        font-size: 16px;
+        font-family: 'BoonJot', 'Helvetica Neue', Helvetica, Arial;
+        font-weight: 200;
+        word-break: break-all;
+    }
+}
+
+@media (min-width: 768px) {
+    .skills-item:first-child {
+        margin-left: 12.5%;
+    }
+}

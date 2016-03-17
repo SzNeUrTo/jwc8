@@ -126,6 +126,8 @@ function registerData(user, data) {
     jwcinfo.specialquestion.answers.push({answer: data.design_2 ,point: 0});
   if(data.content_1)
     jwcinfo.specialquestion.answers.push({answer: data.content_1 ,point: 0});
+  if(data.content_2)
+    jwcinfo.specialquestion.answers.push({answer: data.content_2 ,point: 0});
 
 
 	user.profile = profile;
