@@ -14,7 +14,9 @@ var registerType = "marketing";
     $(".head-2, .head-3, .head-4").addClass("hide");
     $(".step-2, .step-3, .step-4").addClass("hide");
     $( "#datepicker" ).datepicker({
-      dateFormat: "dd/mm/yy"
+      dateFormat: "dd/mm/yy",
+      changeYear: true,
+      yearRange: "1980:2016"
     });
   });
 
