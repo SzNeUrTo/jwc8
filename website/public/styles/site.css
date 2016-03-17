@@ -5828,7 +5828,12 @@ body {
   background-attachment: fixed;
   overflow-x: hidden; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "BoonJot", "Helvetica Nueu", Helvetica, Arial;
   font-weight: 400; }
 
@@ -5856,6 +5861,19 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
   .hidden-xs.text {
     display: inline-block !important; } }
+
+.free.-sticky {
+  position: fixed;
+  width: 200px;
+  top: 0;
+  right: 0;
+  z-index: 99999; }
+
+@media (max-width: 768px) {
+  .free.-sticky {
+    left: 0;
+    right: auto;
+    width: 100px; } }
 
 .title {
   display: inline-block;
