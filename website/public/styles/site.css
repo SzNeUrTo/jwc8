@@ -6112,7 +6112,7 @@ h6 {
   .detail-item > .counter {
     font-family: 'Counter';
     font-size: 62px; }
-  .detail-item > .btn.--last {
+  .detail-item > .counter.--last {
     margin-top: 18px; }
 
 .detail-item.--marketing {
