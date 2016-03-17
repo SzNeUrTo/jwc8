@@ -1,11 +1,12 @@
+.skills-list {
+    text-align: center;
+}
+
 .skills-item {
     @include make-xs-column(4);
-    @include make-sm-column(2);
+    @include make-sm-column(3);
     text-align: center;
-
-    &:first-child {
-        @include make-sm-column-offset(3);
-    }
+    padding: 0 10px;
 
     > .image {
         @extend .img-responsive;
@@ -13,11 +14,18 @@
     }
 
     > .skill {
+        display: inline-block;
         margin-top: 10px;
         color: #dedede;
         font-size: 16px;
         font-family: 'BoonJot', 'Helvetica Neue', Helvetica, Arial;
         font-weight: 200;
-        white-space: nowrap;
+        word-break: break-all;
+    }
+}
+
+@media (min-width: 768px) {
+    .skills-item:first-child {
+        margin-left: 12.5%;
     }
 }

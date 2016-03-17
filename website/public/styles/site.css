@@ -6112,6 +6112,8 @@ h6 {
   .detail-item > .counter {
     font-family: 'Counter';
     font-size: 62px; }
+  .detail-item > .btn.--last {
+    margin-top: 18px; }
 
 .detail-item.--marketing {
   margin-top: -30px; }
@@ -6382,7 +6384,11 @@ h6 {
   font-size: 28px;
   color: #ffffff;
   font-weight: 200;
-  margin-bottom: 55px; }
+  margin-bottom: 55px;
+  padding: 0 60px; }
+
+.skills-list {
+  text-align: center; }
 
 .skills-item {
   position: relative;
@@ -6395,23 +6401,26 @@ h6 {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  text-align: center; }
+  text-align: center;
+  padding: 0 10px; }
   @media (min-width: 768px) {
     .skills-item {
       float: left;
-      width: 16.66667%; } }
-  @media (min-width: 768px) {
-    .skills-item:first-child {
-      margin-left: 25%; } }
+      width: 25%; } }
   .skills-item > .image {
     display: inline-block; }
   .skills-item > .skill {
+    display: inline-block;
     margin-top: 10px;
     color: #dedede;
     font-size: 16px;
     font-family: 'BoonJot', 'Helvetica Neue', Helvetica, Arial;
     font-weight: 200;
-    white-space: nowrap; }
+    word-break: break-all; }
+
+@media (min-width: 768px) {
+  .skills-item:first-child {
+    margin-left: 12.5%; } }
 
 .navbar.navbar-jwc {
   background: url("../images/landing/navbar-bg.png") no-repeat center center;
