@@ -5875,7 +5875,7 @@ h6 {
     right: auto;
     width: 100px; } }
 
-@media (min-width: 1920) {
+@media (min-width: 1920px) {
   .free.-sticky {
     right: 15%; } }
 
@@ -5884,7 +5884,8 @@ h6 {
   color: #ffffff;
   background: url("../images/landing/title-bg.png") no-repeat center center;
   background-size: 100%;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  white-space: nowrap; }
 
 .section > .title {
   padding: 0 40px;
@@ -6385,6 +6386,12 @@ h6 {
 
 .skills-item {
   position: relative;
+  float: left;
+  width: 33.33333%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
@@ -6392,7 +6399,10 @@ h6 {
   @media (min-width: 768px) {
     .skills-item {
       float: left;
-      width: 33.33333%; } }
+      width: 16.66667%; } }
+  @media (min-width: 768px) {
+    .skills-item:first-child {
+      margin-left: 25%; } }
   .skills-item > .image {
     display: inline-block; }
   .skills-item > .skill {

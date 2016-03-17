@@ -1,6 +1,11 @@
 .skills-item {
-    @include make-sm-column(4);
+    @include make-xs-column(4);
+    @include make-sm-column(2);
     text-align: center;
+
+    &:first-child {
+        @include make-sm-column-offset(3);
+    }
 
     > .image {
         @extend .img-responsive;
