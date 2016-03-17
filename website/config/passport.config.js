@@ -103,7 +103,7 @@ module.exports = function(passport) {
 		    					var auth = {auth_type: 'facebook', facebook: {}};
 		    					auth.facebook.token = accessToken;
 		    					auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
-		    					auth.facebook.email = profile.emails[0].value;
+		    					// auth.facebook.email = profile.emails[0].value;
 								user.auth = auth;
 		    					user.save(function(err){
 		    						if(err)
@@ -122,7 +122,7 @@ module.exports = function(passport) {
 		    				auth.facebook.id = profile.id;
 		    				auth.facebook.token = accessToken;
 		    				auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
-		    				auth.facebook.email = profile.emails[0].value;
+		    				// auth.facebook.email = profile.emails[0].value;
 							newUser.auth = auth;
 
 		    				newUser.save(function(err){
@@ -141,7 +141,7 @@ module.exports = function(passport) {
 	    			auth.facebook.id = profile.id;
 	    			auth.facebook.token = accessToken;
 	    			auth.facebook.name = profile.name.givenName + ' ' + profile.name.familyName;
-	    			auth.facebook.email = profile.emails[0].value;
+	    			// auth.facebook.email = profile.emails[0].value;
 					user.auth = auth;
 
 	    			user.save(function(err){
