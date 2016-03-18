@@ -165,6 +165,17 @@ div {
     border-radius: 10px;
 }
 
+.complete-logo {
+    display: block;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.warning-text:last-child {
+    margin-bottom: 35px;
+}
+
 input {
     padding: 10px;
     background: none;
@@ -366,6 +377,13 @@ img.back-button {
     margin-bottom: 0;
     padding: 0 40px;
     font-family: 'ThSarabunNew';
+}
+
+.warning-text.--header {
+    font-size: 56px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 35px;
 }
 
 @media (max-width: 768px) {
