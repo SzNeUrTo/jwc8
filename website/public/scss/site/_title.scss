@@ -1,0 +1,30 @@
+.title {
+    display: inline-block;
+    color: $main-font-color;
+    background: url('../images/landing/title-bg.png') no-repeat center center;
+    background-size: 100%;
+    margin-bottom: 25px;
+}
+
+.section {
+    > .title {
+        padding: 0 40px;
+        margin-bottom: 25px;
+    }
+}
+
+.container > .title {
+    white-space: nowrap;
+}
+
+.major-header.-title {
+    text-transform: uppercase;
+    font-size: 56px;
+}
+
+@media (max-width: 768px) {
+    .major-header.-title {
+        text-transform: uppercase;
+        font-size: 36px;
+    }
+}

@@ -1,0 +1,14 @@
+.about-header {
+	> .title {
+		padding: 0 45px;
+	}
+
+	> .description {
+		font-family: 'THSarabunNew', Arial;
+		font-size: 28px;
+		color: $main-font-color;
+		font-weight: 200;
+		margin-bottom: 55px;
+		padding: 0 60px;
+	}
+}

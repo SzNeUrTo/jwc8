@@ -1,40 +1,48 @@
-body{
+body {
     color: white;
 }
-.logo-regis{
+
+.logo-regis {
     text-align: center;
 }
-.sponsor{
+
+.sponsor {
     margin-top: 30px;
     text-align: center;
     padding: 0px;
 }
-.sponsor-row img{
+
+.sponsor-row img {
     width: 75%;
 }
-.sponsor-row-footer{
+
+.sponsor-row-footer {
     margin-top: 150px;
 }
-.sponsor-row-footer .sponsor-row-footer-bar{
+
+.sponsor-row-footer .sponsor-row-footer-bar {
     width: 100%;
     height: 70px;
 }
-.sponsor-row-footer .sponsor-row-footer-logo{
+
+.sponsor-row-footer .sponsor-row-footer-logo {
     position: relative;
     margin-top: -120px;
     width: 30%;
 }
 
-.hide{
+.hide {
     display: none;
 }
-div{
+
+div {
     display: block;
 }
 
-.step-background-now{
+.step-background-now {
+    margin-top: 16px;
     background-image: url('/pictures/form/icon_in.png');
-    background-size: 90px;
+    background-size: 70px;
     background-repeat: no-repeat;
     /* background-position: center; */
     color: black;
@@ -42,25 +50,27 @@ div{
     background-position-y: 0%;
     background-position: 50% 0%;
 }
-.step-background-now-text{
-    margin-top: 17px;
+
+.step-background-now-text {
+    margin-top: 22px;
     margin-bottom: 40px;
 }
 
-.step-background-future{
+.step-background-future {
     background-image: url('/pictures/form/icon_not_go.png');
     background-size: 55px;
     background-repeat: no-repeat;
     background-position: center;
     color: black;
 }
-.step-background-future-text{
+
+.step-background-future-text {
     margin-top: 32px;
     margin-bottom: 40px;
-    color: rgb(30,52,39);
+    color: rgb(30, 52, 39);
 }
 
-.step-background-pass{
+.step-background-pass {
     /*height: 90px;*/
     /*padding-top: 13px;*/
     background-image: url('/pictures/form/icon_in.png');
@@ -73,22 +83,22 @@ div{
     background-position: 50% 13px;
 }
 
-.step-background-pass-text{
+.step-background-pass-text {
     margin-top: 29px;
     margin-bottom: 40px;
 }
 
-.no-margin{
+.no-margin {
     margin: 0px;
 }
 
-.question{
+.question {
     text-align: left;
     margin-bottom: 20px;
 }
 
-.next-button{
-    background-image:url('/pictures/form/bgถัดไป.png');
+.next-button {
+    background-image: url('/pictures/form/bgถัดไป.png');
     background-size: 150px;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
@@ -100,13 +110,13 @@ div{
     cursor: pointer;
 }
 
-.back-button{
+.back-button {
     cursor: pointer;
-    color: rgb(37,64,47);
+    color: rgb(37, 64, 47);
 }
 
-.head-background{
-    background-image:url('/pictures/whatis/what_is_jwcBG.png');
+.head-background {
+    background-image: url('/pictures/whatis/what_is_jwcBG.png');
     background-size: 250px;
     background-repeat: no-repeat;
     background-position: center;
@@ -114,7 +124,7 @@ div{
     padding-top: 15px;
 }
 
-.textarea{
+.textarea {
     padding: 10px;
     background: none;
     border: solid white 2px;
@@ -125,7 +135,7 @@ div{
     margin-top: 10px;
 }
 
-.textarea textarea{
+.textarea textarea {
     background: none;
     border: none;
     border-radius: 10px;
@@ -136,16 +146,15 @@ div{
 }
 
 .textarea textarea::-webkit-scrollbar,
-.textarea textarea::-moz-scrollbar{
+.textarea textarea::-moz-scrollbar {
     background: none;
     width: 10px;
     margin: 5px;
 }
 
-
 .textarea textarea::-webkit-scrollbar-track,
 .textarea textarea::-moz-scrollbar-track {
-    background: rgb(37,64,47);
+    background: rgb(37, 64, 47);
     width: 15px;
     border-radius: 10px;
 }
@@ -156,7 +165,7 @@ div{
     border-radius: 10px;
 }
 
-input{
+input {
     padding: 10px;
     background: none;
     border: solid white 2px;
@@ -168,7 +177,11 @@ input{
     width: 100%;
 }
 
-.dropdown button, .dropdown button:hover,.dropdown button:focus ,.open button:hover,.open button{
+.dropdown button,
+.dropdown button:hover,
+.dropdown button:focus,
+.open button:hover,
+.open button {
     padding: 10px !important;
     background: none !important;
     border: solid white 2px !important;
@@ -179,13 +192,13 @@ input{
     color: white;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     border-radius: 5px !important;
     width: 100%;
     cursor: pointer;
 }
 
-.dropdown{
+.dropdown {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -195,7 +208,7 @@ input{
     position: relative;
 }
 
-.btn-group.dropdown button .caret{
+.btn-group.dropdown button .caret {
     position: absolute;
     top: 17px;
     right: 10px;
@@ -203,7 +216,6 @@ input{
     border-right: 8px solid transparent;
     border-top: 8px solid #fff;
 }
-
 
 .flip {
     -moz-transform: scaleX(-1);
@@ -237,6 +249,7 @@ input{
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
+
 .fancy-file-upload>input[type=text] {
     background-color: transparent;
     padding-left: 36px;
@@ -250,35 +263,39 @@ input{
     box-shadow: none;
 }
 
-[readonly="readonly"]{
+[readonly="readonly"] {
     border-color: #ccc;
     color: darkgray;
 }
 
-[disabled="disabled"]{
+[disabled="disabled"] {
     border-color: #ccc;
-    cursor: default;;
+    cursor: default;
+    ;
 }
 
-
-.goto{
-  color: white;
-}
-.goto:hover{
-  color:white;
-  text-decoration: none;
+.goto {
+    color: white;
 }
 
-.major-header{
+.goto:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.major-header {
     margin-top: 0;
 }
 
-.head-1,.head-2,.head-3,.head-4{
+.head-1,
+.head-2,
+.head-3,
+.head-4 {
     margin-bottom: 25px;
 }
 
-.send-form-button{
-    background-image:url('/pictures/form/bgถัดไป.png');
+.send-form-button {
+    background-image: url('/pictures/form/bgถัดไป.png');
     background-size: 150px;
     background-repeat: no-repeat;
     background-position: center;
@@ -290,18 +307,95 @@ input{
     border: none;
 }
 
-input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
-   color: white;
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: white;
 }
 
-input:-moz-placeholder, textarea:-moz-placeholder { /* Firefox 18- */
-   color: white;
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: white;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder {  /* Firefox 19+ */
-   color: white;
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: white;
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-   color: white;
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: white;
 }
+
+.step-background-now > .step-background-now-text {
+    font-size: 23px !important;
+    margin-top: 14px !important;
+}
+
+.step-bar-main > .row > h2 {
+    margin-top: 2px;
+    font-size: 38px;
+}
+
+.step-bar > .row > h2 {
+    margin-top: 0px;
+}
+
+.logo-regis.--fixed-top {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 50px);
+}
+
+.logo-regis.--fixed-top > img {
+    width: 100px;
+}
+
+.back-button > .goto {
+    padding-left: 30px;
+}
+
+img.back-button {
+    margin-top: 10px;
+}
+
+.warning-text {
+    font-size: 28px;
+    margin-bottom: 0;
+    padding: 0 40px;
+    font-family: 'ThSarabunNew';
+}
+
+@media (max-width: 768px) {
+    .step-bar-row {
+        padding: 0 25px;
+    }
+    .step-bar > .row > h2 {
+        font-size: 20px;
+    }
+    .step-bar-main > .row > h2 {
+        font-size: 20px;
+    }
+
+    .next-button {
+        width: 150px;
+        display: inline-block;
+        margin-left: -32px;
+    }
+
+    .next-button.next-button-1 {
+        margin-left: -5px;
+    }
+
+    .send-form-button {
+        width: 150px;
+        margin-left: -22px;
+    }
+
+    input, .btn.dropdown-toggle {
+        font-size: 14px !important;
+    }
+}
+

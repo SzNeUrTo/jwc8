@@ -1,0 +1,45 @@
+.contact-section {
+    @extend .container;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    text-align: center;
+    > .title {
+        margin-bottom: 10px;
+    }
+    > .text {
+        font-family: 'THSarabunNew';
+        font-weight: 200;
+        color: #ffffff;
+        margin-top: 0;
+    }
+
+    > .text > a {
+        color: #ffffff;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: #ffffff;
+        }
+    }
+}
+
+.fb-page {
+    float: right;
+}
+
+@media (min-width: 768px) {
+    .contact-section {
+        margin-top: 60px;
+        text-align: left;
+    }
+
+    .contact-section > .qrcode {
+        float: right;
+        margin-top: 25px;
+    }
+
+    span.visible-xs.text {
+        display: none !important;
+    }
+}

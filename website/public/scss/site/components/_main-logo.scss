@@ -1,0 +1,12 @@
+.main-logo {
+    margin-bottom: 45px;
+    background: url('../images/landing/logo-bg.png') no-repeat center center;
+    background-size: 100%;
+
+    > .logo {
+        @extend .center-block;
+        @extend .img-responsive;
+        z-index: 999;
+        padding: 0px 60px;
+    }
+}
