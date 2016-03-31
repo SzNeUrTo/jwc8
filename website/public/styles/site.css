@@ -5884,16 +5884,23 @@ h6 {
   color: #ffffff;
   background: url("../images/landing/title-bg.png") no-repeat center center;
   background-size: 100%;
-  margin-bottom: 25px;
-  white-space: nowrap; }
+  margin-bottom: 25px; }
 
 .section > .title {
   padding: 0 40px;
   margin-bottom: 25px; }
 
+.container > .title, .section > .title, .first-section > .title, .about-section > .title, .register-section > .title, .contact-section > .title, .sponsor-section > .title, .gallery-section > .title, .gallery-container > .title, .faq-section > .title, .faq-container > .title {
+  white-space: nowrap; }
+
 .major-header.-title {
   text-transform: uppercase;
   font-size: 56px; }
+
+@media (max-width: 768px) {
+  .major-header.-title {
+    text-transform: uppercase;
+    font-size: 36px; } }
 
 .first-section {
   text-align: center;
@@ -5964,7 +5971,9 @@ h6 {
     text-align: left; }
   .contact-section > .qrcode {
     float: right;
-    margin-top: 25px; } }
+    margin-top: 25px; }
+  span.visible-xs.text {
+    display: none !important; } }
 
 .main-logo {
   margin-bottom: 45px;
@@ -6483,6 +6492,8 @@ h6 {
   background-size: 100% 100%;
   height: 60px;
   top: -60px;
+  right: 0;
+  left: 0;
   opacity: 0;
   transition: all .4s ease-out; }
   .border-blackboard.-navbar > .logo {
