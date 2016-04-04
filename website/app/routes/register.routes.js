@@ -157,7 +157,7 @@ function isAlreadyRegister(req, res, next) {
             return res.redirect('/');
         }
 
-        if (!user) {
+        if (!user ||!user.jwcinfo) {
             return next();
         }
 
