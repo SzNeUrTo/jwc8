@@ -3,15 +3,15 @@
 	text-align: center;
 	margin-bottom: 120px;
 	> .main-logo {
+    @include clearfix();
 		display: block;
-		width: 400px;
+		width: 380px;
 		max-width: 100%;
 
 		margin: 0 auto;
-		margin-top: 60px;
+		margin-top: 30px;
 		margin-bottom: 20px;
 		padding: 0 30px;
-	    @include clearfix();
 	}
 
 	> .title {
@@ -22,21 +22,10 @@
 	}
 }
 
-@media (max-width: 768px) {
-	.first-section {
-		> .title {
-			font-size: 50px;
-		}
-	}
-}
-
 @media (min-width: 1024px) {
 	.first-section {
-		> .main-logo {
-			width: 600px;
-		}
 		> .title {
-			font-size: 72px;
+			font-size: 48px;
 		}
 	}
 }
