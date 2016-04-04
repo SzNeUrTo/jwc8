@@ -37,6 +37,8 @@
     > .sponsor > img {
         @extend .img-circle;
         @extend .img-responsive;
+        display: block;
+        margin: 0 auto;
         box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
     }
 }
