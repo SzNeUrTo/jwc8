@@ -15,6 +15,12 @@ module.exports = function(app, passport){
         'major': req.params.major
       });
   })
+  app.get('/pic/:id',[isLoggedIn, isInspector], function(req, res){
+    var picpath = "/fb"+req.params.id+".jpg";
+    res.render('pic', {
+      'picname': picpath
+    })
+  })
 }
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
