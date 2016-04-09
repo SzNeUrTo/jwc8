@@ -1,6 +1,7 @@
 <table>
   <tr>
     <td>ลำดับ</td>
+    <td>id(dasign)</td>
     <td>ชื่อเล่น</td>
     <td>เพศ</td>
     <td>ไซส์เสื้อ</td>
@@ -36,6 +37,7 @@ body{
     for(var i=0 ; i<data.length ; i++){
       var row = []
       row.push(i+1);
+      row.push(data[i].auth.facebook.id)
       row.push(data[i].profile.nickname);
       row.push(data[i].profile.sex);
       row.push(data[i].profile.size);
