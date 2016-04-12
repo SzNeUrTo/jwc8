@@ -9,6 +9,7 @@ module.exports = function(app, passport) {
 
 	require('../app/routes/countregis.routes')(app);
 	require('../app/routes/register.routes')(app);
+	require('../app/routes/banner.routes')(app);
 	require('../app/routes/passport.routes.js')(app, passport);
 
 }
