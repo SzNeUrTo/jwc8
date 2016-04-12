@@ -1,0 +1,164 @@
+<!-- views/banner.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>banner page</title>
+  <link rel="stylesheet" href="../../public/css/fonts.css">
+	<link rel="stylesheet" href="../../public/styles/site.css"> <!-- load bootstrap css -->
+	<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">  -->
+  <!-- load fontawesome -->
+ <style>
+   .banner-img-center {
+     margin: 0 auto;
+     position: relative;
+  }
+  .banner-group > div{
+    margin-top: 20px;
+  }
+  .banner-text{
+    margin-top: 15px;
+    width: 100%;
+    word-break: break-all;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'THSarabunNew', Arial;
+  }
+  .banner-text .lock{
+    -ms-overflow-style: none;
+    overflow: hidden;
+    resize: none;
+  }
+  .banner-free{
+    position: absolute;
+    max-width: 200px;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+  }
+  @media only screen and (max-device-width: 480px) {
+    .banner-free{
+      position: absolute;
+      max-width: 150px;
+      top: 0;
+      right: 0;
+      z-index: 99999;
+    }
+	}
+ </style>
+</head>
+<body>
+  <div class="border-blackboard -top"></div>
+  <img src="../../public/images/landing/free.png" class="banner-free img-responsive">
+  <div class="container">
+    <div class="row">
+      <div class="section banner-group">
+         <div >
+          <a href="https://jwc8.jwc.in.th/">
+            <img src="../../public/pictures/allpage/logobig.png" alt="" width='400px' />
+          </a>
+         </div>
+         <h1 class="title">เว็บสุดชิค <br class="visible-xs">พลิกปัญหาวัยทีน</h1>
+         <div>
+           <a href="https://jwc8.jwc.in.th/profile/">
+            <h3 class="title">
+               แต่งรูปโปรไฟล์
+            </h3>
+          </a>
+           <div>
+             <a href="https://jwc8.jwc.in.th/profile/">
+               <img class= "img-responsive banner-img-center" src="../../public/pictures/banner/test-change-image.jpg"
+               alt="" width='400px' />
+             </a>
+            <div>
+              <a href="https://jwc8.jwc.in.th/profile/">
+                <h2 class="title">
+                  เปลี่ยนรูปกัน กดเลย !
+                </h2>
+              </a>
+            </div>
+         </div>
+         </div>
+         <div>
+           <h3 class="title">
+             เนื้่อหาประชาสัมพันธ์
+           </h3>
+           <div>
+              <textarea rows="13" class="banner-text" onclick="this.select();">
+        Junior Webmaster Camp 8th
+    เปิดรับสมัครแล้ว!
+สมรภูมิใหม่ กำลังจะเริ่มขึ้นแล้ว… Junior Webmaster Camp 8th
+สนามประลองไอเดียการพัฒนาเว็บสุดเจ๋ง ของเยาวชนระดับมัธยมศึกษาตอนปลาย หรือเทียบเท่า
+  Junior Webmaster Camp 8th ค่ายเจาะลึกวิชาชีพเว็บมาสเตอร์รุ่นเยาว์
+พร้อมเปิดรับนักเรียน นักศึกษา ระดับมัธยมศึกษาตอนปลาย หรือเทียบเท่า
+มาประลองไอเดีย พลิกโฉมวงการเว็บไซต์ ภายใต้แนวคิด “เว็บสุดชิคพลิกปัญหาวัยทีน”
+ภายในค่าย Junior Webmaster Camp 8th นี้ น้อง ๆ จะได้พัฒนาเว็บไซต์กันจริง ๆ
+ภายใต้สถานการณ์จำลองสุดมันส์ ด้วยบทบาทของ 3 สายงานในวิชาชีพเว็บมาสเตอร์
+ดังนี้
+  Web Design - สาขาสำหรับเด็กแนว รักการออกแบบ พร้อมระเบิดไอเดียแจ่ม ๆ
+ให้โดนใจผู้ชมของเว็บไซต์
+  Web Content - วัยรุ่นคนไหนที่หลงใหลในงานเขียน หลงรักการสร้างเนื้อหาเจ๋ง ๆ
+ให้ผู้ชมได้เสพย์ (ติด) ไม่ไปไหน ต้องสมัครสาขานี้
+  Web Marketing - น้องคนไหนชื่นชอบการเปลี่ยนแปลง ชอบวางแผน
+และริเริ่มสิ่งใหม่ ๆ และสนใจในการตลาดออนไลน์
+สาขานี้พร้อมให้น้องได้เรียนรู้แบบไม่มีกั๊ก
+  Junior Webmaster Camp 8th เปิดรับสมัครผู้กล้า ถึงวันที่ 17 เมษายน 2559 นี้เท่านั้น !!
+พร้อมแล้วอย่ารอช้า มาร่วมเป็น 1 ใน 42 คนสุดท้าย ของค่าย Junior Webmaster Camp 8th กัน
+สมัครได้แล้ววันนี้ที่ www.jwc.in.th
+ช่องทางการสื่อสารของ JWC#8
+Facebook (https://www.facebook.com/jwcth)
+Twitter (https://twitter.com/jwcth)
+Instagram (https://instagram.com/jwcth)
+หรือสามารถติดตามข่าวสารและถามตอบข้อสงสัยอย่างฉับไวที่ LINE @jwcth
+              </textarea>
+            </div>
+         </div>
+         <div >
+           <h3 class="title">
+             ขนาด 300X250
+           </h3>
+           <div >
+             <img class= "img-responsive banner-img-center" src="../../public/pictures/banner/Welcomepage300X250.jpg" width="300" height="250">
+           </div>
+           <textarea rows="2" class="banner-text lock" onclick="this.select();">
+             <a href="http://www.jwc.in.th"> <img src="http://www.jwc.in.th/pictures/banner/Welcomepage300X250.jpg" width="300" height="250" border="0" alt="Young Webmaster Camp"></a>
+          </textarea>
+         </div>
+         <div >
+           <h3 class="title">
+             ขนาด 300X250 แบบที่ 1
+           </h3>
+           <div >
+             <img class= "img-responsive banner-img-center" src="../../public/pictures/banner/Banner300X250.jpg" width="300" height="250">
+           </div>
+           <textarea rows="2" class="banner-text lock" onclick="this.select();">
+             <a href="http://www.jwc.in.th"> <img src="http://www.jwc.in.th/pictures/banner/Banner300X250.jpg" width="300" height="250" border="0" alt="Young Webmaster Camp"></a>
+          </textarea>
+         </div>
+         <div >
+           <h3 class="title">
+             ขนาด 160X600 แบบที 2
+           </h3>
+           <div >
+             <img class= "img-responsive banner-img-center" src="../../public/pictures/banner/Banner160X600.jpg" width="160" height="600" >
+           </div>
+           <textarea rows="2" class="banner-text lock" onclick="this.select();">
+             <a href="http://www.jwc.in.th"> <img src="http://www.jwc.in.th/pictures/banner/Banner160X600.jpg" width="160" height="600" border="0" alt="Young Webmaster Camp"></a>
+          </textarea>
+         </div>
+         <div >
+           <h3 class="title">
+             ขนาด 560X250
+           </h3>
+           <div >
+             <img class= "img-responsive banner-img-center" src="../../public/pictures/banner/Banner560X250.jpg" width="560" height="250">
+           </div>
+           <textarea rows="2" class="banner-text lock" onclick="this.select();">
+             <a href="http://www.jwc.in.th"> <img src="http://www.jwc.in.th/pictures/banner/Banner560X250.jpg" width="560" height="250" border="0" alt="Young Webmaster Camp"></a>
+          </textarea>
+         </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-blackboard -bottom"></div>
+</body>
+</html>
