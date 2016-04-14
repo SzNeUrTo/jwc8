@@ -1,0 +1,57 @@
+<table>
+  <tr>
+    <td>ลำดับ</td>
+    <td>id(dasign)</td>
+    <td>ชื่อเล่น</td>
+    <td>เพศ</td>
+    <td>ไซส์เสื้อ</td>
+    <td>โรงเรียน</td>
+    <td>สายการเรียน</td>
+    <td>เล่ากิจกรรม</td>
+    <td>ความสามารถพิเศษ</td>
+    <td>จุดเด่น</td>
+    <td>นิสัยตัวเองที่ไม่ชอบ</td>
+    <td>เว็ปไซต์ที่อยากสร้าง</td>
+    <td>คำถาม1</td>
+    <td>คำถาม2</td>
+  </tr>
+</table>
+<style >
+table, th, td {
+  border: 1px solid black;
+}
+td{
+  text-align: center;
+}
+body{
+  background: none;
+  overflow: auto;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+  var marketing = "marketing";
+  var content = "content";
+  var design = "design";
+  $.get('/api/'+{{major}}, function(data){
+    for(var i=0 ; i<data.length ; i++){
+      var row = []
+      row.push(i+1);
+      row.push(data[i].auth.facebook.id)
+      row.push(data[i].profile.nickname);
+      row.push(data[i].profile.sex);
+      row.push(data[i].profile.size);
+      row.push(data[i].profile.school);
+      row.push(data[i].profile.major);
+      for(var j=0 ; j<5 ; j++)
+        row.push(data[i].jwcinfo.generalquestion.answers[j].answer)
+      for(var k=1; k< data[i].jwcinfo.specialquestion.answers.length; k++)
+        row.push(data[i].jwcinfo.specialquestion.answers[k].answer)
+      var p = "<tr>";
+      for(d of row)
+        p+="<td>"+d+"</td>"
+      p+="</tr>"
+      $("table").append(p);
+    }
+  });
+</script>
