@@ -1,0 +1,24 @@
+{{>navbar}}
+{{>navbarm}}
+<table>
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>ชื่อ</td>
+      <td>นามสกุล</td>
+      <td>ยอดที่ต้องโอน</td>
+      <td>ยืนยัน</td>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+      <tr>
+        <td>{{this.number}}</td>
+        <td>{{this.name}}</td>
+        <td>{{this.lastname}}</td>
+        <td>{{this.money}}</td>
+        <td>{{this.confirm}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
