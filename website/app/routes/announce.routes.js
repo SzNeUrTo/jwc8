@@ -18,8 +18,11 @@ module.exports = function(app, passport) {
         confirm: 'no'
       }
     ];
+    var img = '/images/landing/register/web'+major+'.png';
         res.render('announce', {
-          'users': result
+          'img': img,
+          'users': result,
+          'major': major
         });
     // User.find({'_______.major': major}, function(err, result){
     //   if(err) res.send(err);
