@@ -36,7 +36,7 @@ module.exports = function(app, passport){
 		});
 
 		app.get('/authen/facebook/cb/' + major,
-			passport.authenticate('facebook', { callbackURL: 'https://jwc8.jwc.in.th/authen/facebook/cb/' + major, successRedirect: '/register/' + major, // EditHere
+			passport.authenticate('facebook', { callbackURL: 'https://jwc8.jwc.in.th/authen/facebook/cb/' + major, successRedirect: 'https://jwc8.jwc.in.th/register/' + major, // EditHere
 	                                      failureRedirect: 'https://jwc8.jwc.in.th/' })); // EditHere
 	});
 	app.get('/auth/facebook', passport.authenticate('facebook', {authType: 'reauthenticate', scope: ['email']}));
