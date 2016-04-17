@@ -1,27 +1,45 @@
-{{>navbar}}
-{{>navbarm}}
+<style>
+  .table-announce {
+    color: #efefef;
+  }
+
+  .table-announce tbody td {
+    border-top-color: #374E36 !important;
+    border-top-width: 2px !important;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+
+  .payment {
+    color: #374E36;
+  }
+
+  .resign {
+    color: #A34123;
+  }
+</style>
 <img src={{img}} />
 <p>{{major}}</p>
-<table>
-  <thead>
-    <tr>
-      <td>#</td>
-      <td>ชื่อ</td>
-      <td>นามสกุล</td>
-      <td>ยอดที่ต้องโอน</td>
-      <td>ยืนยัน</td>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each users}}
+<div class="container">
+  <table class="table table-announce">
+    <thead>
       <tr>
-        <td>{{this.number}}</td>
-        <td>{{this.name}}</td>
-        <td>{{this.lastname}}</td>
-        <td>{{this.money}}</td>
-        <td>{{this.confirm}}</td>
+        <td>#</td>
+        <td>ชื่อ - นามสกุล</td>
+        <td>ยอดที่ต้องโอน</td>
+        <td>ยืนยัน</td>
       </tr>
-    {{/each}}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {{#each users}}
+        <tr>
+          <td>{{this.number}}</td>
+          <td>{{this.name}} {{this.lastname}}</td>
+          <td>{{this.money}}</td>
+          <td>{{this.confirm}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
 <a href="/confirm">ยืนยัน</a>

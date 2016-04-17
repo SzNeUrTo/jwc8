@@ -28,7 +28,7 @@ module.exports = function(app, passport) {
       var num = 1;
       for(user of result){
         if(user.jwcinfo.specialquestion.answers[0].point == 1){
-          var d = (user.jwcinfo.specialquestion.answers[0].point == 1)? 'ยืนยัน':'ไม่ยืนยัน';
+          var d = (user.jwcinfo.specialquestion.answers[1].point == 1)? 'ยืนยัน':'ไม่ยืนยัน';
           var data = {
             number: num,
             name: user.profile.firstname+' '+user.profile.lastname,
