@@ -30,6 +30,13 @@ module.exports = function(app, passport){
 		res.render('profile.ejs', { user: req.user });
 	});
 
+	app.get('/authen/facebook/confirm', function(req, res, next){
+			passport.authenticate('facebook', {callbackURL: '/authen/facebook/cb/confirm', authType: 'reauthenticate'}/*, scope: ['email']}*/)(req, res, next);
+	});
+	app.get('/authen/facebook/cb/confirm',
+		passport.authenticate('facebook', { callbackURL: '/authen/facebook/cb/confirm', successRedirect: '/confirm', // EditHere
+                                      failureRedirect: '/' })); // EditHere
+
 	['marketing', 'design', 'content'].forEach(function(major) {
 		app.get('/authen/facebook/' + major, function(req, res, next) {
 			passport.authenticate('facebook', {callbackURL: '/authen/facebook/cb/' + major, authType: 'reauthenticate'}/*, scope: ['email']}*/)(req, res, next);
