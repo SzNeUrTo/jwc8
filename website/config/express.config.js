@@ -41,7 +41,6 @@ module.exports = function() {
 	app.set('views', './app/views');
 	app.use(express.static('./public'));
 	app.use(express.static('./uploads'));
-
 	app.engine('.hbs', exphbs({
 		defaultLayout: 'main',
 	 	extname: '.hbs',
