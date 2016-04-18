@@ -25,21 +25,24 @@ module.exports = function(app, passport) {
     User.find({'jwcinfo.major': major}, function(err, result){
       var users = [];
       var i = 0;
-      var num  = 1;//marketing
-      if(major == 'content') num = 15;
-      else if (mojor == 'design') num = 30;
+      var num  = 1;
+      var money = 11;//marketing
+      if(major == 'design') money = 31;
+      if(major == 'content') money = 51;
       for(user of result){
         if(user.jwcinfo.specialquestion.answers[0].point == 1){
           var d = (user.jwcinfo.specialquestion.answers[1].point == 1)? 'ยืนยัน':'ไม่ยืนยัน';
+          var a = (num>=15)? ' (สำรอง)':'';
           var data = {
             number: num,
-            name: user.profile.firstname+' '+user.profile.lastname,
-            money: 300+num/100,
+            name: user.profile.firstname+' '+user.profile.lastname+a,
+            money: 300+money/100,
             confirm: d
           }
           console.log(data)
           users.push(data);
           num++;
+          money++;
         }
         if(i == result.length-1){
           res.render('announce', {
@@ -65,9 +68,6 @@ module.exports = function(app, passport) {
   })
   app.get('/update_list',[isLoggedIn, isInspector], function(req, res){
     var data = [
-      //'851752604887062',
-      '1054396421274449',//tester
-      '785138124919334'//tester
     ];
     for(var i=0 ; i<data.length ; i++){
       User.findOne({'auth.facebook.id':data[i]}, function(err, user){
