@@ -16,6 +16,8 @@
     <td>ชื่อผู้ปกครอง</td>
     <td>เกี่ยวข้อง</td>
     <td>เบอร์ผู้ปกครอง</td>
+    <td>วิธีไป</td>
+    <td>หมายเหตุ</td>
   </tr>
 </table>
 <style >
@@ -54,6 +56,14 @@ body{
       row.push(data[i].profile.contact_person.firstname+" "+data[i].profile.contact_person.lastname);
       row.push(data[i].profile.contact_person.relation);
       row.push(data[i].profile.contact_person.emergency_tel);
+      if(data[i].jwcinfo.generalquestion.answers >5){
+        row.push(data[i].jwcinfo.generalquestion.answers[5].answer);
+        row.push(data[i].jwcinfo.generalquestion.answers[6].answer);
+      }
+      else{
+        row.push('-');
+        row.push('-');
+      }
       var p = "<tr>";
       for(d of row)
         p+="<td>"+d+"</td>"

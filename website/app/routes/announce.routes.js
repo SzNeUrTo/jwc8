@@ -60,11 +60,18 @@ module.exports = function(app, passport) {
   })
 
   app.post('/confirm',[isLoggedIn, multerMiddle], function(req, res){
-    // User.findOne({'auth.facebook.id': req.user.auth.facebook.id}, function(err, user){
-    //   user.____ = req.body.travel;
-    //   user.save();
-    // })
-    res.render('upload_conplete')
+    User.findOne({'auth.facebook.id': req.user.auth.facebook.id}, function(err, user){
+      if(user.jwcinfo.generalquestion.answers == 5){
+        user.jwcinfo.generalquestion.answers.push({ answer: req.body.travel, point: 0 });
+        user.jwcinfo.generalquestion.answers.push({ answer: req.body.note, point: 0 });
+      }
+      else{
+        user.jwcinfo.generalquestion.answers[5].answer = req.body.travel;
+        user.jwcinfo.generalquestion.answers[6].answer = req.body.note;
+      }
+      user.save();
+    })
+    res.render('upload_complete')
   })
   app.get('/update_list',[isLoggedIn, isInspector], function(req, res){
     var data = [
