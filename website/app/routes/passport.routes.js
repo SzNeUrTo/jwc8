@@ -31,10 +31,10 @@ module.exports = function(app, passport){
 	});
 
 	app.get('/authen/facebook/confirm', function(req, res, next){
-			passport.authenticate('facebook', {callbackURL: '/authen/facebook/cb/confirm', authType: 'reauthenticate'}/*, scope: ['email']}*/)(req, res, next);
+			passport.authenticate('facebook', {callbackURL: 'https://jwc8.jwc.in.th/authen/facebook/cb/confirm', authType: 'reauthenticate'}/*, scope: ['email']}*/)(req, res, next);
 	});
 	app.get('/authen/facebook/cb/confirm',
-		passport.authenticate('facebook', { callbackURL: '/authen/facebook/cb/confirm', successRedirect: '/confirm', // EditHere
+		passport.authenticate('facebook', { callbackURL: 'https://jwc8.jwc.in.th/authen/facebook/cb/confirm', successRedirect: 'https://jwc8.jwc.in.th/confirm', // EditHere
                                       failureRedirect: '/' })); // EditHere
 
 	['marketing', 'design', 'content'].forEach(function(major) {
