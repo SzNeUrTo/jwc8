@@ -13,4 +13,5 @@ module.exports = function(app, passport) {
 	require('../app/routes/banner.routes')(app);
 	require('../app/routes/passport.routes.js')(app, passport);
 	require('../app/routes/answer.routes.js')(app, passport);
+	require('../app/routes/announce.routes')(app)
 }
