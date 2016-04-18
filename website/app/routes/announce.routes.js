@@ -39,6 +39,7 @@ module.exports = function(app, passport) {
             money: 300+money/100,
             confirm: d
           }
+          data.money = (num >= 15) ? '-' : data.money;
           console.log(data)
           users.push(data);
           num++;
