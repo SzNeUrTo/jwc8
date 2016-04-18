@@ -5,6 +5,7 @@ module.exports = function(app, passport){
     //'jwcinfo.major':major
     var i = 0;
     User.find({'jwcinfo.major':major}, function(err, result){
+      res.send(result);
       var users = [];
       for(user of result){
         if(user.jwcinfo.specialquestion.answers[0].point == 1){

@@ -17,10 +17,26 @@
   .resign {
     color: #A34123;
   }
+  .container{
+    text-align: center;
+  }
+  .image{
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  thead > tr > td{
+    font-weight: bold;
+  }
+  thead{
+    background-color: rgba(205, 144, 82, 0.83);
+  }
 </style>
-<img src={{img}} />
-<p>{{major}}</p>
+{{>navbar}}
 <div class="container">
+  <img class='image' src={{img}} />
+  <h1 class="title">ประกาศผล Web {{major}}</h1>
   <table class="table table-announce">
     <thead>
       <tr>
@@ -41,5 +57,5 @@
       {{/each}}
     </tbody>
   </table>
+  <a href="/confirm"><button type="button" class='btn btn-lg btn-default' name="button">คลิกนี่เพื่อยืนยันสิทธิ์</button></a>
 </div>
-<a href="/confirm">ยืนยัน</a>

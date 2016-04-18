@@ -70,8 +70,10 @@ module.exports = function(app, passport) {
         user.jwcinfo.generalquestion.answers[6].answer = req.body.note;
       }
       user.save();
+      res.render('upload_complete',{
+        'name': user.profile.nickname
+      })
     })
-    res.render('upload_complete')
   })
   app.get('/update_list',[isLoggedIn, isInspector], function(req, res){
     var data = [
