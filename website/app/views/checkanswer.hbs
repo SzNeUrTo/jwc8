@@ -1,19 +1,23 @@
 <table>
   <tr>
     <td>ลำดับ</td>
-    <td>id(dasign)</td>
+    <td>id</td>
+    <td>facebook name</td>
     <td>ชื่อเล่น</td>
-    <td>เพศ</td>
-    <td>ไซส์เสื้อ</td>
+    <td>ชื่อ</td>
+    <td>นามสกุล</td>
     <td>โรงเรียน</td>
-    <td>สายการเรียน</td>
-    <td>เล่ากิจกรรม</td>
-    <td>ความสามารถพิเศษ</td>
-    <td>จุดเด่น</td>
-    <td>นิสัยตัวเองที่ไม่ชอบ</td>
-    <td>เว็ปไซต์ที่อยากสร้าง</td>
-    <td>คำถาม1</td>
-    <td>คำถาม2</td>
+    <td>ระดับชั้น</td>
+    <td>เบอร์</td>
+    <td>เพศ</td>
+    <td>e-mail</td>
+    <td>ที่อยู่</td>
+    <td>ไซส์เสื้อ</td>
+    <td>ชื่อผู้ปกครอง</td>
+    <td>เกี่ยวข้อง</td>
+    <td>เบอร์ผู้ปกครอง</td>
+    <td>วิธีไป</td>
+    <td>หมายเหตุ</td>
   </tr>
 </table>
 <style >
@@ -38,15 +42,28 @@ body{
       var row = []
       row.push(i+1);
       row.push(data[i].auth.facebook.id)
+      row.push(data[i].auth.facebook.name)
       row.push(data[i].profile.nickname);
-      row.push(data[i].profile.sex);
-      row.push(data[i].profile.size);
+      row.push(data[i].profile.firstname);
+      row.push(data[i].profile.lastname);
       row.push(data[i].profile.school);
-      row.push(data[i].profile.major);
-      for(var j=0 ; j<5 ; j++)
-        row.push(data[i].jwcinfo.generalquestion.answers[j].answer)
-      for(var k=1; k< data[i].jwcinfo.specialquestion.answers.length; k++)
-        row.push(data[i].jwcinfo.specialquestion.answers[k].answer)
+      row.push(data[i].profile.level);
+      row.push(data[i].profile.tel);
+      row.push(data[i].profile.sex);
+      row.push(data[i].profile.email);
+      row.push(data[i].profile.position);
+      row.push(data[i].profile.size);
+      row.push(data[i].profile.contact_person.firstname+" "+data[i].profile.contact_person.lastname);
+      row.push(data[i].profile.contact_person.relation);
+      row.push(data[i].profile.contact_person.emergency_tel);
+      if(data[i].jwcinfo.generalquestion.answers >5){
+        row.push(data[i].jwcinfo.generalquestion.answers[5].answer);
+        row.push(data[i].jwcinfo.generalquestion.answers[6].answer);
+      }
+      else{
+        row.push('-');
+        row.push('-');
+      }
       var p = "<tr>";
       for(d of row)
         p+="<td>"+d+"</td>"
