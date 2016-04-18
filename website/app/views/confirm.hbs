@@ -22,6 +22,20 @@
   #blah{
     max-width: 500px;
   }
+
+  .confirm-btn {
+    display: block;
+    color: #ffffff;
+    font-size: 48px;
+    font-family: BoonJot;
+    padding: 0 40px;
+    background: url('../images/landing/title-bg.png') no-repeat center center;
+    background-size: 100%;
+  }
+
+  .confirm-btn:hover {
+    color: #ffffff;
+  }
 </style>
 <div class="container">
   <form method="post" enctype="multipart/form-data" action="/confirm">
@@ -47,8 +61,12 @@
       หากน้องๆมีข้อสงสัย หรือต้องการสอบถามข้อมูลเพิ่มเติม
   สามารถติดต่อได้ที่  099-402-8900 (พี่มายด์), 084-023-7266 (พี่ช้าง), 087-685-7077 (พี่แนต)
     </p>
-    <input type="submit" class="btn btn-lg btn-default" value="ยืนยันสิทธิ์">
+    <input type="submit" class="confirm-btn" value="ยืนยันสิทธิ์">
     <input type="hidden" name="travel" class="travel" value="" >
+    <br>
+    <br>
+    <br>
+    <br>
   </form>
 </div>
 
