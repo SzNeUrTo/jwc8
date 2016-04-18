@@ -38,13 +38,16 @@
   }
 
   .confirm-btn {
-    display: block;
     color: #ffffff;
     font-size: 48px;
     font-family: BoonJot;
     padding: 0 40px;
     background: url('../images/landing/title-bg.png') no-repeat center center;
     background-size: 100%;
+  }
+
+  .confirm-btn.small {
+    font-size: 20px;
   }
 
   .confirm-btn:hover {
@@ -54,6 +57,7 @@
 <div class="container">
   <img class='image' src={{img}} />
   <h1 class="title text-wrap">ประกาศผล Web {{major}}</h1>
+  <a href="/" class="confirm-btn small">กลับหน้าหลัก</a>
   <table class="table table-announce">
     <thead>
       <tr>
@@ -74,7 +78,9 @@
       {{/each}}
     </tbody>
   </table>
-  <a href="/confirm" class="confirm-btn">คลิกที่นี่เพื่อยืนยันสิทธิ์</a>
+  <div class="text-center">
+    <a href="/confirm" class="confirm-btn">คลิกที่นี่เพื่อยืนยันสิทธิ์</a>
+  </div>
   <br>
   <br>
   <br>

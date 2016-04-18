@@ -55,7 +55,7 @@ module.exports = function(app, passport) {
       }
     });
   });
-  app.get('/confirm',[isLoggedIn] ,function(req, res, next){
+  app.get('/confirm',[isLoggedIn, isPass] ,function(req, res, next){
     res.render('confirm');
   })
 
