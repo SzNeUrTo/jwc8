@@ -49,10 +49,10 @@ module.exports = function(app, passport) {
     });
 
     app.post('/complete', [isLoggedIn, multerMiddle], function(req, res) {
-        // res.send(req.body);
+         res.send('register already close');
         User.findOne({ 'auth.facebook.id': req.user.auth.facebook.id }, function(err, user) {
             var data = req.body;
-            registerData(user, data);
+           // registerData(user, data);
             if (err) {
                 res.redirect('/');
                 console.log('err');
