@@ -26,31 +26,45 @@ module.exports = function(app, passport) {
       var users = [];
       var i = 0;
       var num  = 1;
-      var money = 11;//marketing
-      if(major == 'design') money = 31;
-      if(major == 'content') money = 51;
       for(user of result){
-        if(user.jwcinfo.specialquestion.answers[0].point == 1){
+        if(user.jwcinfo.specialquestion.answers[0].point >= 1){
           var d = (user.jwcinfo.specialquestion.answers[1].point == 1)? 'ยืนยัน':'ไม่ยืนยัน';
-          var a = (num>=15)? ' (สำรอง)':'';
+          var a = (user.jwcinfo.specialquestion.answers[0].point==1)? ' (สำรอง)':'';
           var data = {
             number: num,
             name: user.profile.firstname+' '+user.profile.lastname+a,
-            money: 300+money/100+((money%10==0)? '0':''),
+            money: 0,
             confirm: d
           }
           data.money = (num >= 15) ? '-' : data.money;
           console.log(data)
-          users.push(data);
+          if(user.jwcinfo.specialquestion.answers[0].point > 1)
+          users.unshift(data);
+          else {
+            users.push(data);
+          }
           num++;
           money++;
         }
         if(i == result.length-1){
-          res.render('announce', {
-            'img': img,
-            'users': users,
-            'major': major
-          });
+          var money = 11;//marketing
+          if(major == 'design') money = 31;
+          if(major == 'content') money = 51;
+
+          for(var j = 0 ; j<users.length ; j++){
+            users[j].number = j+1;
+            users[j].money = 300+money/100+((money%10==0)? '0':'')
+            if(j>=14)
+              users[j].money = '-';
+            if(j == users.length-1){
+              res.render('announce', {
+                'img': img,
+                'users': users,
+                'major': major
+              });
+            }
+            money++;
+          }
         }
         i++;
       }
@@ -83,7 +97,7 @@ module.exports = function(app, passport) {
       User.findOne({'auth.facebook.id':data[i]}, function(err, user){
         if(err) res.send(err)
         else{
-          user.jwcinfo.specialquestion.answers[0].point = 1;
+          user.jwcinfo.specialquestion.answers[0].point = 2;
           user.save(function(err){
             if(err) throw err;
             console.log('update complete');
@@ -121,7 +135,7 @@ function isPass(req, res, next){
         throw(err)
         return res.redirect('/');
     }
-    if(user.jwcinfo.specialquestion.answers[0].point == 1){
+    if(user.jwcinfo.specialquestion.answers[0].point >= 1){
       return next();
     }
     else{

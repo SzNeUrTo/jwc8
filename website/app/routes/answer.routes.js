@@ -8,7 +8,7 @@ module.exports = function(app, passport){
       //res.send(result);
       var users = [];
       for(user of result){
-        if(user.jwcinfo.specialquestion.answers[0].point == 1){
+        if(user.jwcinfo.specialquestion.answers[0].point >= 1){
           users.push(user);
         }
         if(i == result.length-1){
