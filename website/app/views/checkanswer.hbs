@@ -42,7 +42,7 @@ body{
       row.push(data[i].auth.facebook.id)
       row.push(data[i].auth.facebook.name)
       row.push(data[i].profile.nickname);
-      row.push(data[i].profile.name);
+      row.push(data[i].profile.firstname);
       row.push(data[i].profile.lastname);
       row.push(data[i].profile.school);
       row.push(data[i].profile.level);
@@ -51,9 +51,9 @@ body{
       row.push(data[i].profile.email);
       row.push(data[i].profile.position);
       row.push(data[i].profile.size);
-      row.push(data[i].contact_person.firstname);
-      row.push(data[i].contact_person.relation);
-      row.push(data[i].contact_person.emergency_tel);
+      row.push(data[i].profile.contact_person.firstname+" "+data[i].profile.contact_person.lastname);
+      row.push(data[i].profile.contact_person.relation);
+      row.push(data[i].profile.contact_person.emergency_tel);
       var p = "<tr>";
       for(d of row)
         p+="<td>"+d+"</td>"
