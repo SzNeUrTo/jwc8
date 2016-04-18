@@ -33,7 +33,12 @@
     background-color: rgba(205, 144, 82, 0.83);
   }
 
+  .text-wrap {
+    white-space: normal !important;
+  }
+
   .confirm-btn {
+    display: block;
     color: #ffffff;
     font-size: 48px;
     font-family: BoonJot;
@@ -48,7 +53,7 @@
 </style>
 <div class="container">
   <img class='image' src={{img}} />
-  <h1 class="title">ประกาศผล Web {{major}}</h1>
+  <h1 class="title text-wrap">ประกาศผล Web {{major}}</h1>
   <table class="table table-announce">
     <thead>
       <tr>
