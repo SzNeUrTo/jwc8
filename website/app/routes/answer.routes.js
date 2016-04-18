@@ -3,12 +3,18 @@ module.exports = function(app, passport){
   app.get('/api/:major', [isLoggedIn, isInspector], function(req, res){
     var major = req.params.major;
     //'jwcinfo.major':major
+    var i = 0;
     User.find({'jwcinfo.major':major}, function(err, result){
-      if(err)
-        res.send(err);
-      else {
-        res.send(result);
-      };
+      var users = [];
+      for(user of result){
+        if(user.jwcinfo.specialquestion.answers[0].point == 1){
+          users.push(user);
+        }
+        if(i == result.length-1){
+          res.send(users)
+        }
+        i++;
+      }
     });
   });
   app.get('/answer/:major',[isLoggedIn, isInspector], function(req, res){

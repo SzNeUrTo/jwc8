@@ -57,6 +57,10 @@ module.exports = function(app, passport) {
   })
 
   app.post('/confirm',[isLoggedIn, multerMiddle], function(req, res){
+    // User.findOne({'auth.facebook.id': req.user.auth.facebook.id}, function(err, user){
+    //   user.____ = req.body.travel;
+    //   user.save();
+    // })
     res.render('upload_conplete')
   })
   app.get('/update_list',[isLoggedIn, isInspector], function(req, res){
