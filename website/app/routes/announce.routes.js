@@ -36,7 +36,7 @@ module.exports = function(app, passport) {
           var data = {
             number: num,
             name: user.profile.firstname+' '+user.profile.lastname+a,
-            money: 300+money/100,
+            money: 300+money/100+((money%10==0)? '0':''),
             confirm: d
           }
           data.money = (num >= 15) ? '-' : data.money;
