@@ -10,8 +10,8 @@ module.exports = function(app, passport){
 		res.render('login.ejs', { message: req.flash('loginMessage') });
 	});
 	app.post('/login', passport.authenticate('local-login', {
-		successRedirect: '/profile',
-		failureRedirect: '/login',
+		successRedirect: 'https://jwc8.jwc.in.th/profile',
+		failureRedirect: 'https://jwc8.jwc.in.th/login',
 		failureFlash: true
 	}));
 
@@ -21,8 +21,8 @@ module.exports = function(app, passport){
 
 
 	app.post('/signup', passport.authenticate('local-signup', {
-		successRedirect: '/testauth',
-		failureRedirect: '/signup',
+		successRedirect: 'https://jwc8.jwc.in.th/testauth',
+		failureRedirect: 'https://jwc8.jwc.in.th/signup',
 		failureFlash: true
 	}));
 
@@ -31,35 +31,35 @@ module.exports = function(app, passport){
 	});
 
 	app.get('/authen/facebook/confirm', function(req, res, next){
-			passport.authenticate('facebook', {callbackURL: '/authen/facebook/cb/confirm', authType: 'reauthenticate'}/*, scope: ['email']}*/)(req, res, next);
+			passport.authenticate('facebook', {callbackURL: 'https://jwc8.jwc.in.th/authen/facebook/cb/confirm', authType: 'reauthenticate'}/*, scope: ['email']}*/)(req, res, next);
 	});
 	app.get('/authen/facebook/cb/confirm',
-		passport.authenticate('facebook', { callbackURL: '/authen/facebook/cb/confirm', successRedirect: '/confirm', // EditHere
+		passport.authenticate('facebook', { callbackURL: 'https://jwc8.jwc.in.th/authen/facebook/cb/confirm', successRedirect: 'https://jwc8.jwc.in.th/confirm', // EditHere
                                       failureRedirect: '/' })); // EditHere
 
 	['marketing', 'design', 'content'].forEach(function(major) {
 		app.get('/authen/facebook/' + major, function(req, res, next) {
-			passport.authenticate('facebook', {callbackURL: '/authen/facebook/cb/' + major, authType: 'reauthenticate'}/*, scope: ['email']}*/)(req, res, next);
+			passport.authenticate('facebook', {callbackURL: 'https://jwc8.jwc.in.th/authen/facebook/cb/' + major, authType: 'reauthenticate'}/*, scope: ['email']}*/)(req, res, next);
 		});
 
 		app.get('/authen/facebook/cb/' + major,
-			passport.authenticate('facebook', { callbackURL: '/authen/facebook/cb/' + major, successRedirect: '/register/' + major, // EditHere
-	                                      failureRedirect: '/' })); // EditHere
+			passport.authenticate('facebook', { callbackURL: 'https://jwc8.jwc.in.th/authen/facebook/cb/' + major, successRedirect: 'https://jwc8.jwc.in.th/register/' + major, // EditHere
+	                                      failureRedirect: 'https://jwc8.jwc.in.th/' })); // EditHere
 	});
 	app.get('/auth/facebook', passport.authenticate('facebook', {authType: 'reauthenticate', scope: ['email']}));
 
 	app.get('/auth/facebook/callback',
 	//   // passport.authenticate('facebook', { successRedirect: '/profile',
 	//                                       // failureRedirect: '/testauth' }));
-		passport.authenticate('facebook', { successRedirect: '/', // EditHere
-	                                      failureRedirect: '/' })); // EditHere
+		passport.authenticate('facebook', { successRedirect: 'https://jwc8.jwc.in.th/', // EditHere
+	                                      failureRedirect: 'https://jwc8.jwc.in.th/' })); // EditHere
 
 
 	app.get('/auth/google', passport.authenticate('google', {scope: ['profile', 'email']}));
 
 	app.get('/auth/google/callback',
-	  passport.authenticate('google', { successRedirect: '/profile',
-	                                      failureRedirect: '/testauth' }));
+	  passport.authenticate('google', { successRedirect: 'https://jwc8.jwc.in.th/profile',
+	                                      failureRedirect: 'https://jwc8.jwc.in.th/testauth' }));
 
 	app.get('/connect/facebook', passport.authorize('facebook', { scope: 'email' }), function(req, res){
 		console.log("account" + req.account);
@@ -71,8 +71,8 @@ module.exports = function(app, passport){
 	});
 
 	app.post('/connect/local', passport.authenticate('local-signup', {
-		successRedirect: '/profile',
-		failureRedirect: '/connect/local',
+		successRedirect: 'https://jwc8.jwc.in.th/profile',
+		failureRedirect: 'https://jwc8.jwc.in.th/connect/local',
 		failureFlash: true
 	}));
 
