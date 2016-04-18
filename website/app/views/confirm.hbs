@@ -1,5 +1,19 @@
-<img src="รูปวิธีโอนเงิน" />
 <form method="post" enctype="multipart/form-data" action="/confirm">
+  <input type="radio" class="checklist" name="howtogo" value="1">หมอชิต<br>
+  <input type="radio" class="checklist" name="howtogo" value="2">อนุ<br>
+  <input type="radio" class="checklist" name="howtogo" value="3">อะไรซักอย่าง<br>
+
   <input type="file" name="slip-pic" >
   <input type="submit">
+  <input type="hidden" name="travel" class="travel" value="" >
 </form>
+<script type="text/javascript">
+  $('.checklist').on('click', function(e){
+    if(e.target.value == 1)
+      $('.travel').val('ไปทางหมอชิต');
+    else if(e.target.value == 2)
+      $('.travel').val('ไปทางอนุ');
+    else if(e.target.value == 3)
+      $('.travel').val('ไปทางไหนก็ได้');
+  })
+</script>

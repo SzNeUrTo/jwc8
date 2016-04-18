@@ -14,8 +14,8 @@ module.exports = function(app, passport) {
       storage: storage,
       limits: {
           fileSize: 1000 * 1000 * 10, // not sure 10 MB
-          files: 1,
-          fields: 1
+          //files: 1,
+          //fields: 1
       }
   }).single('slip-pic');
 
@@ -25,7 +25,9 @@ module.exports = function(app, passport) {
     User.find({'jwcinfo.major': major}, function(err, result){
       var users = [];
       var i = 0;
-      var num = 1;
+      var num  = 1;//marketing
+      if(major == 'content') num = 15;
+      else if (mojor == 'design') num = 30;
       for(user of result){
         if(user.jwcinfo.specialquestion.answers[0].point == 1){
           var d = (user.jwcinfo.specialquestion.answers[1].point == 1)? 'ยืนยัน':'ไม่ยืนยัน';
@@ -50,11 +52,11 @@ module.exports = function(app, passport) {
       }
     });
   });
-  app.get('/confirm',[isLoggedIn, isPass] ,function(req, res, next){
+  app.get('/confirm',[isLoggedIn] ,function(req, res, next){
     res.render('confirm');
   })
 
-  app.post('/confirm',[isLoggedIn,isPass, multerMiddle], function(req, res){
+  app.post('/confirm',[isLoggedIn, multerMiddle], function(req, res){
     res.render('upload_conplete')
   })
   app.get('/update_list',[isLoggedIn, isInspector], function(req, res){
