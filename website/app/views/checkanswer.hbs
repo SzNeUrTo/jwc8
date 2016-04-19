@@ -56,7 +56,7 @@ body{
       row.push(data[i].profile.contact_person.firstname+" "+data[i].profile.contact_person.lastname);
       row.push(data[i].profile.contact_person.relation);
       row.push(data[i].profile.contact_person.emergency_tel);
-      if(data[i].jwcinfo.generalquestion.answers >5){
+      if(data[i].jwcinfo.generalquestion.answers.length >5){
         row.push(data[i].jwcinfo.generalquestion.answers[5].answer);
         row.push(data[i].jwcinfo.generalquestion.answers[6].answer);
       }

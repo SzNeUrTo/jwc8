@@ -33,7 +33,9 @@
     border: none;
     box-shadow: none;
   }
-
+  .nen{
+    font-weight: bold;
+  }
   .confirm-btn:hover {
     color: #ffffff;
   }
@@ -41,16 +43,22 @@
 
 </style>
 <div class="container">
+  <h1>รายละเอียดการยืนยันสิทธิ์</h1>
+<p>กรุณาโอนเงินตามจำนวนด้านบนไปที่ <span class='nen'>นางสาวอทิตยา สักกะพลางกูร และ นายภคนันท์ จุลเสน</span></p>
+<p>เลขที่บัญชี <span class='nen'>009-8-70124-9 ธนาคารกสิกรไทย สาขาอโศก</span></p>
+<p>ตามยอดที่ระบุไว้เป็นจุดทศนิยม (เช่น 300.11 บาท)
+กรุณา Upload หลักฐานภายในวันที่ 20 เมษายน 2559 ก่อนเวลา 23.59 น. มิเช่นนั้นจะถือว่าสละสิทธิ์</p>
+  </br>
   <form method="post" enctype="multipart/form-data" action="/confirm">
     <h1>สถานที่นัดพบ</h1>
     <div class="check-box">
-      <input type="radio" class="checklist" name="howtogo" value="1">หน้า 7-eleven ในสถานีขนส่งหมอชิต 2 ( <a href="https://www.google.co.th/maps/place/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%82%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E+%E0%B8%88%E0%B8%95%E0%B8%B8%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3/@13.8133815,100.5447198,15z/data=!4m2!3m1!1s0x30e29c68857005dd:0x265b4896bc1aa299?hl=th">คลิกเพื่อดูแผนที่</a> )<br>
-      <input type="radio" class="checklist" name="howtogo" value="2">หน้าสถานีรถไฟฟ้าใต้ดิน (MRT) "จตุจักร" ( <a href="https://www.google.co.th/maps/place/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%88%E0%B8%95%E0%B8%B8%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3/@13.8070114,100.5513486,15z/data=!4m2!3m1!1s0x30e29c4043011e05:0x350ee8ca19837514?hl=th">1</a> | <a href="http://jwc.in.th/jwc7/assets/img/main/map/16_CHA-01.png">2</a> )<br>
-      <input type="radio" class="checklist" name="howtogo" value="3">ใต้ตึกสํานักงานอธิการบดี มหาวิทยาลัยราชภัฏจันทรเกษม ( <a href="https://www.google.co.th/maps/place/%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%88%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%A1/@13.81829,100.575608,18z/data=!4m2!3m1!1s0x0000000000000000:0x0f0100b33d0b32b0?hl=th">1</a> | <a href="http://jwc.in.th/jwc7/assets/img/main/map/mapCRUWeb.png">2</a>)<br>
+      <input type="radio" class="checklist" name="howtogo" value="1"> หน้า 7-eleven ในสถานีขนส่งหมอชิต 2 ( <a href="https://www.google.co.th/maps/place/%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99%E0%B8%B5%E0%B8%82%E0%B8%99%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E+%E0%B8%88%E0%B8%95%E0%B8%B8%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3/@13.8133815,100.5447198,15z/data=!4m2!3m1!1s0x30e29c68857005dd:0x265b4896bc1aa299?hl=th">คลิกเพื่อดูแผนที่</a> )<br>
+      <input type="radio" class="checklist" name="howtogo" value="2"> หน้าสถานีรถไฟฟ้าใต้ดิน (MRT) "จตุจักร" ( <a href="https://www.google.co.th/maps/place/%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%88%E0%B8%95%E0%B8%B8%E0%B8%88%E0%B8%B1%E0%B8%81%E0%B8%A3/@13.8070114,100.5513486,15z/data=!4m2!3m1!1s0x30e29c4043011e05:0x350ee8ca19837514?hl=th">1</a> | <a href="http://jwc.in.th/jwc7/assets/img/main/map/16_CHA-01.png">2</a> )<br>
+      <input type="radio" class="checklist" name="howtogo" value="3"> ใต้ตึกสํานักงานอธิการบดี มหาวิทยาลัยราชภัฏจันทรเกษม ( <a href="https://www.google.co.th/maps/place/%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%88%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%A1/@13.81829,100.575608,18z/data=!4m2!3m1!1s0x0000000000000000:0x0f0100b33d0b32b0?hl=th">1</a> | <a href="http://jwc.in.th/jwc7/assets/img/main/map/mapCRUWeb.png">2</a>)<br>
     </div>
     <br>
     <h3>
-      หมายเหตุอื่นๆ( ข้อมูลเพิ่มเติมที่น้องๆต้องการจะแจ้งให้พี่ๆทราบ เช่น "หนูมาถึงตอนตีสามค่ะ ต้องทํายังไง")
+      หมายเหตุอื่น ๆ ( ข้อมูลเพิ่มเติมที่น้องๆต้องการจะแจ้งให้พี่ ๆ ทราบ เช่น "หนูมาถึงตอนตีสามค่ะ ต้องทํายังไง")
     </h3>
     <input type="text" class="text-box" name="note" value="">
     <br><br>
@@ -58,7 +66,7 @@
       อัพโหลดใบเสร็จ
     </h3>
     <input type="file" id="imgInp"class="upload" name="slip-pic" >
-    <img id="blah" src="#" alt="your image" />
+    <img id="blah" src="#" alt="" />
     <br><br>
     <p>
       หากน้องๆมีข้อสงสัย หรือต้องการสอบถามข้อมูลเพิ่มเติม
@@ -67,7 +75,7 @@
     <div class="text-center">
       <input type="submit" class="confirm-btn" value="ยืนยันสิทธิ์">
     </div>
-    <input type="hidden" name="travel" class="travel" value="" >
+    <input type="hidden" name="travel" class="travel" value="none" >
     <br>
     <br>
     <br>

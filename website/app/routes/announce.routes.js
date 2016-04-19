@@ -70,7 +70,7 @@ module.exports = function(app, passport) {
       }
     });
   });
-  app.get('/confirm',[isLoggedIn, isPass] ,function(req, res, next){
+  app.get('/confirm',[isLoggedIn] ,function(req, res, next){
     res.render('confirm');
   })
 
@@ -112,7 +112,7 @@ module.exports = function(app, passport) {
       User.findOne({'auth.facebook.id':data}, function(err, user){
         if(err) res.send(err)
         else{
-          user.jwcinfo.specialquestion.answers[1].point = 1;
+          user.jwcinfo.specialquestion.answers[1].point = 0;
           user.save(function(err){
             if(err) throw err;
             console.log('update slip complete');
@@ -135,7 +135,7 @@ function isPass(req, res, next){
         throw(err)
         return res.redirect('/');
     }
-    if(user.jwcinfo.specialquestion.answers[0].point >= 1){
+    if(user.jwcinfo.specialquestion.answers[0].point > 1){
       return next();
     }
     else{
