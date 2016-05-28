@@ -2,6 +2,7 @@
 Web Register (Backend and Frontend) for Junior Webmaster Camp 8
 
 ## Installation
+- nginx
 - node.js & npm
 - Docker
 - MongoDB
@@ -19,6 +20,11 @@ Docker Pull
 npm install
 ```
 
+### Set Environment
+- port
+- url
+- nginx reverse proxy
+
 ### Start Server
 ```bash
 npm start
@@ -27,10 +33,8 @@ npm start
 ## Tools
 - Robomongo
 
-
-
 ## Contibutors
-Developer | Github
-----|----
-ExampleName | @ExampleID
+Developer             |   Github
+----------------------|----------------------
+ExampleName           | @ExampleID
 
